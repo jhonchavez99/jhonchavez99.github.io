@@ -1863,7 +1863,7 @@
             window.speechSynthesis.onvoiceschanged = setupSpeechSynthesis;
         }
 
-         // --- Speech Synthesis ---
+        // --- Speech Synthesis ---
         function setupSpeechSynthesis() {
             const voices = window.speechSynthesis.getVoices();
             if (voices.length === 0) return;
@@ -1896,7 +1896,6 @@
 
             window.speechSynthesis.speak(utterance);
         }
-
 
         // --- Render UI ---
         function populateVocab(grade) {
