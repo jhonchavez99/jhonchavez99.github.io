@@ -6,7 +6,7 @@
     <title>Spelling Bee Prep Tool</title>
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
     <!-- ResponsiveVoice: Guaranteed British English TTS on all devices -->
-    <script src="https://code.responsivevoice.org/responsivevoice.js?key=free"></script>
+    <script src="https://code.responsivevoice.org/responsivevoice.js?key=ejZxTRxX"></script>
     <style>
         :root {
             --primary: #FFBF00;
@@ -1863,15 +1863,13 @@
 
         // --- Speech (ResponsiveVoice - Guaranteed British Accent on all devices) ---
         function speakWord(word, onEndCallback = null) {
-            // Cancel any speech in progress
-            if (typeof responsiveVoice !== 'undefined') {
+            if (typeof responsiveVoice !== 'undefined' && responsiveVoice.voiceSupport()) {
                 responsiveVoice.cancel();
-                responsiveVoice.speak(word, "UK English Female", {
-                    rate: 0.85,
-                    onend: onEndCallback || function() {}
-                });
+                const params = { rate: 0.85, pitch: 1, volume: 1 };
+                if (onEndCallback) params.onend = onEndCallback;
+                responsiveVoice.speak(word, "UK English Female", params);
             } else {
-                // Hard fallback to speechSynthesis if library fails to load
+                // Hard fallback to speechSynthesis
                 window.speechSynthesis.cancel();
                 const utterance = new SpeechSynthesisUtterance(word);
                 utterance.lang = 'en-GB';
