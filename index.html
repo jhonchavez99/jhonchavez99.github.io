@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Spelling Bee Prep Tool</title>
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <!-- ResponsiveVoice: Guaranteed British English TTS on all devices -->
+    <script src="https://code.responsivevoice.org/responsivevoice.js?key=free"></script>
     <style>
         :root {
             --primary: #FFBF00;
@@ -1856,45 +1858,27 @@
         // --- Initialization ---
         function init() {
             populateVocab(state.grade);
-            setupSpeechSynthesis();
             setupEventListeners();
-            
-            // Re-check voices in case they load asynchronously
-            window.speechSynthesis.onvoiceschanged = setupSpeechSynthesis;
         }
 
-        // --- Speech Synthesis ---
-        function setupSpeechSynthesis() {
-            const voices = window.speechSynthesis.getVoices();
-            if (voices.length === 0) return;
-
-            // Prioritize British voices
-            const ukVoice = voices.find(v => 
-                v.lang.replace('_', '-').toLowerCase().includes('en-gb') || 
-                v.name.toLowerCase().includes('british') || 
-                v.name.toLowerCase().includes('uk english')
-            );
-            
-            // Fallback to first English voice if no UK voice is found
-            const fallbackVoice = voices.find(v => v.lang.startsWith('en'));
-            
-            state.britishVoice = ukVoice || fallbackVoice || voices[0];
-            console.log("Selected Voice:", state.britishVoice.name);
-        }
-
+        // --- Speech (ResponsiveVoice - Guaranteed British Accent on all devices) ---
         function speakWord(word, onEndCallback = null) {
-            window.speechSynthesis.cancel(); // Clear queue
-            const utterance = new SpeechSynthesisUtterance(word);
-            if (state.britishVoice) {
-                utterance.voice = state.britishVoice;
+            // Cancel any speech in progress
+            if (typeof responsiveVoice !== 'undefined') {
+                responsiveVoice.cancel();
+                responsiveVoice.speak(word, "UK English Female", {
+                    rate: 0.85,
+                    onend: onEndCallback || function() {}
+                });
+            } else {
+                // Hard fallback to speechSynthesis if library fails to load
+                window.speechSynthesis.cancel();
+                const utterance = new SpeechSynthesisUtterance(word);
+                utterance.lang = 'en-GB';
+                utterance.rate = 0.85;
+                if (onEndCallback) utterance.onend = onEndCallback;
+                window.speechSynthesis.speak(utterance);
             }
-            utterance.rate = 0.85; // Slightly slower for clarity
-            
-            if(onEndCallback) {
-                utterance.onend = onEndCallback;
-            }
-
-            window.speechSynthesis.speak(utterance);
         }
 
         // --- Render UI ---
