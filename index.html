@@ -1862,20 +1862,37 @@
         }
 
         // --- Speech (ResponsiveVoice - Guaranteed British Accent on all devices) ---
+        let currentUtterance = null; // Prevent utterance garbage collection which kills onend events
+
         function speakWord(word, onEndCallback = null) {
+            let callbackFired = false;
+            const safeCallback = () => {
+                if (callbackFired) return;
+                callbackFired = true;
+                if (onEndCallback) onEndCallback();
+            };
+
+            // Fallback timeout to prevent UI freezing (speech events are notoriously unreliable)
+            if (onEndCallback) {
+                setTimeout(safeCallback, Math.max(3000, word.length * 150));
+            }
+
             if (typeof responsiveVoice !== 'undefined' && responsiveVoice.voiceSupport()) {
                 responsiveVoice.cancel();
                 const params = { rate: 0.85, pitch: 1, volume: 1 };
-                if (onEndCallback) params.onend = onEndCallback;
+                if (onEndCallback) params.onend = safeCallback;
                 responsiveVoice.speak(word, "UK English Female", params);
             } else {
                 // Hard fallback to speechSynthesis
                 window.speechSynthesis.cancel();
-                const utterance = new SpeechSynthesisUtterance(word);
-                utterance.lang = 'en-GB';
-                utterance.rate = 0.85;
-                if (onEndCallback) utterance.onend = onEndCallback;
-                window.speechSynthesis.speak(utterance);
+                currentUtterance = new SpeechSynthesisUtterance(word);
+                currentUtterance.lang = 'en-GB';
+                currentUtterance.rate = 0.85;
+                if (onEndCallback) {
+                    currentUtterance.onend = safeCallback;
+                    currentUtterance.onerror = safeCallback;
+                }
+                window.speechSynthesis.speak(currentUtterance);
             }
         }
 
