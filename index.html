@@ -804,51 +804,6 @@
         .no-print {
             /* Helper class to hide elements from print */
         }
-
-        /* --- Admin Preview Panel --- */
-        .preview-container {
-            background-color: var(--surface);
-            padding: 30px;
-            border-radius: var(--radius-lg);
-            border: 3px dashed var(--border);
-        }
-        .json-editor {
-            width: 100%;
-            height: 400px;
-            font-family: 'Inter', monospace;
-            font-size: 0.9rem;
-            padding: 15px;
-            border-radius: var(--radius-sm);
-            border: 2px solid var(--border);
-            margin-bottom: 20px;
-            resize: vertical;
-            background: #fdfdfd;
-        }
-        .admin-controls {
-            display: flex;
-            gap: 15px;
-            flex-wrap: wrap;
-        }
-        .status-msg {
-            margin-top: 15px;
-            padding: 10px 20px;
-            border-radius: var(--radius-sm);
-            font-weight: 600;
-            display: none;
-        }
-        .status-success { background-color: #dcfce7; color: #166534; display: block; }
-        .status-error { background-color: #fee2e2; color: #991b1b; display: block; }
-        .preview-badge {
-            background: var(--danger);
-            color: white;
-            padding: 4px 12px;
-            border-radius: 20px;
-            font-size: 0.8rem;
-            font-weight: 800;
-            margin-left: 10px;
-            vertical-align: middle;
-            animation: pulse 2s infinite;
-        }
     </style>
 </head>
 <body>
@@ -871,7 +826,6 @@
         <button class="tab-btn active" data-target="vocab-view">Vocabulary</button>
         <button class="tab-btn" data-target="practice-view">Practice</button>
         <button class="tab-btn" data-target="rules-view">Rules</button>
-        <button class="tab-btn" data-target="preview-view" style="color: var(--danger);">Dev Tools 🛠️</button>
     </div>
 
     <main>
@@ -1135,29 +1089,6 @@
 
             </div>
         </section>
-
-        <!-- Tab 4: Admin Preview -->
-        <section id="preview-view" class="view-section">
-            <h2 style="font-size: 2.5rem; text-align: center; margin-bottom: 20px; color: var(--text-dark); font-family: 'Outfit', sans-serif;">Data Preview Panel 🛠️</h2>
-            <p style="text-align: center; color: var(--text-muted); margin-bottom: 30px; font-size: 1.1rem;">
-                Paste your <strong>data.json</strong> content here to preview changes instantly before uploading to GitHub.
-            </p>
-
-            <div class="preview-container">
-                <textarea id="jsonEditor" class="json-editor" placeholder='Paste your JSON here (e.g., { "8": [...], "9": [...], "10": [...] })'></textarea>
-                
-                <div class="admin-controls">
-                    <button class="btn-pdf" id="btnApplyPreview" style="background-color: var(--primary);">🚀 Apply Preview Data</button>
-                    <button class="btn-pdf btn-stroke" id="btnRestoreGitHub">🔄 Restore GitHub Data</button>
-                </div>
-                
-                <div id="previewStatus" class="status-msg"></div>
-            </div>
-
-            <div style="margin-top: 40px; padding: 25px; background: #fffbeb; border: 2px solid #fde68a; border-radius: var(--radius-md); color: #92400e;">
-                <p><strong>Note:</strong> Changes applied here are <u>temporary</u> and will disappear if you refresh the page. After verifying, remember to copy this JSON and upload it to your GitHub repository permanently.</p>
-            </div>
-        </section>
     </main>
 
     <!-- Modal for Vocabulary -->
@@ -1186,18 +1117,271 @@
             <div id="countdownSkipText" style="margin-bottom: 15px; font-weight: bold; color: var(--danger);">Wait 5 seconds to accept...</div>
 
             <div style="position: relative; width: 100%; height: 50px; background: var(--surface); border: 2px solid var(--border); border-radius: 25px; overflow: hidden; display: none;" id="sliderContainer">
-                <div class="slide-text">Sli    <script>
-        // --- Data State ---
-        let VOCAB_DATA = {};
-        let GITHUB_BACKUP = null; 
-        let isPreviewMode = false;
-        const GITHUB_JSON_URL = 'https://raw.githubusercontent.com/jhonchavez99/jhonchavez99.github.io/main/data.json';
+                <div class="slide-text">Slide arrow to accept &rarr;</div>
+                <input type="range" min="0" max="100" value="0" id="accentAcceptSlider">
+            </div>
+        </div>
+    </div>
 
-        // --- Configuration ---
-        const SHEETS_URL = "https://script.google.com/macros/s/AKfycbwJM5HZztPzhGPAL71BfYpOvldXAwap80io4GWE56iANVt15LMbLJu7GgIYKNPS8q5F/exec";
-
-        // --- State ---
-us substance.", ex: "The deeply soft t-shirt is fundamentally 100% pure organic ***." },
+    <script>
+        // --- Mock Data ---
+        const VOCAB_DATA = {
+            "8": [
+                { word: "Ain't", emoji: "🚫", def: "Am not, are not, or is not.", ex: "I *** going to the party tonight." },
+                { word: "Broken-hearted", emoji: "💔", def: "Overwhelmed by grief or disappointment.", ex: "She was *** when her pet died." },
+                { word: "Faith-deported", emoji: "😔", def: "Having one's faith or hope removed or banished.", ex: "He felt completely *** after the loss." },
+                { word: "Back down", emoji: "🔙", def: "To withdraw a claim or assertion in the face of opposition.", ex: "They refused to *** during the debate." },
+                { word: "Crowd", emoji: "🧑‍🤝‍🧑", def: "A large number of people gathered together.", ex: "A massive *** rushed to the stage." },
+                { word: "Don't bend", emoji: "📏", def: "To remain rigid and not yield to pressure.", ex: "Stand strong and *** to their rules." },
+                { word: "Don't break", emoji: "🛡️", def: "To endure without surrendering or shattering.", ex: "Hold the line and *** under stress." },
+                { word: "Highway", emoji: "🛣️", def: "A main road, especially one connecting major towns or cities.", ex: "We drove down the *** at midnight." },
+                { word: "Rubber", emoji: "🧽", def: "An elastic substance made from the latex sap of trees.", ex: "The tires are made of solid ***." },
+                { word: "Exercise book", emoji: "📓", def: "A notebook used by students for taking notes or completing assignments.", ex: "Write the answers in your ***." },
+                { word: "Pencil case", emoji: "👝", def: "A small container used to store pens, pencils, and erasers.", ex: "My new *** has a zipper." },
+                { word: "Textbook", emoji: "📘", def: "A book used as a standard work for the study of a particular subject.", ex: "Open your math *** to page fifty." },
+                { word: "Borrow", emoji: "🤝", def: "To take and use something belonging to someone else with the intention of returning it.", ex: "Can I *** your pencil?" },
+                { word: "Swim underwater", emoji: "🤿", def: "To propel oneself beneath the surface of the water.", ex: "You must learn to *** to explore the reef." },
+                { word: "Ride a bike", emoji: "🚲", def: "To travel on a two-wheeled vehicle powered by pedaling.", ex: "I usually *** to school." },
+                { word: "Play rugby", emoji: "🏉", def: "To participate in a team game played with an oval ball.", ex: "We are going to *** this weekend." },
+                { word: "Go snowboarding", emoji: "🏂", def: "To descend a snow-covered slope on a snowboard.", ex: "They love to *** in the Alps." },
+                { word: "Go sailing", emoji: "⛵", def: "To travel on water using primarily wind power.", ex: "Let's *** across the lake today." },
+                { word: "Go surfing", emoji: "🏄", def: "To ride on a wave towards the shore while standing or lying on a surfboard.", ex: "He wakes up early to ***." },
+                { word: "Go cycling", emoji: "🚴", def: "To ride a bicycle for recreation or sport.", ex: "We *** through the forest trails." },
+                { word: "Sleigh", emoji: "🛷", def: "A vehicle on runners for conveying loads or passengers over snow or ice.", ex: "Santa's *** is pulled by reindeer." },
+                { word: "Tree", emoji: "🌲", def: "A woody perennial plant, typically having a single stem or trunk.", ex: "The oak *** provides great shade." },
+                { word: "Star", emoji: "⭐", def: "A fixed luminous point in the night sky.", ex: "Look at that bright ***." },
+                { word: "Lights", emoji: "💡", def: "Equipment or fixtures that produce illumination.", ex: "Turn off the *** when you leave." },
+                { word: "Ornament", emoji: "🎄", def: "A thing used to make something look more attractive.", ex: "Hang that *** on the highest branch." },
+                { word: "Candles", emoji: "🕯️", def: "Cylinders of wax enclosing a wick for burning.", ex: "Blow out the *** on your birthday cake." },
+                { word: "Postcard", emoji: "🎴", def: "A card for sending a message by mail without an envelope.", ex: "She sent me a beautiful *** from Paris." },
+                { word: "Presents", emoji: "🎁", def: "Things given to someone as a gift.", ex: "Place all the *** under the tree." },
+                { word: "Bells", emoji: "🔔", def: "Hollow objects typically made of metal that sound a clear musical note when struck.", ex: "The church *** ring every hour." },
+                { word: "Wreath", emoji: "🌿", def: "An arrangement of flowers, leaves, or stems fastened in a ring.", ex: "Hang the *** on the front door." },
+                { word: "Bipedalism", emoji: "🚶", def: "The condition of having two feet or using only two feet for locomotion.", ex: "Human evolution is marked by ***." },
+                { word: "Australopithecus", emoji: "🐒", def: "An extinct genus of hominins that lived in Africa.", ex: "Lucy is a famous *** fossil." },
+                { word: "Muscles", emoji: "💪", def: "A band or bundle of fibrous tissue in a human or animal body.", ex: "He worked out to build his ***." },
+                { word: "Sporulation", emoji: "🍄", def: "The process of forming spores.", ex: "The fungus reproduces by ***." },
+                { word: "Bipartition", emoji: "➗", def: "Division into two parts.", ex: "The cell multiplies by simple ***." },
+                { word: "Zygote", emoji: "🔬", def: "A diploid cell resulting from the fusion of two haploid gametes.", ex: "The *** divides rapidly after fertilization." },
+                { word: "Tissue", emoji: "🥩", def: "Any of the distinct types of material of which animals or plants are made.", ex: "Muscle *** contracts to produce movement." },
+                { word: "Phototaxis", emoji: "☀️", def: "The bodily movement of a motile organism in response to light.", ex: "Moths display positive ***." },
+                { word: "Chemotaxis", emoji: "🧪", def: "Movement of a motile cell or organism in a direction corresponding to a gradient of increasing or decreasing concentration of a particular substance.", ex: "Bacteria use *** to find food." },
+                { word: "Wrong", emoji: "✖️", def: "Not correct or true.", ex: "Your calculation is completely ***." },
+                { word: "Badminton", emoji: "🏸", def: "A game with rackets in which a shuttlecock is played back and forth across a net.", ex: "We play *** every Thursday." },
+                { word: "Basketball", emoji: "🏀", def: "A game played between two teams of five players in which goals are scored by throwing a ball through a netted hoop.", ex: "He loves shooting hoops in ***." },
+                { word: "Hockey", emoji: "🏒", def: "A fast contact sport played on ice or a field, using sticks to hit a puck or ball.", ex: "Ice *** is huge in Canada." },
+                { word: "Gilli-danda", emoji: "🏏", def: "An amateur sport popular in rural areas of the Indian subcontinent.", ex: "The kids played *** in the dirt road." },
+                { word: "Routine", emoji: "📅", def: "A sequence of actions regularly followed.", ex: "My morning *** includes jogging." },
+                { word: "Shopping", emoji: "🛍️", def: "The purchasing of goods from stores.", ex: "Let's go *** for clothes." },
+                { word: "Wearing", emoji: "👗", def: "To have something on one's body as clothing, decoration, or protection.", ex: "She is *** a red dress today." },
+                { word: "Cabbage", emoji: "🥬", def: "A cultivated plant eaten as a vegetable, having thick green or purple leaves surrounding a spherical heart.", ex: "I made a salad using fresh ***." },
+                { word: "Ecosystem", emoji: "🌍", def: "A biological community of interacting organisms and their physical environment.", ex: "The rainforest is a fragile ***." },
+                { word: "Microspheres", emoji: "💧", def: "Microscopic spherical particles.", ex: "Scientists synthesized protein *** in the lab." },
+                { word: "Chromosomes", emoji: "🧬", def: "A threadlike structure of nucleic acids and protein carrying genetic information.", ex: "Humans have 46 *** in their cells." },
+                { word: "Cytoplasm", emoji: "🦠", def: "The material or protoplasm within a living cell, excluding the nucleus.", ex: "Organelles float within the ***." },
+                { word: "Mitochondria", emoji: "⚡", def: "An organelle found in large numbers in most cells, the powerhouse of the cell.", ex: "*** produce the cell's energy." },
+                { word: "Endoplasmic", emoji: "🕸️", def: "Relating to the endoplasmic reticulum, a network of membranous tubules in the cytoplasm.", ex: "The rough *** reticulum contains ribosomes." },
+                { word: "Cryopreservation", emoji: "❄️", def: "The process of cooling and storing cells, tissues, or organs at very low temperatures to maintain their viability.", ex: "The scientist used *** for the stem cells." },
+                { word: "Neurons", emoji: "🧠", def: "A specialized cell transmitting nerve impulses.", ex: "*** transmit messages to the brain." },
+                { word: "Justify", emoji: "⚖️", def: "To show or prove to be right or reasonable.", ex: "You must *** your actions to the jury." },
+                { word: "Ensure", emoji: "✅", def: "To make certain that something shall occur or be the case.", ex: "Please *** all doors are locked." },
+                { word: "Smooth", emoji: "🪨", def: "Having an even and regular surface or consistency; free from perceptible projections, lumps, or indentations.", ex: "The stone was perfectly ***." },
+                { word: "Universal", emoji: "🌌", def: "Relating to or done by all people or things in the world or in a particular group.", ex: "Music is a *** language." },
+                { word: "Chloroplast", emoji: "🌱", def: "A plastid that contains chlorophyll and in which photosynthesis takes place.", ex: "The *** gives plants their green color." },
+                { word: "Cytoskeleton", emoji: "🦴", def: "A microscopic network of protein filaments and tubules in the cytoplasm of many living cells.", ex: "The *** provides cellular structural support." },
+                { word: "Flagellum", emoji: "🪱", def: "A slender threadlike structure that enables many protozoa or bacteria to swim.", ex: "The sperm cell uses its *** to move." },
+                { word: "Mammals", emoji: "🦁", def: "A warm-blooded vertebrate animal of a class that is distinguished by the possession of hair or fur, the secretion of milk by females for the nourishment of the young.", ex: "Whales are marine ***." },
+                { word: "Amphibians", emoji: "🐸", def: "A cold-blooded vertebrate animal of a class that comprises the frogs, toads, newts, and salamanders.", ex: "Frogs are semi-aquatic ***." },
+                { word: "Endothermic", emoji: "🌡️", def: "Dependent on or capable of the internal generation of heat.", ex: "Birds and mammals are *** animals." },
+                { word: "Locomotion", emoji: "🏃", def: "Movement or the ability to move from one place to another.", ex: "Flight is a fast form of ***." },
+                { word: "Autotroph", emoji: "🌻", def: "An organism that is able to form nutritional organic substances from simple inorganic substances such as carbon dioxide.", ex: "A plant is an ***." },
+                { word: "Photosynthesis", emoji: "🌞", def: "The process by which green plants and some other organisms use sunlight to synthesize foods from carbon dioxide and water.", ex: "*** converts sunlight into energy." },
+                { word: "Harvest", emoji: "🌾", def: "The process or period of gathering in crops.", ex: "Autumn is the time for the wheat ***." },
+                { word: "Sowing", emoji: "🌱", def: "To plant seed for growth especially by scattering.", ex: "Spring is the best time for *** seeds." },
+                { word: "Livestock", emoji: "🐄", def: "Farm animals regarded as an asset.", ex: "The farmer raises cattle and other ***." },
+                { word: "Shepherd", emoji: "🐑", def: "A person who tends and rears sheep.", ex: "The *** guided his flock home." },
+                { word: "Domestication", emoji: "🐕", def: "The process of taming an animal and keeping it as a pet or on a farm.", ex: "The *** of wolves led to dogs." },
+                { word: "Cuneiform", emoji: "🧮", def: "Denoting or relating to the wedge-shaped characters used in the ancient writing systems of Mesopotamia, Persia, and Ugarit.", ex: "They wrote records in *** on clay tablets." },
+                { word: "Pictographs", emoji: "🖼️", def: "A pictorial symbol for a word or phrase.", ex: "Ancient people carved *** on cave walls." },
+                { word: "Ideogram", emoji: "🔣", def: "A written character symbolizing the idea of a thing without indicating the sounds used to say it.", ex: "Chinese writing uses the *** extensively." },
+                { word: "Papyrus", emoji: "📜", def: "A material prepared in ancient Egypt from the pithy stem of a water plant.", ex: "The ancient text was preserved on ***." },
+                { word: "Scribes", emoji: "✍️", def: "A person who copies out documents, especially one employed to do this before printing was invented.", ex: "The *** worked tirelessly in the temple." },
+                { word: "civilization", emoji: "🏛️", def: "The stage of human social and cultural development and organization that is considered most advanced.", ex: "The Mayan *** was highly advanced." },
+                { word: "Wondering", emoji: "🤔", def: "To desire to know something.", ex: "I was *** if you wanted to join me." },
+                { word: "Reminds", emoji: "💭", def: "To cause someone to remember someone or something.", ex: "This song *** me of my childhood." },
+                { word: "Night", emoji: "🌙", def: "The period of darkness in each twenty-four hours.", ex: "The stars shine brightest at ***." },
+                { word: "Pain", emoji: "🤕", def: "Physical suffering or discomfort caused by illness or injury.", ex: "He felt a sharp *** in his arm." },
+                { word: "Imply", emoji: "🤫", def: "To strongly suggest the truth or existence of something not expressly stated.", ex: "Are you trying to *** that it was my fault?" },
+                { word: "Giving", emoji: "🤝", def: "To formally provide or confer something on someone.", ex: "Thank you for *** me a chance." },
+                { word: "Having", emoji: "🤲", def: "To possess, own, or hold.", ex: "We are *** a wonderful time." },
+                { word: "Soaking", emoji: "🧼", def: "Extremely wet.", ex: "My shoes were completely *** wet." },
+                { word: "Towel", emoji: "🛀", def: "A piece of thick absorbent cloth or paper used for drying oneself or wiping things dry.", ex: "Grab a dry *** after swimming." },
+                { word: "Thank you", emoji: "🙌", def: "A polite expression used when acknowledging a gift, service, or compliment.", ex: "Please tell them I said ***." },
+                { word: "Clouds", emoji: "☁️", def: "A visible mass of condensed water vapor floating in the atmosphere.", ex: "The sky was filled with dark ***." },
+                { word: "Drinking", emoji: "🥤", def: "To take a liquid into the mouth and swallow.", ex: "He is *** a glass of cold water." },
+                { word: "Above", emoji: "⬆️", def: "In extended space over and not touching.", ex: "The bird flew high *** the trees." },
+                { word: "Never mind", emoji: "🙅", def: "Used to urge someone not to worry or disregard a previous statement.", ex: "If you can't come, just ***." },
+                { word: "Wouldn't", emoji: "👎", def: "A contraction of would not.", ex: "I *** do that if I were you." },
+                { word: "By the way", emoji: "💬", def: "Incidentally (used to introduce a minor topic or new subject).", ex: "And ***, nice to meet you." },
+                { word: "Fall down", emoji: "🍂", def: "To lose one's balance and collapse to the ground.", ex: "Be careful not to *** on the ice." },
+                { word: "Whenever", emoji: "🕒", def: "At whatever time; on whatever occasion.", ex: "Call me *** you are ready." },
+                { word: "Wherever", emoji: "🗺️", def: "In or to whatever place.", ex: "I will follow you *** you go." },
+                { word: "Whoever", emoji: "👤", def: "The person or people who; any person who.", ex: "*** ate my cake is in big trouble." },
+                { word: "Saxophone", emoji: "🎷", def: "A member of a family of metal wind instruments with a single-reed mouthpiece.", ex: "He played a smooth jazz solo on his ***." },
+                { word: "Keyboard", emoji: "🎹", def: "A panel of keys that operate a computer or typewriter, or a musical instrument.", ex: "She plays the electronic *** beautifully." },
+                { word: "Lessons", emoji: "📖", def: "A period of learning or teaching.", ex: "I take piano *** every Tuesday." },
+                { word: "Conversation", emoji: "🗣️", def: "A talk, especially an informal one, between two or more people.", ex: "We had an interesting *** about science." },
+                { word: "Terrible", emoji: "😨", def: "Extremely or distressingly bad or serious.", ex: "That was a *** mistake." },
+                { word: "Mobile phone", emoji: "📱", def: "A telephone with access to a cellular radio system.", ex: "He left his *** at home." },
+                { word: "Lovely", emoji: "🌸", def: "Exquisitely beautiful.", ex: "What a *** bouquet of flowers." },
+                { word: "Wedding", emoji: "💍", def: "A marriage ceremony, especially considered as including the associated celebrations.", ex: "The *** took place in a historic chapel." },
+                { word: "Barbecue", emoji: "🍖", def: "A meal or gathering at which meat, fish, or other food is cooked out of doors on a rack over an open fire.", ex: "We are having a backyard *** this weekend." },
+                { word: "Nervous", emoji: "😰", def: "Easily agitated or alarmed; tending to be anxious.", ex: "He was very *** before the exam." },
+                { word: "Agree", emoji: "👍", def: "To have the same opinion about something.", ex: "I completely *** with your statement." },
+                { word: "Disagree", emoji: "👎", def: "To have or express a different opinion.", ex: "It is okay to respectfully ***." },
+                { word: "Regards", emoji: "💌", def: "Best wishes (used to express friendliness in greetings).", ex: "Give my warmest *** to your family." },
+                { word: "Pounds", emoji: "💷", def: "A unit of weight or currency.", ex: "This item costs ten British ***." },
+                { word: "Advice", emoji: "🧠", def: "Guidance or recommendations offered with regard to prudent future action.", ex: "Can I give you a piece of ***?" },
+                { word: "Touched", emoji: "🥹", def: "To cause feelings of sympathy or gratitude.", ex: "She was deeply *** by their kindness." },
+                { word: "Games", emoji: "🎮", def: "A form of play or sport, especially a competitive one played according to rules and decided by skill, strength, or luck.", ex: "We played video *** all night long." },
+                { word: "Always", emoji: "♾️", def: "At all times; on all occasions.", ex: "I will *** love you." },
+                { word: "Burnt", emoji: "🔥", def: "Damaged or completely destroyed by fire.", ex: "The toast is completely ***." },
+                { word: "Myself", emoji: "🙋", def: "Used by a speaker to refer to himself or herself as the object of a verb or preposition.", ex: "I made this entire cake by ***." },
+                { word: "Looking", emoji: "👀", def: "Directing one's gaze toward someone or something.", ex: "I am *** for my missing keys." },
+                { word: "Waiting", emoji: "⏳", def: "To stay where one is or delay action until a particular time or until something else happens.", ex: "I am eagerly *** for the bus." },
+                { word: "Watching", emoji: "📺", def: "Look at or observe attentively continuously.", ex: "We are *** the new movie right now." },
+                { word: "Burning", emoji: "📛", def: "On fire.", ex: "The ancient library was *** to the ground." },
+                { word: "Recorded", emoji: "⏺️", def: "Set down in writing or some other permanent form for later reference.", ex: "He *** his favorite song on tape." },
+                { word: "Portraits", emoji: "🖼️", def: "A painting, drawing, photograph, or engraving of a person, especially one depicting only the face or head and shoulders.", ex: "The museum gallery was filled with royal ***." },
+                { word: "Suffering", emoji: "🤕", def: "The state of undergoing pain, distress, or hardship.", ex: "Their goal is to ease human ***." },
+                { word: "Inclusions", emoji: "📥", def: "The action or state of including or of being included within a group or structure.", ex: "The mineral had fascinating crystal ***." },
+                { word: "Translation", emoji: "🌍", def: "The process of translating words or text from one language into another.", ex: "The English *** of the book is fantastic." },
+                { word: "Digestion", emoji: "🍽️", def: "The process of breaking down food by mechanical and enzymatic action.", ex: "Drinking water aids regular ***." },
+                { word: "Breaking down", emoji: "📉", def: "To separate into constituent parts.", ex: "Enzymes are responsible for *** your food." },
+                { word: "Sacks", emoji: "🥔", def: "A large bag made of a strong material such as hessian, paper, or plastic, used for storing and carrying goods.", ex: "They bought three large *** of potatoes." },
+                { word: "Signals", emoji: "🚥", def: "A gesture, action, or sound that is used to convey information or instructions.", ex: "The traffic *** stopped working during the storm." },
+                { word: "Mushrooms", emoji: "🍄", def: "A fungal growth that typically takes the form of a domed cap on a stalk.", ex: "We picked wild *** in the forest." },
+                { word: "Reparation", emoji: "🛠️", def: "The making of amends for a wrong one has done.", ex: "The country demanded immediate *** for the damages." },
+                { word: "Optical", emoji: "👓", def: "Relating to sight, especially in relation to the physical action of light.", ex: "The prism creates a fascinating *** illusion." },
+                { word: "Distinguish", emoji: "🔍", def: "To recognize or treat as different.", ex: "It is hard to *** the twins from each other." },
+                { word: "Inequalities", emoji: "⚖️", def: "Difference in size, degree, circumstances, etc.; lack of equality.", ex: "Social *** led to public protests." },
+                { word: "Lead", emoji: "🛤️", def: "To cause to go with one by holding them by the hand, a halter, a rope, etc.", ex: "The guide will *** us through the mountains." },
+                { word: "Stages", emoji: "🪜", def: "A point, period, or step in a process or development.", ex: "There are four primary *** in this lifecycle." },
+                { word: "Morula", emoji: "🦠", def: "A solid ball of cells resulting from division of a fertilized ovum.", ex: "The zygote divides to become a ***." },
+                { word: "Blastula", emoji: "🔵", def: "An animal embryo at the early stage of development when it is a hollow ball of cells.", ex: "The morula develops into a ***." },
+                { word: "Gastrulation", emoji: "🧬", def: "A phase early in the embryonic development of most animals.", ex: "Cell migration accelerates during ***." },
+                { word: "Implantation", emoji: "🪺", def: "The attachment of the fertilized egg or blastocyst to the wall of the uterus.", ex: "Pregnancy officially begins after exact ***." },
+                { word: "Chorion", emoji: "👶", def: "The outermost membrane surrounding an embryo.", ex: "The *** contributes to placenta formation." },
+                { word: "Conception", emoji: "🎇", def: "The action of conceiving a child or of a child being conceived.", ex: "Their first child was born nine months after ***." },
+                { word: "Pregnancy", emoji: "🤰", def: "The condition or period of being pregnant.", ex: "She is in the second month of her ***." },
+                { word: "Spermatogenesis", emoji: "🔬", def: "The production or development of mature spermatozoa.", ex: "*** occurs in the male reproductive system." },
+                { word: "Fallopian tubes", emoji: "🧬", def: "Either of a pair of tubes along which eggs travel from the ovaries to the uterus.", ex: "Fertilization generally occurs inside the ***." },
+                { word: "Intercourse", emoji: "❤️", def: "Communication or dealings between individuals or groups.", ex: "Their social *** was always respectful." },
+                { word: "Inherits", emoji: "👨‍👩‍👦", def: "Receive money, property, or a title as an heir at the death of the previous holder.", ex: "He *** his grandfather's vast estate." },
+                { word: "Embryogenesis", emoji: "🌱", def: "The formation and development of an embryo.", ex: "*** involves cellular differentiation." },
+                { word: "Fetus", emoji: "👼", def: "An unborn offspring of a mammal, in particular an unborn human baby.", ex: "The ultrasound showed a healthy ***." },
+                { word: "Resembles", emoji: "👥", def: "To have qualities or features, especially those of appearance, in common with.", ex: "He closely *** his older brother." },
+                { word: "Blastomeres", emoji: "🦠", def: "A cell formed by cleavage of a fertilized ovum.", ex: "Early division creates identical ***." },
+                { word: "Cavity", emoji: "🕳️", def: "An empty space within a solid object.", ex: "The dentist found a small *** in my tooth." },
+                { word: "Ectoderm", emoji: "🧱", def: "The outermost layer of cells or tissue of an embryo.", ex: "Skin eventually develops from the ***." },
+                { word: "Mesoderm", emoji: "🧬", def: "The middle layer of an embryo in early development.", ex: "Muscles form from the embryonic ***." },
+                { word: "Progesterone", emoji: "🧪", def: "A steroid hormone released by the corpus luteum.", ex: "*** levels rise during early pregnancy." },
+                { word: "Stores", emoji: "🏪", def: "A retail establishment selling items to the public.", ex: "We need to visit grocery *** for supplies." },
+                { word: "Psychology", emoji: "🧠", def: "The scientific study of the human mind and its functions.", ex: "She earned her university degree in ***." },
+                { word: "Honest", emoji: "😇", def: "Free of deceit and untruthfulness; sincere.", ex: "Please give me your completely *** opinion." },
+                { word: "Enough", emoji: "👌", def: "As much or as many as required.", ex: "We simply do not have *** food." },
+                { word: "Daughter", emoji: "👧", def: "A girl or woman in relation to her parents.", ex: "Her youngest *** just started kindergarten." },
+                { word: "Cough", emoji: "🤧", def: "Expel air from the lungs with a sudden sharp sound.", ex: "He had a terrible dry ***." },
+                { word: "Government", emoji: "🏛️", def: "The governing body of a nation, state, or community.", ex: "The national *** passed a new law." },
+                { word: "Millennium", emoji: "🎆", def: "A period of a thousand years.", ex: "The turn of the *** was heavily celebrated." },
+                { word: "Questionnaire", emoji: "📝", def: "A set of printed or written questions with a choice of answers.", ex: "Please fill out this incredibly long ***." },
+                { word: "Maintenance", emoji: "🔧", def: "The process of keeping something in good condition.", ex: "Car *** is essential for longevity." },
+                { word: "Disagreeing", emoji: "😠", def: "Having or expressing a different opinion.", ex: "They are always completely *** over politics." },
+                { word: "Subway", emoji: "🚇", def: "An underground electric railroad.", ex: "We took the underground *** to downtown." },
+                { word: "Nickname", emoji: "🤭", def: "A familiar or humorous name given to a person or thing instead of or as well as the real name.", ex: "My childhood *** was Speedy." },
+                { word: "Pronunciation", emoji: "🗣️", def: "The way in which a word is pronounced.", ex: "English has a notoriously difficult ***." },
+                { word: "Relationships", emoji: "🤝", def: "The way in which two or more concepts, objects, or people are connected.", ex: "Building healthy *** takes patience and empathy." },
+                { word: "Necessary", emoji: "❗", def: "Required to be done, achieved, or present; needed.", ex: "Water is absolutely *** for human survival." },
+                { word: "Embarrassed", emoji: "😳", def: "Feeling or showing embarrassment.", ex: "He felt completely *** by his mistake." },
+                { word: "Schedule", emoji: "📅", def: "A plan for carrying out a process or procedure.", ex: "My daily *** is packed full today." },
+                { word: "Foreign", emoji: "🛂", def: "Of, from, in, or characteristic of a country or language other than one's own.", ex: "Learning a new *** language is fun." },
+                { word: "Privilege", emoji: "🏅", def: "A special right, advantage, or immunity granted or available only to a particular person or group of people.", ex: "Driving a car is a ***, not a right." },
+                { word: "Leisure", emoji: "🏖️", def: "Use of free time for enjoyment.", ex: "I enjoy reading in my precious *** time." },
+                { word: "Rhythm", emoji: "🥁", def: "A strong, regular, repeated pattern of movement or sound.", ex: "She danced perfectly to the musical ***." },
+                { word: "Separate", emoji: "✂️", def: "Forming or viewed as a unit apart or by itself.", ex: "Keep the trash completely *** from the recycling." },
+                { word: "Twice", emoji: "✌️", def: "Two times; on two occasions.", ex: "I have visited London exactly *** in my life." },
+                { word: "Humble", emoji: "😌", def: "Having or showing a modest or low estimate of one's own importance.", ex: "He remained exceedingly *** despite his fame." },
+                { word: "Weird", emoji: "👽", def: "Suggesting something supernatural; uncanny.", ex: "That was a really *** and strange movie." },
+                { word: "Achieve", emoji: "🏆", def: "Successfully bring about or reach by effort, skill, or courage.", ex: "You can successfully *** your wildest dreams." },
+                { word: "Believe", emoji: "🌠", def: "Accept that something is true, especially without proof.", ex: "I truly *** that things will improve." },
+                { word: "Conscience", emoji: "⚖️", def: "An inner feeling or voice viewed as acting as a guide to the rightness or wrongness of one's behavior.", ex: "His guilty *** kept him up all night." },
+                { word: "Definite", emoji: "✔️", def: "Clearly stated or decided; not vague or doubtful.", ex: "We need a clear and *** answer." },
+                { word: "Environment", emoji: "🌲", def: "The surroundings or conditions in which a person, animal, or plant lives or operates.", ex: "We must fiercely protect our natural ***." },
+                { word: "Guarantee", emoji: "🤝", def: "A formal promise or assurance.", ex: "I can personally *** the highest product quality." },
+                { word: "Immediately", emoji: "⚡", def: "At once; instantly.", ex: "Please come over here right ***." },
+                { word: "Jewellery", emoji: "💎", def: "Personal ornaments, such as necklaces, rings, or bracelets.", ex: "She wore expensive diamond *** to the ball." },
+                { word: "Knowledge", emoji: "📚", def: "Facts, information, and skills acquired by a person through experience or education.", ex: "Reading vast books significantly increases your ***." },
+                { word: "Library", emoji: "🏛️", def: "A building or room containing collections of books, periodicals, and sometimes films.", ex: "I studied quietly in the public ***." },
+                { word: "Occurred", emoji: "💥", def: "Happen; take place.", ex: "The terrible accident suddenly *** late last night." },
+                { word: "Parallel", emoji: "⏸️", def: "Side by side and having the same distance continuously between them.", ex: "The two railroad tracks perfectly run ***." },
+                { word: "Restaurant", emoji: "🍽️", def: "A place where people pay to sit and eat meals that are cooked and served on the premises.", ex: "We ate out at a completely new ***." },
+                { word: "Successfull", emoji: "🎉", def: "Accomplishing an aim or purpose (Note: traditionally spelled successful).", ex: "The huge business summit was greatly ***." },
+                { word: "Association", emoji: "🤝", def: "A group of people organized for a joint purpose.", ex: "He joined the local neighborhood ***." },
+                { word: "Thumb", emoji: "👍", def: "The short, thick first digit of the human hand.", ex: "He accidentally hit his poor *** with a hammer." },
+                { word: "Village", emoji: "🏘️", def: "A group of houses and associated buildings, larger than a hamlet and smaller than a town.", ex: "They live peacefully in a tiny coastal ***." },
+                { word: "Written", emoji: "✍️", def: "Expressed in writing.", ex: "The rules are strictly *** down on paper." },
+                { word: "Acceptable", emoji: "✅", def: "Able to be agreed on; suitable.", ex: "Your formal proposal is perfectly ***." },
+                { word: "Acquire", emoji: "🛒", def: "Buy or obtain for oneself.", ex: "The company plans to completely *** its rival." },
+                { word: "beginning", emoji: "🏁", def: "The point in time or space at which something starts.", ex: "That was definitely the *** of the end." },
+                { word: "Appropriate", emoji: "👌", def: "Suitable or proper in the circumstances.", ex: "Wear incredibly *** formal attire for the interview." },
+                { word: "Argument", emoji: "🗣️", def: "An exchange of diverging or opposite views.", ex: "They had a huge shouted *** yesterday." },
+                { word: "Calendar", emoji: "📆", def: "A chart or series of pages showing the days, weeks, and months of a particular year.", ex: "Mark the date cleanly on your ***." },
+                { word: "Ceiling", emoji: "🏠", def: "The upper interior surface of a room.", ex: "The large fly stubbornly landed on the ***." },
+                { word: "Cemetery", emoji: "🪦", def: "A burial ground; a graveyard.", ex: "The old spooky *** is completely haunted." },
+                { word: "Committee", emoji: "👔", def: "A group of people appointed for a specific function.", ex: "The powerful *** voted totally against the formal proposal." },
+                { word: "Completely", emoji: "💯", def: "Totally; utterly.", ex: "I thoroughly and *** agree with you." },
+                { word: "Conscious", emoji: "🧠", def: "Aware of and responding to one's surroundings.", ex: "The patient was finally fully awake and ***." },
+                { word: "Convenient", emoji: "🚗", def: "Fitting in well with a person's needs, activities, and plans.", ex: "The nearest grocery store is incredibly locally ***." },
+                { word: "Criticism", emoji: "📉", def: "The expression of disapproval of someone or something based on perceived faults or mistakes.", ex: "Constructive and gentle *** can help you radically improve." },
+                { word: "Curiosity", emoji: "🐱", def: "A strong desire to know or learn something.", ex: "Raging *** eventually killed the proverb animal." },
+                { word: "Desperate", emoji: "😫", def: "Feeling, showing, or involving a hopeless sense that a situation is so bad as to be impossible to deal with.", ex: "They were deeply and truly *** for pure water." },
+                { word: "Develop", emoji: "📈", def: "Grow or cause to grow and become more mature, advanced, or elaborate.", ex: "Seedlings quickly *** into mature massive trees." },
+                { word: "Different", emoji: "🧩", def: "Not the same as another or each other.", ex: "We absolutely have very *** bold tastes." },
+                { word: "Disaster", emoji: "🌪️", def: "A sudden event, such as an accident or a natural catastrophe, that causes great damage.", ex: "The earthquake was a completely horrifying ***." },
+                { word: "Drums", emoji: "🥁", def: "A percussion instrument sounded by being struck with sticks or the hands.", ex: "He loudly played the massive *** in the local band." },
+                { word: "Magazines", emoji: "📰", def: "A periodical publication containing articles and illustrations.", ex: "She reads deeply many fashion colored ***." },
+                { word: "Extinguisher", emoji: "🧯", def: "An active fire protection device used to extinguish or control small fires.", ex: "Grab the red fire *** immediately!" },
+                { word: "Blanket", emoji: "🛌", def: "A large piece of woolen or similar material used as a bed covering.", ex: "Pull up the warm fuzzy ***." },
+                { word: "Costume", emoji: "🎭", def: "A set of clothes in a style typical of a particular country or historical period.", ex: "He wore a spooky vampire *** for Halloween." },
+                { word: "Sunglasses", emoji: "🕶️", def: "Glasses tinted to protect the eyes from sunlight or glare.", ex: "She wore dark *** to hide her eyes." },
+                { word: "Jumper", emoji: "🧥", def: "A knitted garment with long sleeves, worn over the upper body.", ex: "He wore a thick woolen *** in winter." },
+                { word: "Scarf", emoji: "🧣", def: "A length or square of fabric worn around the neck or head.", ex: "She wrapped a red *** tightly around her neck." },
+                { word: "Trainers", emoji: "👟", def: "A soft sports shoe suitable for casual wear.", ex: "He bought a new pair of running ***." },
+                { word: "Gloves", emoji: "🧤", def: "A covering for the hand worn for protection against cold or dirt.", ex: "It's freezing, put your thick *** on." },
+                { word: "Socks", emoji: "🧦", def: "A garment for the foot and lower part of the leg.", ex: "He lost one of his striped ***." },
+                { word: "Suit", emoji: "🕴️", def: "A set of outer clothes made of the same fabric.", ex: "He wore a very sharp tailored black ***." },
+                { word: "Jacket", emoji: "🧥", def: "An outer garment extending either to the waist or the hips.", ex: "Zip up your warm leather ***." },
+                { word: "Coat", emoji: "🧥", def: "An outer garment worn outdoors, having sleeves and typically extending below the hips.", ex: "He hung his heavy winter *** in the closet." },
+                { word: "Trousers", emoji: "👖", def: "An outer garment covering the body from the waist to the ankles.", ex: "He ironed his formal dress ***." },
+                { word: "Shirt", emoji: "👕", def: "A garment for the upper body.", ex: "He spilled coffee completely on his white ***." },
+                { word: "Skirt", emoji: "👗", def: "A woman's outer garment fastened around the waist and hanging down around the legs.", ex: "She completely wore a pleated plaid short ***." },
+                { word: "Dress", emoji: "👗", def: "A one-piece garment for a woman or girl.", ex: "She gracefully wore an elegant beautiful ***." },
+                { word: "Hat", emoji: "🎩", def: "A shaped covering for the head worn for warmth.", ex: "Take off your outdoor *** inside." },
+                { word: "Cap", emoji: "🧢", def: "A kind of soft, flat hat without a brim.", ex: "He spun his baseball blue *** backwards." },
+                { word: "Belt", emoji: "🪢", def: "A strip of leather or other material worn round the waist.", ex: "Tighten your loosely hanging buckle ***." },
+                { word: "Tie", emoji: "👔", def: "A piece of string, cord, or the like used for fastening or tying something.", ex: "He wore a strongly patterned neck ***." },
+                { word: "Boots", emoji: "👢", def: "A sturdy item of footwear covering the foot, the ankle, and sometimes the leg.", ex: "Put your heavy snow wet *** on." },
+                { word: "Sandals", emoji: "🩴", def: "A light shoe with either an openwork upper or straps attaching the sole to the foot.", ex: "We heavily wore basic leather *** down to the nearby beach." },
+                { word: "Pyjamas", emoji: "🛏️", def: "A loose-fitting jacket and trousers for sleeping in.", ex: "Put on your comfy warm striped ***." },
+                { word: "Uniform", emoji: "👮", def: "The distinctive clothing worn by members of the same organization.", ex: "The guard wore a flawlessly neat blue ***." },
+                { word: "Leather", emoji: "🐄", def: "A material made from the skin of an animal by tanning or a similar process.", ex: "She bought incredibly expensive genuine *** shoes." },
+                { word: "Rubber", emoji: "🧽", def: "A tough elastic polymeric substance.", ex: "Tires are primarily heavily made of hard ***." },
+                { word: "Silver", emoji: "🥈", def: "A precious shiny grayish-white metal.", ex: "She fiercely polished the dull *** cutlery." },
+                { word: "Concrete", emoji: "🏗️", def: "A heavy, rough building material.", ex: "The bridge is made of solid ***." },
+                { word: "Porcelain", emoji: "☕", def: "A white vitrified translucent ceramic; china.", ex: "The fragile antique doll had a delicate *** face." },
+                { word: "Styrofoam", emoji: "📦", def: "A kind of expanded polystyrene used especially for making food containers.", ex: "The basic cooler is cheaply made of light ***." },
+                { word: "Cardboard", emoji: "📦", def: "Pasteboard or stiff paper.", ex: "He fully packed the items purely into a heavy *** box." },
+                { word: "Cotton", emoji: "☁️", def: "A soft white fibrous substance.", ex: "The deeply soft t-shirt is fundamentally 100% pure organic ***." },
                 { word: "Aluminium", emoji: "🥫", def: "A light silvery-grey metal.", ex: "Drink strictly wildly from cold *** completely recycled cans." },
                 { word: "Steel", emoji: "⚔️", def: "A hard, strong, gray or bluish-gray alloy of iron.", ex: "Superman is literally known fiercely as the absolute Man of ***." },
                 { word: "Graphite", emoji: "✏️", def: "A gray crystalline allotropic form of carbon.", ex: "Pencil fundamentally leads surprisingly commonly are cleanly made of dark soft ***." },
@@ -1848,7 +2032,7 @@ us substance.", ex: "The deeply soft t-shirt is fundamentally 100% pure organic 
         async function init() {
             try {
                 // Show loading state if needed, but for now we just fetch
-                const response = await fetch('https://raw.githubusercontent.com/jhonchavez99/jhonchavez99.github.io/main/data.json');
+                const response = await fetch('data.json');
                 if (!response.ok) throw new Error('Failed to load data.json');
                 VOCAB_DATA = await response.json();
                 
@@ -1950,98 +2134,11 @@ us substance.", ex: "The deeply soft t-shirt is fundamentally 100% pure organic 
                 sec.classList.toggle('active', sec.id === targetId);
             });
 
-            // Update UI if switching to/from preview
-            if(targetId === 'vocab-view' || targetId === 'practice-view') {
-                populateVocab(state.grade);
-                if(targetId === 'vocab-view') resetPracticeState();
-            }
-        }
-
-        // --- Initialization ---
-        async function init() {
-            try {
-                const response = await fetch(GITHUB_JSON_URL);
-                if (!response.ok) throw new Error('Failed to load data.json');
-                
-                const data = await response.json();
-                GITHUB_BACKUP = JSON.parse(JSON.stringify(data)); // Deep copy
-                VOCAB_DATA = data;
-                
-                populateVocab(state.grade);
-                setupEventListeners();
-                
-                // Show official link in editor as placeholder or starter
-                if(document.getElementById('jsonEditor')) {
-                    document.getElementById('jsonEditor').value = JSON.stringify(VOCAB_DATA, null, 4);
-                }
-            } catch (error) {
-                console.error("Data loading error:", error);
-                showErrorState();
-            }
-        }
-
-        function showErrorState() {
-            const grid = document.getElementById('vocabGrid');
-            if (grid) {
-                grid.innerHTML = `
-                    <div style="grid-column: 1/-1; text-align: center; padding: 40px; color: #ff6b6b;">
-                        <h3>⚠️ Error de Carga</h3>
-                        <p>No se pudo cargar el archivo <strong>data.json</strong> desde GitHub.</p>
-                        <p style="font-size: 0.9em; opacity: 0.8;">Verifica tu conexión a internet o el enlace del archivo.</p>
-                    </div>
-                `;
-            }
-        }
-
-        // --- Admin/Preview Logic ---
-        function applyJsonPreview() {
-            const editor = document.getElementById('jsonEditor');
-            const status = document.getElementById('previewStatus');
-            const badgeContainer = document.getElementById('previewBadgeContainer');
-            
-            try {
-                const newData = JSON.parse(editor.value);
-                
-                // Basic validation: check if grades exist
-                if (!newData["8"] && !newData["9"] && !newData["10"]) {
-                    throw new Error("Invalid format. Must contain grade keys (8, 9, or 10).");
-                }
-                
-                VOCAB_DATA = newData;
-                isPreviewMode = true;
-                
-                status.textContent = "✅ Preview applied successfully!";
-                status.className = "status-msg status-success";
-                
-                badgeContainer.innerHTML = '<span class="preview-badge">MODO PREVIEW ACTIVO</span>';
-                
-                // Refresh views
-                populateVocab(state.grade);
+            // Reset practice if leaving tab
+            if(targetId === 'vocab-view') {
                 resetPracticeState();
-                
-            } catch (e) {
-                status.textContent = "❌ Error: " + e.message;
-                status.className = "status-msg status-error";
+                populateVocab(state.grade);
             }
-        }
-
-        function restoreOfficialData() {
-            if (!GITHUB_BACKUP) return;
-            
-            VOCAB_DATA = JSON.parse(JSON.stringify(GITHUB_BACKUP));
-            isPreviewMode = false;
-            
-            const editor = document.getElementById('jsonEditor');
-            const status = document.getElementById('previewStatus');
-            const badgeContainer = document.getElementById('previewBadgeContainer');
-            
-            editor.value = JSON.stringify(VOCAB_DATA, null, 4);
-            status.textContent = "🔄 Official GitHub data restored.";
-            status.className = "status-msg status-success";
-            badgeContainer.innerHTML = '';
-            
-            populateVocab(state.grade);
-            resetPracticeState();
         }
 
         // --- Practice Mode Logic ---
@@ -2538,12 +2635,6 @@ us substance.", ex: "The deeply soft t-shirt is fundamentally 100% pure organic 
                 const item = state.practiceList[state.practiceIndex];
                 showLifelineScreen('def', item.def);
             });
-
-            // Admin Listeners
-            const btnApply = document.getElementById('btnApplyPreview');
-            const btnRestore = document.getElementById('btnRestoreGitHub');
-            if(btnApply) btnApply.addEventListener('click', applyJsonPreview);
-            if(btnRestore) btnRestore.addEventListener('click', restoreOfficialData);
         }
 
         // Boot
