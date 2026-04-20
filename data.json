@@ -1,384 +1,2214 @@
 {
     "8":  [
-              {"id": 1, "word": "Ain't", "emoji": "🚫", "def": "Am not, are not, or is not.", "ex": "I *** going to the party tonight." },
-              {"id": 2, "word": "Broken-hearted", "emoji": "💔", "def": "Overwhelmed by grief or disappointment.", "ex": "She was *** when her pet died." },
-              {"id": 3, "word": "Faith-deported", "emoji": "😔", "def": "Having one's faith or hope removed or banished.", "ex": "He felt completely *** after the loss." },
-              {"id": 4, "word": "Back down", "emoji": "🔙", "def": "To withdraw a claim or assertion in the face of opposition.", "ex": "They refused to *** during the debate." },
-              {"id": 5, "word": "Crowd", "emoji": "🧑‍🤝‍🧑", "def": "A large number of people gathered together.", "ex": "A massive *** rushed to the stage." },
-              {"id": 6, "word": "Don't bend", "emoji": "📏", "def": "To remain rigid and not yield to pressure.", "ex": "Stand strong and *** to their rules." },
-              {"id": 7, "word": "Don't break", "emoji": "🛡️", "def": "To endure without surrendering or shattering.", "ex": "Hold the line and *** under stress." },
-              {"id": 8, "word": "Highway", "emoji": "🛣️", "def": "A main road, especially one connecting major towns or cities.", "ex": "We drove down the *** at midnight." },
-              {"id": 9, "word": "Rubber", "emoji": "🧽", "def": "An elastic substance made from the latex sap of trees.", "ex": "The tires are made of solid ***." },
-              {"id": 10, "word": "Exercise book", "emoji": "📓", "def": "A notebook used by students for taking notes.", "ex": "Write the answers in your ***." },
-              {"id": 11, "word": "Pencil case", "emoji": "👝", "def": "A small container used to store pens and pencils.", "ex": "My new *** has a zipper." },
-              {"id": 12, "word": "Textbook", "emoji": "📘", "def": "A book used as a standard work for the study of a subject.", "ex": "Open your math *** to page fifty." },
-              {"id": 13, "word": "Borrow", "emoji": "🤝", "def": "To take and use something with the intention of returning it.", "ex": "Can I *** your pencil?" },
-              {"id": 14, "word": "Swim underwater", "emoji": "🤿", "def": "To propel oneself beneath the surface of the water.", "ex": "You must learn to *** to explore the reef." },
-              {"id": 15, "word": "Ride a bike", "emoji": "🚲", "def": "To travel on a two-wheeled vehicle powered by pedaling.", "ex": "I usually *** to school." },
-              {"id": 16, "word": "Play rugby", "emoji": "🏉", "def": "To participate in a team game played with an oval ball.", "ex": "We are going to *** this weekend." },
-              {"id": 17, "word": "Go snowboarding", "emoji": "🏂", "def": "To descend a snow-covered slope on a snowboard.", "ex": "They love to *** in the Alps." },
-              {"id": 18, "word": "Go sailing", "emoji": "⛵", "def": "To travel on water using primarily wind power.", "ex": "Let's *** across the lake today." },
-              {"id": 19, "word": "Go surfing", "emoji": "🏄", "def": "To ride on a wave towards the shore while standing.", "ex": "He wakes up early to ***." },
-              {"id": 20, "word": "Go cycling", "emoji": "🚴", "def": "To ride a bicycle for recreation or sport.", "ex": "We *** through the forest trails." },
-              {"id": 21, "word": "Sleigh", "emoji": "🛷", "def": "A vehicle on runners for conveying loads over snow.", "ex": "Santa's *** is pulled by reindeer." },
-              {"id": 22, "word": "Tree", "emoji": "🌲", "def": "A woody perennial plant, typically having a single trunk.", "ex": "The oak *** provides great shade." },
-              {"id": 23, "word": "Star", "emoji": "⭐", "def": "A fixed luminous point in the night sky.", "ex": "Look at that bright ***." },
-              {"id": 24, "word": "Lights", "emoji": "💡", "def": "Equipment or fixtures that produce illumination.", "ex": "Turn off the *** when you leave." },
-              {"id": 25, "word": "Ornament", "emoji": "🎄", "def": "A thing used to make something look more attractive.", "ex": "Hang that *** on the highest branch." },
-              {"id": 26, "word": "Candles", "emoji": "🕯️", "def": "Cylinders of wax enclosing a wick for burning.", "ex": "Blow out the *** on your birthday cake." },
-              {"id": 27, "word": "Postcard", "emoji": "🎴", "def": "A card for sending a message by mail without an envelope.", "ex": "She sent me a beautiful *** from Paris." },
-              {"id": 28, "word": "Presents", "emoji": "🎁", "def": "Things given to someone as a gift.", "ex": "Place all the *** under the tree." },
-              {"id": 29, "word": "Bells", "emoji": "🔔", "def": "Hollow metal objects that sound a musical note when struck.", "ex": "The church *** ring every hour." },
-              {"id": 30, "word": "Wreath", "emoji": "🌿", "def": "An arrangement of flowers or leaves fastened in a ring.", "ex": "Hang the *** on the front door." },
-              {"id": 31, "word": "Bipedalism", "emoji": "🚶", "def": "The condition of using only two feet for locomotion.", "ex": "Human evolution is marked by ***." },
-              {"id": 32, "word": "Australopithecus", "emoji": "🐒", "def": "An extinct genus of hominins that lived in Africa.", "ex": "Lucy is a famous *** fossil." },
-              {"id": 33, "word": "Muscles", "emoji": "💪", "def": "A band or bundle of fibrous tissue in a body.", "ex": "He worked out to build his ***." },
-              {"id": 34, "word": "Sporulation", "emoji": "🍄", "def": "The process of forming spores.", "ex": "The fungus reproduces by ***." },
-              {"id": 35, "word": "Bipartition", "emoji": "➗", "def": "Division into two parts.", "ex": "The cell multiplies by simple ***." },
-              {"id": 36, "word": "Zygote", "emoji": "🔬", "def": "A diploid cell resulting from the fusion of two gametes.", "ex": "The *** divides rapidly after fertilization." },
-              {"id": 37, "word": "Tissue", "emoji": "🥩", "def": "Material of which animals or plants are made.", "ex": "Muscle *** contracts to produce movement." },
-              {"id": 38, "word": "Phototaxis", "emoji": "☀️", "def": "The movement of an organism in response to light.", "ex": "Moths display positive ***." },
-              {"id": 39, "word": "Chemotaxis", "emoji": "🧪", "def": "Movement of an organism in response to a chemical gradient.", "ex": "Bacteria use *** to find food." },
-              {"id": 40, "word": "Wrong", "emoji": "✖️", "def": "Not correct or true.", "ex": "Your calculation is completely ***." },
-              {"id": 41, "word": "Badminton", "emoji": "🏸", "def": "A game with rackets and a shuttlecock.", "ex": "We play *** every Thursday." },
-              {"id": 42, "word": "Basketball", "emoji": "🏀", "def": "A team game where goals are scored through a hoop.", "ex": "He loves shooting hoops in ***." },
-              {"id": 43, "word": "Hockey", "emoji": "🏒", "def": "A contact sport played with sticks and a puck or ball.", "ex": "Ice *** is huge in Canada." },
-              {"id": 44, "word": "Gilli-danda", "emoji": "🏏", "def": "An amateur sport popular in rural areas of South Asia.", "ex": "The kids played *** in the dirt road." },
-              {"id": 45, "word": "Routine", "emoji": "📅", "def": "A sequence of actions regularly followed.", "ex": "My morning *** includes jogging." },
-              {"id": 46, "word": "Shopping", "emoji": "🛍️", "def": "The purchasing of goods from stores.", "ex": "Let's go *** for clothes." },
-              {"id": 47, "word": "Wearing", "emoji": "👗", "def": "To have something on one's body as clothing.", "ex": "She is *** a red dress today." },
-              {"id": 48, "word": "Cabbage", "emoji": "🥬", "def": "A plant with thick green or purple leaves eaten as a vegetable.", "ex": "I made a salad using fresh ***." },
-              {"id": 49, "word": "Ecosystem", "emoji": "🌍", "def": "A biological community of interacting organisms.", "ex": "The rainforest is a fragile ***." },
-              {"id": 50, "word": "Microspheres", "emoji": "💧", "def": "Microscopic spherical particles.", "ex": "Scientists synthesized protein *** in the lab." },
-              {"id": 51, "word": "Chromosomes", "emoji": "🧬", "def": "Structures carrying genetic information.", "ex": "Humans have 46 *** in their cells." },
-              {"id": 52, "word": "Cytoplasm", "emoji": "🦠", "def": "The material within a living cell, excluding the nucleus.", "ex": "Organelles float within the ***." },
-              {"id": 53, "word": "Mitochondria", "emoji": "⚡", "def": "The powerhouse of the cell.", "ex": "*** produce the cell's energy." },
-              {"id": 54, "word": "Endoplasmic", "emoji": "🕸️", "def": "Relating to a network of membranous tubules in the cytoplasm.", "ex": "The rough *** reticulum contains ribosomes." },
-              {"id": 55, "word": "Cryopreservation", "emoji": "❄️", "def": "The process of storing cells at very low temperatures.", "ex": "The scientist used *** for the stem cells." },
-              {"id": 56, "word": "Neurons", "emoji": "🧠", "def": "Specialized cells transmitting nerve impulses.", "ex": "*** transmit messages to the brain." },
-              {"id": 57, "word": "Justify", "emoji": "⚖️", "def": "To show or prove to be right or reasonable.", "ex": "You must *** your actions to the jury." },
-              {"id": 58, "word": "Ensure", "emoji": "✅", "def": "To make certain that something shall occur.", "ex": "Please *** all doors are locked." },
-              {"id": 59, "word": "Smooth", "emoji": "🪨", "def": "Having an even and regular surface.", "ex": "The stone was perfectly ***." },
-              {"id": 60, "word": "Universal", "emoji": "🌌", "def": "Done by all people or things in the world.", "ex": "Music is a *** language." },
-              {"id": 61, "word": "Chloroplast", "emoji": "🌱", "def": "Structure in which photosynthesis takes place.", "ex": "The *** gives plants their green color." },
-              {"id": 62, "word": "Cytoskeleton", "emoji": "🦴", "def": "Network of protein filaments in the cytoplasm.", "ex": "The *** provides cellular structural support." },
-              {"id": 63, "word": "Flagellum", "emoji": "🪱", "def": "Threadlike structure that enables bacteria to swim.", "ex": "The sperm cell uses its *** to move." },
-              {"id": 64, "word": "Mammals", "emoji": "🦁", "def": "Warm-blooded vertebrate animals with hair or fur.", "ex": "Whales are marine ***." },
-              {"id": 65, "word": "Amphibians", "emoji": "🐸", "def": "Cold-blooded vertebrates like frogs and toads.", "ex": "Frogs are semi-aquatic ***." },
-              {"id": 66, "word": "Endothermic", "emoji": "🌡️", "def": "Capable of internal generation of heat.", "ex": "Birds and mammals are *** animals." },
-              {"id": 67, "word": "Locomotion", "emoji": "🏃", "def": "Movement or the ability to move from place to place.", "ex": "Flight is a fast form of ***." },
-              {"id": 68, "word": "Autotroph", "emoji": "🌻", "def": "An organism that forms its own nutrition.", "ex": "A plant is an ***." },
-              {"id": 69, "word": "Photosynthesis", "emoji": "🌞", "def": "The process by which plants use sunlight to make food.", "ex": "*** converts sunlight into energy." },
-              {"id": 70, "word": "Harvest", "emoji": "🌾", "def": "The process or period of gathering in crops.", "ex": "Autumn is the time for the wheat ***." },
-              {"id": 71, "word": "Sowing", "emoji": "🌱", "def": "To plant seed for growth.", "ex": "Spring is the best time for *** seeds." },
-              {"id": 72, "word": "Livestock", "emoji": "🐄", "def": "Farm animals regarded as an asset.", "ex": "The farmer raises cattle and other ***." },
-              {"id": 73, "word": "Shepherd", "emoji": "🐑", "def": "A person who tends and rears sheep.", "ex": "The *** guided his flock home." },
-              {"id": 74, "word": "Domestication", "emoji": "🐕", "def": "The process of taming an animal.", "ex": "The *** of wolves led to dogs." },
-              {"id": 75, "word": "Cuneiform", "emoji": "🧮", "def": "Characters used in ancient writing systems of Mesopotamia.", "ex": "They wrote records in *** on clay tablets." },
-              {"id": 76, "word": "Pictographs", "emoji": "🖼️", "def": "A pictorial symbol for a word or phrase.", "ex": "Ancient people carved *** on cave walls." },
-              {"id": 77, "word": "Ideogram", "emoji": "🔣", "def": "A written character symbolizing an idea.", "ex": "Chinese writing uses the *** extensively." },
-              {"id": 78, "word": "Papyrus", "emoji": "📜", "def": "Material prepared in ancient Egypt from a water plant.", "ex": "The ancient text was preserved on ***." },
-              {"id": 79, "word": "Scribes", "emoji": "✍️", "def": "People who copies out documents by hand.", "ex": "The *** worked tirelessly in the temple." },
-              {"id": 80, "word": "civilization", "emoji": "🏛️", "def": "Advanced stage of human social development.", "ex": "The Mayan *** was highly advanced." },
-              {"id": 81, "word": "Wondering", "emoji": "🤔", "def": "To desire to know something.", "ex": "I was *** if you wanted to join me." },
-              {"id": 82, "word": "Reminds", "emoji": "💭", "def": "To cause someone to remember something.", "ex": "This song *** me of my childhood." },
-              {"id": 83, "word": "Night", "emoji": "🌙", "def": "The period of darkness in each 24 hours.", "ex": "The stars shine brightest at ***." },
-              {"id": 84, "word": "Pain", "emoji": "🤕", "def": "Physical suffering or discomfort.", "ex": "He felt a sharp *** in his arm." },
-              {"id": 85, "word": "Imply", "emoji": "🤫", "def": "To strongly suggest the truth of something.", "ex": "Are you trying to *** that it was my fault?" },
-              {"id": 86, "word": "Giving", "emoji": "🤝", "def": "To formally provide something.", "ex": "Thank you for *** me a chance." },
-              {"id": 87, "word": "Having", "emoji": "🤲", "def": "To possess, own, or hold.", "ex": "We are *** a wonderful time." },
-              {"id": 88, "word": "Soaking", "emoji": "🧼", "def": "Extremely wet.", "ex": "My shoes were completely *** wet." },
-              {"id": 89, "word": "Towel", "emoji": "🛀", "def": "Absorbent cloth used for drying.", "ex": "Grab a dry *** after swimming." },
-              {"id": 90, "word": "Thank you", "emoji": "🙌", "def": "Expression of gratitude.", "ex": "Please tell them I said ***." },
-              {"id": 91, "word": "Clouds", "emoji": "☁️", "def": "Mass of condensed water vapor in the sky.", "ex": "The sky was filled with dark ***." },
-              {"id": 92, "word": "Drinking", "emoji": "🥤", "def": "To take a liquid into the mouth and swallow.", "ex": "He is *** a glass of cold water." },
-              {"id": 93, "word": "Above", "emoji": "⬆️", "def": "In extended space over something.", "ex": "The bird flew high *** the trees." },
-              {"id": 94, "word": "Never mind", "emoji": "🙅", "def": "Used to disregard a previous statement.", "ex": "If you can't come, just ***." },
-              {"id": 95, "word": "Wouldn't", "emoji": "👎", "def": "Contraction of would not.", "ex": "I *** do that if I were you." },
-              {"id": 96, "word": "By the way", "emoji": "💬", "def": "Incidentally; introducing a new topic.", "ex": "And ***, nice to meet you." },
-              {"id": 97, "word": "Fall down", "emoji": "🍂", "def": "To lose balance and fall.", "ex": "Be careful not to *** on the ice." },
-              {"id": 98, "word": "Whenever", "emoji": "🕒", "def": "At whatever time.", "ex": "Call me *** you are ready." },
-              {"id": 99, "word": "Wherever", "emoji": "🗺️", "def": "In or to whatever place.", "ex": "I will follow you *** you go." },
-              {"id": 100, "word": "Whoever", "emoji": "👤", "def": "The person or people who.", "ex": "*** ate my cake is in big trouble." },
-              {"id": 101, "word": "Saxophone", "emoji": "🎷", "def": "A metal wind instrument with a single reed.", "ex": "He played a smooth jazz solo on his ***." },
-              {"id": 102, "word": "Keyboard", "emoji": "🎹", "def": "A panel of keys on a musical instrument or computer.", "ex": "She plays the electronic *** beautifully." },
-              {"id": 103, "word": "Lessons", "emoji": "📖", "def": "A period of learning or teaching.", "ex": "I take piano *** every Tuesday." },
-              {"id": 104, "word": "Conversation", "emoji": "🗣️", "def": "A talk between two or more people.", "ex": "We had an interesting *** about science." },
-              {"id": 105, "word": "Terrible", "emoji": "😨", "def": "Extremely bad or serious.", "ex": "That was a *** mistake." },
-              {"id": 106, "word": "Mobile phone", "emoji": "📱", "def": "A portable telephone.", "ex": "He left his *** at home." },
-              {"id": 107, "word": "Lovely", "emoji": "🌸", "def": "Exquisitely beautiful.", "ex": "What a *** bouquet of flowers." },
-              {"id": 108, "word": "Wedding", "emoji": "💍", "def": "A marriage ceremony.", "ex": "The *** took place in a historic chapel." },
-              {"id": 109, "word": "Barbecue", "emoji": "🍖", "def": "Meal cooked outdoors on a rack over fire.", "ex": "We are having a backyard *** this weekend." },
-              {"id": 110, "word": "Nervous", "emoji": "😰", "def": "Easily agitated or anxious.", "ex": "He was very *** before the exam." },
-              {"id": 111, "word": "Agree", "emoji": "👍", "def": "To have the same opinion.", "ex": "I completely *** with your statement." },
-              {"id": 112, "word": "Disagree", "emoji": "👎", "def": "To have a different opinion.", "ex": "It is okay to respectfully ***." },
-              {"id": 113, "word": "Regards", "emoji": "💌", "def": "Best wishes used in greetings.", "ex": "Give my warmest *** to your family." },
-              {"id": 114, "word": "Pounds", "emoji": "💷", "def": "A unit of weight or currency.", "ex": "This item costs ten British ***." },
-              {"id": 115, "word": "Advice", "emoji": "🧠", "def": "Guidance offered for future action.", "ex": "Can I give you a piece of ***?" },
-              {"id": 116, "word": "Touched", "emoji": "🥹", "def": "Causing feelings of sympathy or gratitude.", "ex": "She was deeply *** by their kindness." },
-              {"id": 117, "word": "Games", "emoji": "🎮", "def": "Forms of play or sport.", "ex": "We played video *** all night long." },
-              {"id": 118, "word": "Always", "emoji": "♾️", "def": "At all times.", "ex": "I will *** love you." },
-              {"id": 119, "word": "Burnt", "emoji": "🔥", "def": "Damaged or destroyed by fire.", "ex": "The toast is completely ***." },
-              {"id": 120, "word": "Myself", "emoji": "🙋", "def": "Used by a speaker to refer to themselves.", "ex": "I made this entire cake by ***." },
-              {"id": 121, "word": "Looking", "emoji": "👀", "def": "Directing one's gaze toward something.", "ex": "I am *** for my missing keys." },
-              {"id": 122, "word": "Waiting", "emoji": "⏳", "def": "Stay until something else happens.", "ex": "I am eagerly *** for the bus." },
-              {"id": 123, "word": "Watching", "emoji": "📺", "def": "Look at or observe attentively.", "ex": "We are *** the new movie right now." },
-              {"id": 124, "word": "Burning", "emoji": "📛", "def": "On fire.", "ex": "The ancient library was *** to the ground." },
-              {"id": 125, "word": "Recorded", "emoji": "⏺️", "def": "Set down in writing or permanent form.", "ex": "He *** his favorite song on tape." },
-              {"id": 126, "word": "Portraits", "emoji": "🖼️", "def": "Paintings or drawings of people.", "ex": "The museum gallery was filled with royal ***." },
-              {"id": 127, "word": "Suffering", "emoji": "🤕", "def": "Undergoing pain, distress, or hardship.", "ex": "Their goal is to ease human ***." },
-              {"id": 128, "word": "Inclusions", "emoji": "📥", "def": "The state of being included within a group.", "ex": "The mineral had fascinating crystal ***." },
-              {"id": 129, "word": "Translation", "emoji": "🌍", "def": "Converting text from one language to another.", "ex": "The English *** of the book is fantastic." },
-              {"id": 130, "word": "Digestion", "emoji": "🍽️", "def": "Breaking down food by mechanical action.", "ex": "Drinking water aids regular ***." },
-              {"id": 131, "word": "Breaking down", "emoji": "📉", "def": "To separate into constituent parts.", "ex": "Enzymes are responsible for *** your food." },
-              {"id": 132, "word": "Sacks", "emoji": " potatoes", "def": "Large bags used for storing goods.", "ex": "They bought three large *** of potatoes." },
-              {"id": 133, "word": "Signals", "emoji": "🚥", "def": "Gestures or actions used to convey information.", "ex": "The traffic *** stopped working during the storm." },
-              {"id": 134, "word": "Mushrooms", "emoji": "🍄", "def": "Fungal growth with a domed cap.", "ex": "We picked wild *** in the forest." },
-              {"id": 135, "word": "Reparation", "emoji": "🛠️", "def": "The making of amends for a wrong.", "ex": "The country demanded immediate *** for the damages." },
-              {"id": 136, "word": "Optical", "emoji": "👓", "def": "Relating to sight or light.", "ex": "The prism creates a fascinating *** illusion." },
-              {"id": 137, "word": "Distinguish", "emoji": "🔍", "def": "To recognize or treat as different.", "ex": "It is hard to *** the twins from each other." },
-              {"id": 138, "word": "Inequalities", "emoji": "⚖️", "def": "Difference in size or circumstances.", "ex": "Social *** led to public protests." },
-              {"id": 139, "word": "Lead", "emoji": "🛤️", "def": "To cause to go with one.", "ex": "The guide will *** us through the mountains." },
-              {"id": 140, "word": "Stages", "emoji": "🪜", "def": "Steps in a process or development.", "ex": "There are four primary *** in this lifecycle." },
-              {"id": 141, "word": "Morula", "emoji": "🦠", "def": "A solid ball of cells from an ovum.", "ex": "The zygote divides to become a ***." },
-              {"id": 142, "word": "Blastula", "emoji": "🔵", "def": "An embryo at the early stage of a hollow ball of cells.", "ex": "The morula develops into a ***." },
-              {"id": 143, "word": "Gastrulation", "emoji": "🧬", "def": "Phase in embryonic development of animals.", "ex": "Cell migration accelerates during ***." },
-              {"id": 144, "word": "Implantation", "emoji": "🪺", "def": "Attachment of the embryo to the uterus.", "ex": "Pregnancy officially begins after exact ***." },
-              {"id": 145, "word": "Chorion", "emoji": "👶", "def": "Membrane surrounding an embryo.", "ex": "The *** contributes to placenta formation." },
-              {"id": 146, "word": "Conception", "emoji": "🎇", "def": "The action of conceiving a child.", "ex": "Their first child was born nine months after ***." },
-              {"id": 147, "word": "Pregnancy", "emoji": "🤰", "def": "The condition of being pregnant.", "ex": "She is in the second month of her ***." },
-              {"id": 148, "word": "Spermatogenesis", "emoji": "🔬", "def": "The development of mature spermatozoa.", "ex": "*** occurs in the male reproductive system." },
-              {"id": 149, "word": "Fallopian tubes", "emoji": "🧬", "def": "Tubes along which eggs travel from ovaries.", "ex": "Fertilization generally occurs inside the ***." },
-              {"id": 150, "word": "Intercourse", "emoji": "❤️", "def": "Communication or dealings between people.", "ex": "Their social *** was always respectful." },
-              {"id": 151, "word": "Inherits", "emoji": "👨‍👩‍👦", "def": "Receive property or a title as an heir.", "ex": "He *** his grandfather's vast estate." },
-              {"id": 152, "word": "Embryogenesis", "emoji": "🌱", "def": "The development of an embryo.", "ex": "*** involves cellular differentiation." },
-              {"id": 153, "word": "Fetus", "emoji": "👼", "def": "An unborn offspring of a mammal.", "ex": "The ultrasound showed a healthy ***." },
-              {"id": 154, "word": "Resembles", "emoji": "👥", "def": "To have qualities in common with.", "ex": "He closely *** his older brother." },
-              {"id": 155, "word": "Blastomeres", "emoji": "🦠", "def": "Cells formed by cleavage of a fertilized ovum.", "ex": "Early division creates identical ***." },
-              {"id": 156, "word": "Cavity", "emoji": "🕳️", "def": "An empty space within a solid object.", "ex": "The dentist found a small *** in my tooth." },
-              {"id": 157, "word": "Ectoderm", "emoji": "🧱", "def": "The outermost layer of an embryo.", "ex": "Skin eventually develops from the ***." },
-              {"id": 158, "word": "Mesoderm", "emoji": "🧬", "def": "The middle layer of an embryo.", "ex": "Muscles form from the embryonic ***." },
-              {"id": 159, "word": "Progesterone", "emoji": "🧪", "def": "A hormone released during pregnancy.", "ex": "*** levels rise during early pregnancy." },
-              {"id": 160, "word": "Stores", "emoji": "🏪", "def": "Retail establishments selling items.", "ex": "We need to visit grocery *** for supplies." },
-              {"id": 161, "word": "Psychology", "emoji": "🧠", "def": "Scientific study of the human mind.", "ex": "She earned her university degree in ***." },
-              {"id": 162, "word": "Honest", "emoji": "😇", "def": "Free of deceit; sincere.", "ex": "Please give me your completely *** opinion." },
-              {"id": 163, "word": "Enough", "emoji": "👌", "def": "As much as required.", "ex": "We simply do not have *** food." },
-              {"id": 164, "word": "Daughter", "emoji": "👧", "def": "A female child.", "ex": "Her youngest *** just started kindergarten." },
-              {"id": 165, "word": "Cough", "emoji": "🤧", "def": "Expel air from the lungs abruptly.", "ex": "He had a terrible dry ***." },
-              {"id": 166, "word": "Government", "emoji": "🏛️", "def": "The governing body of a nation.", "ex": "The national *** passed a new law." },
-              {"id": 167, "word": "Millennium", "emoji": "🎆", "def": "A period of a thousand years.", "ex": "The turn of the *** was heavily celebrated." },
-              {"id": 168, "word": "Questionnaire", "emoji": "📝", "def": "A set of questions for research.", "ex": "Please fill out this long ***." },
-              {"id": 169, "word": "Maintenance", "emoji": "🔧", "def": "Keeping something in good condition.", "ex": "Car *** is essential for longevity." },
-              {"id": 170, "word": "Disagreeing", "emoji": "😠", "def": "Expressing a different opinion.", "ex": "They are always *** over politics." },
-              {"id": 171, "word": "Subway", "emoji": "🚇", "def": "An underground electric railroad.", "ex": "We took the *** to downtown." },
-              {"id": 172, "word": "Nickname", "emoji": "🤭", "def": "A familiar or humorous name.", "ex": "My childhood *** was Speedy." },
-              {"id": 173, "word": "Pronunciation", "emoji": "🗣️", "def": "The way in which a word is pronounced.", "ex": "English has a difficult ***." },
-              {"id": 174, "word": "Relationships", "emoji": "🤝", "def": "Ways in which people are connected.", "ex": "Building healthy *** takes patience." },
-              {"id": 175, "word": "Necessary", "emoji": "❗", "def": "Required or needed.", "ex": "Water is absolutely *** for human survival." },
-              {"id": 176, "word": "Embarrassed", "emoji": "😳", "def": "Feeling self-conscious or ashamed.", "ex": "He felt completely *** by his mistake." },
-              {"id": 177, "word": "Schedule", "emoji": "📅", "def": "A plan for carrying out a process.", "ex": "My daily *** is packed full today." },
-              {"id": 178, "word": "Foreign", "emoji": "🛂", "def": "Of or from another country.", "ex": "Learning a new *** language is fun." },
-              {"id": 179, "word": "Privilege", "emoji": "🏅", "def": "A special right or advantage.", "ex": "Driving a car is a ***, not a right." },
-              {"id": 180, "word": "Leisure", "emoji": "🏖️", "def": "Use of free time for enjoyment.", "ex": "I enjoy reading in my *** time." },
-              {"id": 181, "word": "Rhythm", "emoji": "🥁", "def": "A strong, regular, repeated pattern of sound.", "ex": "She danced perfectly to the musical ***." },
-              {"id": 182, "word": "Separate", "emoji": "✂️", "def": "Forming or viewed as a unit apart.", "ex": "Keep the trash *** from the recycling." },
-              {"id": 183, "word": "Twice", "emoji": "✌️", "def": "Two times.", "ex": "I have visited London exactly *** in my life." },
-              {"id": 184, "word": "Humble", "emoji": "😌", "def": "Having a modest estimate of one's importance.", "ex": "He remained *** despite his fame." },
-              {"id": 185, "word": "Weird", "emoji": "👽", "def": "Supernatural or uncanny.", "ex": "That was a really *** and strange movie." },
-              {"id": 186, "word": "Achieve", "emoji": "🏆", "def": "Successfully reach by effort or skill.", "ex": "You can successfully *** your wildest dreams." },
-              {"id": 187, "word": "Believe", "emoji": "🌠", "def": "Accept that something is true.", "ex": "I truly *** that things will improve." },
-              {"id": 188, "word": "Conscience", "emoji": "⚖️", "def": "Inner feeling acting as a guide to right or wrong.", "ex": "His guilty *** kept him up all night." },
-              {"id": 189, "word": "Definite", "emoji": "✔️", "def": "Clearly stated or decided.", "ex": "We need a clear and *** answer." },
-              {"id": 190, "word": "Environment", "emoji": "🌲", "def": "Surroundings in which one operates.", "ex": "We must protect our natural ***." },
-              {"id": 191, "word": "Guarantee", "emoji": "🤝", "def": "A formal promise or assurance.", "ex": "I can personally *** the quality." },
-              {"id": 192, "word": "Immediately", "emoji": "⚡", "def": "At once; instantly.", "ex": "Please come over here right ***." },
-              {"id": 193, "word": "Jewellery", "emoji": "💎", "def": "Personal ornaments like necklaces.", "ex": "She wore expensive diamond *** to the ball." },
-              {"id": 194, "word": "Knowledge", "emoji": "📚", "def": "Information and skills acquired through education.", "ex": "Books increase your ***." },
-              {"id": 195, "word": "Library", "emoji": "🏛️", "def": "A building containing collections of books.", "ex": "I studied quietly in the public ***." },
-              {"id": 196, "word": "Occurred", "emoji": "💥", "def": "To happen or take place.", "ex": "The accident *** late last night." },
-              {"id": 197, "word": "Parallel", "emoji": "⏸️", "def": "Side by side and having the same distance.", "ex": "The two railroad tracks run ***." },
-              {"id": 198, "word": "Restaurant", "emoji": "🍽️", "def": "A place where people pay to eat cooked meals.", "ex": "We ate out at a new ***." },
-              {"id": 199, "word": "Successfull", "emoji": "🎉", "def": "Accomplishing an aim (spelled successful).", "ex": "The business summit was greatly ***." },
-              {"id": 200, "word": "Association", "emoji": "🤝", "def": "A group of people organized for a purpose.", "ex": "He joined the local neighborhood ***." },
-              {"id": 201, "word": "Thumb", "emoji": "👍", "def": "The short, thick first digit of the hand.", "ex": "He manually hit his *** with a hammer." },
-              {"id": 202, "word": "Village", "emoji": "🏘️", "def": "A group of houses in a rural area.", "ex": "They live in a tiny coastal ***." },
-              {"id": 203, "word": "Written", "emoji": "✍️", "def": "Expressed in writing.", "ex": "The rules are strictly *** down on paper." },
-              {"id": 204, "word": "Acceptable", "emoji": "✅", "def": "Able to be agreed on; suitable.", "ex": "Your formal proposal is perfectly ***." },
-              {"id": 205, "word": "Acquire", "emoji": "🛒", "def": "Buy or obtain for oneself.", "ex": "The company plans to *** its rival." },
-              {"id": 206, "word": "beginning", "emoji": "🏁", "def": "The point at which something starts.", "ex": "That was definitely the *** of the end." },
-              {"id": 207, "word": "Appropriate", "emoji": "👌", "def": "Suitable or proper in the circumstances.", "ex": "Wear *** formal attire for the interview." },
-              {"id": 208, "word": "Argument", "emoji": "🗣️", "def": "An exchange of diverging views.", "ex": "They had a huge *** yesterday." },
-              {"id": 209, "word": "Calendar", "emoji": "📆", "def": "A chart showing the days and months.", "ex": "Mark the date on your ***." },
-              {"id": 210, "word": "Ceiling", "emoji": "🏠", "def": "The upper interior surface of a room.", "ex": "The fly landed on the ***." },
-              {"id": 211, "word": "Cemetery", "emoji": "🪦", "def": "A burial ground; a graveyard.", "ex": "The old *** is haunted." },
-              {"id": 212, "word": "Committee", "emoji": "👔", "def": "A group appointed for a function.", "ex": "The *** voted against the proposal." },
-              {"id": 213, "word": "Completely", "emoji": "💯", "def": "Totally; utterly.", "ex": "I *** agree with you." },
-              {"id": 214, "word": "Conscious", "emoji": "🧠", "def": "Aware of one's surroundings.", "ex": "The patient was finally fully ***." },
-              {"id": 215, "word": "Convenient", "emoji": "🚗", "def": "Fitting in well with one's needs.", "ex": "The store is very ***." },
-              {"id": 216, "word": "Criticism", "emoji": "📉", "def": "Disapproval of something based on faults.", "ex": "Constructive *** can help you improve." },
-              {"id": 217, "word": "Curiosity", "emoji": "🐱", "def": "A strong desire to learn something.", "ex": "*** killed the cat." },
-              {"id": 218, "word": "Desperate", "emoji": "😫", "def": "Hopeless sense that a situation is bad.", "ex": "They were *** for water." },
-              {"id": 219, "word": "Develop", "emoji": "📈", "def": "Grow or become more mature.", "ex": "Seedlings *** into trees." },
-              {"id": 220, "word": "Different", "emoji": "🧩", "def": "Not the same as another.", "ex": "We have very *** tastes." },
-              {"id": 221, "word": "Disaster", "emoji": "🌪️", "def": "A sudden event that causes great damage.", "ex": "The earthquake was a ***." },
-              {"id": 222, "word": "Drums", "emoji": "🥁", "def": "A percussion instrument struck with sticks.", "ex": "He played the *** in the band." },
-              {"id": 223, "word": "Magazines", "emoji": "📰", "def": "Periodical publications with articles.", "ex": "She reads many fashion ***." },
-              {"id": 224, "word": "Extinguisher", "emoji": "🧯", "def": "Device used to control small fires.", "ex": "Grab the fire ***!" },
-              {"id": 225, "word": "Blanket", "emoji": "🛌", "def": "A piece of cloth used as a bed covering.", "ex": "Pull up the warm ***." },
-              {"id": 226, "word": "Costume", "emoji": "🎭", "def": "Clothes typical of a particular period.", "ex": "He wore a vampire *** for Halloween." },
-              {"id": 227, "word": "Sunglasses", "emoji": "🕶️", "def": "Glasses tinted to protect from sunlight.", "ex": "She wore dark ***." },
-              {"id": 228, "word": "Jumper", "emoji": "🧥", "def": "A knitted garment worn over the upper body.", "ex": "He wore a thick woolen ***." },
-              {"id": 229, "word": "Scarf", "emoji": "🧣", "def": "Fabric worn around the neck or head.", "ex": "She wrapped a *** around her neck." },
-              {"id": 230, "word": "Trainers", "emoji": "👟", "def": "A soft sports shoe casual wear.", "ex": "He bought new running ***." },
-              {"id": 231, "word": "Gloves", "emoji": "🧤", "def": "Hand covering worn for protection from cold.", "ex": "Put your *** on." },
-              {"id": 232, "word": "Socks", "emoji": "🧦", "def": "A garment for the foot and lower leg.", "ex": "He lost one of his ***." },
-              {"id": 233, "word": "Suit", "emoji": "🕴️", "def": "Set of outer clothes of the same fabric.", "ex": "He wore a sharp tailored ***." },
-              {"id": 234, "word": "Jacket", "emoji": "🧥", "def": "Outer garment extending to the waist.", "ex": "Zip up your warm leather ***." },
-              {"id": 235, "word": "Coat", "emoji": "🧥", "def": "Outer garment worn outdoors with sleeves.", "ex": "He hung his winter *** in the closet." },
-              {"id": 236, "word": "Trousers", "emoji": "👖", "def": "Outer garment covering waist to ankles.", "ex": "He ironed his formal ***." },
-              {"id": 237, "word": "Shirt", "emoji": "👕", "def": "A garment for the upper body.", "ex": "He spilled coffee on his white ***." },
-              {"id": 238, "word": "Skirt", "emoji": "👗", "def": "Woman's garment fastened around the waist.", "ex": "She wore a pleated ***." },
-              {"id": 239, "word": "Dress", "emoji": "👗", "def": "A one-piece garment for a woman.", "ex": "She wore an elegant ***." },
-              {"id": 240, "word": "Hat", "emoji": "🎩", "def": "A shaped covering for the head.", "ex": "Take off your *** inside." },
-              {"id": 241, "word": "Cap", "emoji": "🧢", "def": "A soft, flat hat without a brim.", "ex": "He spun his baseball *** backwards." },
-              {"id": 242, "word": "Belt", "emoji": "🪢", "def": "Strip of leather worn round the waist.", "ex": "Tighten your ***." },
-              {"id": 243, "word": "Tie", "emoji": "👔", "def": "String used for fastening something.", "ex": "He wore a patterned neck ***." },
-              {"id": 244, "word": "Boots", "emoji": "👢", "def": "Sturdy footwear covering the foot and ankle.", "ex": "Put your heavy snow *** on." },
-              {"id": 245, "word": "Sandals", "emoji": "🩴", "def": "Light shoe with straps attaching the sole.", "ex": "We wore *** to the beach." },
-              {"id": 246, "word": "Pyjamas", "emoji": "🛏️", "def": "Jacket and trousers for sleeping in.", "ex": "Put on your warm ***." },
-              {"id": 247, "word": "Uniform", "emoji": "👮", "def": "Distinctive clothing worn by members of an group.", "ex": "The guard wore a neat blue ***." },
-              {"id": 248, "word": "Leather", "emoji": "🐄", "def": "Material made from animal skin by tanning.", "ex": "She bought expensive *** shoes." },
-              {"id": 249, "word": "Rubber", "emoji": "🧽", "def": "A tough elastic polymeric substance.", "ex": "Tires are made of ***." },
-              {"id": 250, "word": "Silver", "emoji": "🥈", "def": "A precious shiny grayish-white metal.", "ex": "She polished the dull *** cutlery." },
-              {"id": 251, "word": "Concrete", "emoji": "🏗️", "def": "A heavy building material.", "ex": "The bridge is made of solid ***." },
-              {"id": 252, "word": "Porcelain", "emoji": "☕", "def": "White translucent ceramic; china.", "ex": "The antique doll had a *** face." },
-              {"id": 253, "word": "Styrofoam", "emoji": "📦", "def": "Expanded polystyrene used for containers.", "ex": "The cooler is made of light ***." },
-              {"id": 254, "word": "Cardboard", "emoji": "📦", "def": "Pasteboard or stiff paper.", "ex": "He packed the items into a *** box." },
-              {"id": 255, "word": "Cotton", "emoji": "☁️", "def": "A soft white fibrous substance.", "ex": "The t-shirt is 100% ***." },
-              {"id": 256, "word": "Aluminium", "emoji": "🥫", "def": "A light silvery-grey metal.", "ex": "Drink from cold *** cans." },
-              {"id": 257, "word": "Steel", "emoji": "⚔️", "def": "Hard gray alloy of iron and carbon.", "ex": "Superman is the Man of ***." },
-              {"id": 258, "word": "Graphite", "emoji": "✏️", "def": "Gray crystalline form of carbon.", "ex": "Pencil leads are made of ***." },
-              {"id": 259, "word": "Titanium", "emoji": "🔩", "def": "A hard silver-gray metal.", "ex": "The bike frame is made of ***." },
-              {"id": 260, "word": "Plastic", "emoji": "🛍️", "def": "Synthetic material made from polymers.", "ex": "Recycle used *** water bottles." },
-              {"id": 261, "word": "Glass", "emoji": "🪟", "def": "A hard, brittle substance, typically transparent or translucent.", "ex": "Handle the fragile *** with care." },
-              {"id": 262, "word": "Wood", "emoji": "🪵", "def": "The hard fibrous material that forms the main substance of a tree.", "ex": "We carved the bowl out of a single piece of ***." },
-              {"id": 263, "word": "Fabric", "emoji": "🧵", "def": "Cloth, typically produced by weaving or knitting textile fibers.", "ex": "This sofa is covered in a soft, durable ***." },
-              {"id": 264, "word": "Silk", "emoji": "🐛", "def": "A fine, strong, soft, lustrous fiber produced by certain insect larvae.", "ex": "The bride wore a gown made of pure white ***." },
-              {"id": 265, "word": "Wool", "emoji": "🐑", "def": "The fine soft curly or wavy hair forming the coat of a sheep.", "ex": "This heavy sweater is made from 100% organic ***." },
-              {"id": 266, "word": "Nylon", "emoji": "🧦", "def": "A tough, lightweight, elastic synthetic polymer.", "ex": "Her hiking backpack is made of water-resistant ***." },
-              {"id": 267, "word": "Cash", "emoji": "💵", "def": "Money in coins or notes, as distinct from checks.", "ex": "I don't have any ***, do you accept cards?" },
-              {"id": 268, "word": "Bill", "emoji": "🧾", "def": "A statement of the money owed for goods or services.", "ex": "The waiter brought the *** after we finished dinner." },
-              {"id": 269, "word": "Discount", "emoji": "🏷️", "def": "A deduction from the usual cost of something.", "ex": "Students are eligible for a 10% ***." },
-              {"id": 270, "word": "Price", "emoji": "💲", "def": "The amount of money expected in payment for something.", "ex": "The *** of gas has gone up recently." },
-              {"id": 271, "word": "Accommodate", "emoji": "🏨", "def": "To provide lodging or sufficient space for.", "ex": "The hotel can *** up to five hundred guests." },
-              {"id": 272, "word": "Amateur", "emoji": "🏌️", "def": "A person who engages in a pursuit on an unpaid basis.", "ex": "He is an *** photographer but his work is good." },
-              {"id": 273, "word": "Anonymous", "emoji": "🎭", "def": "Of unknown name.", "ex": "The charity received an *** donation." },
-              {"id": 274, "word": "Average", "emoji": "📊", "def": "A number expressing the typical value in a set of data.", "ex": "The *** temperature in April is twenty degrees." },
-              {"id": 275, "word": "Bureaucracy", "emoji": "🏢", "def": "A system of government with state officials.", "ex": "We had to deal with a lot of *** to get the permit." },
-              {"id": 276, "word": "Caribbean", "emoji": "🏝️", "def": "Relating to the region of the Caribbean Sea.", "ex": "We are planning a cruise to the ***." },
-              {"id": 277, "word": "Vaccination", "emoji": "💉", "def": "Treatment with a vaccine to produce immunity.", "ex": "Smallpox was eradicated through ***." },
-              {"id": 278, "word": "Chauffeur", "emoji": "🚘", "def": "A person employed to drive a private automobile.", "ex": "The celebrity was driven by a private ***." },
-              {"id": 279, "word": "Browser", "emoji": "🌐", "def": "A program for displaying HTML files.", "ex": "Which web *** are you using?" },
-              {"id": 280, "word": "Ketchup", "emoji": "🍅", "def": "A smooth sweet sauce made from tomatoes.", "ex": "I like to have *** with my fries." },
-              {"id": 281, "word": "Peanut Butter", "emoji": "🥜", "def": "A paste made from ground peanuts.", "ex": "I had a *** and jelly sandwich." },
-              {"id": 282, "word": "Water bottle", "emoji": "💧", "def": "A container used to hold water.", "ex": "Always carry a *** to stay hydrated." },
-              {"id": 283, "word": "Dilemma", "emoji": "⚖️", "def": "A situation where a difficult choice has to be made.", "ex": "He faced a moral ***." },
-              {"id": 284, "word": "Donut", "emoji": "🍩", "def": "A small fried cake of sweetened dough.", "ex": "I grabbed a *** on my way to work." },
-              {"id": 285, "word": "Architecture", "emoji": "🏛️", "def": "The practice of designing buildings.", "ex": "She is studying modern *** at university." },
-              {"id": 286, "word": "Entrepreneur", "emoji": "💼", "def": "A person who operates a business.", "ex": "He is a successful *** in the tech industry." },
-              {"id": 287, "word": "Existence", "emoji": "🌌", "def": "The fact or state of having objective reality.", "ex": "Scientists study the *** of the universe." },
-              {"id": 288, "word": "Facetious", "emoji": "😜", "def": "Treating serious issues with inappropriate humor.", "ex": "Stop being so *** and take this seriously!" },
-              {"id": 289, "word": "Fascination", "emoji": "✨", "def": "Intense interest.", "ex": "He has a lifelong *** with history." },
-              {"id": 290, "word": "Fluorescent", "emoji": "💡", "def": "Having or showing fluorescence.", "ex": "The office is lit by *** lights." },
-              {"id": 291, "word": "Fuchsia", "emoji": "🌸", "def": "A vivid purplish-red color.", "ex": "She wore a stunning *** dress." },
-              {"id": 292, "word": "Porcelain Clay", "emoji": "☕", "def": "A fine white clay used to make porcelain.", "ex": "The artist used *** to create the vase." },
-              {"id": 293, "word": "Harass", "emoji": "😠", "def": "Subject to aggressive pressure.", "ex": "It is illegal to *** coworkers." },
-              {"id": 294, "word": "Hierarchy", "emoji": "👑", "def": "A system where members are ranked according to status.", "ex": "There is a clear *** in the military." },
-              {"id": 295, "word": "Hypocrisy", "emoji": "🎭", "def": "Claiming to have moral standards to which one does not conform.", "ex": "It's pure *** to complain about trash when you litter." },
-              {"id": 296, "word": "Idiosyncrasy", "emoji": "🧩", "def": "Mode of behavior peculiar to an individual.", "ex": "One of his ***s is wearing mismatched socks." },
-              {"id": 297, "word": "Independent", "emoji": "🗽", "def": "Free from outside control.", "ex": "The country became *** in 1960." },
-              {"id": 298, "word": "Indispensable", "emoji": "❗", "def": "Absolutely necessary.", "ex": "A good dictionary is *** for a translator." },
-              {"id": 299, "word": "Intelligence", "emoji": "🧠", "def": "Ability to acquire and apply knowledge.", "ex": "Artificial *** is transforming our world." },
-              {"id": 300, "word": "Time Machine", "emoji": "🕰️", "def": "Machine capable of transporting a person through time.", "ex": "If I had a ***, I would visit the past." },
-              {"id": 301, "word": "Unobtrusive", "emoji": "🥷", "def": "Not conspicuous or attracting attention.", "ex": "The cameras were mounted in an *** way." },
-              {"id": 302, "word": "Disquietude", "emoji": "😟", "def": "A state of uneasiness or anxiety.", "ex": "A feeling of *** gripped the city." },
-              {"id": 303, "word": "Irresistible", "emoji": "🍩", "def": "Too attractive or tempting to be resisted.", "ex": "The smell of fresh bread was ***." },
-              {"id": 304, "word": "Commiseration", "emoji": "🤝", "def": "Expression of sympathy for another's misfortune.", "ex": "We offered our ***s to the family." },
-              {"id": 305, "word": "Hypochondriac", "emoji": "🤒", "def": "Anxious about one's health.", "ex": "He is a bit of a ***." },
-              {"id": 306, "word": "Physiognomy", "emoji": "👤", "def": "Facial features regarded as indicative of character.", "ex": "The detective studied the suspect’s ***." },
-              {"id": 307, "word": "Melancholy", "emoji": "😔", "def": "A feeling of pensive sadness.", "ex": "The rainy weather puts me in a state of ***." },
-              {"id": 308, "word": "Irreproachable", "emoji": "😇", "def": "Beyond criticism; faultless.", "ex": "Her conduct as a teacher has been ***." },
-              {"id": 309, "word": "Despondency", "emoji": "😩", "def": "A state of low spirits caused by loss of hope.", "ex": "He fell into deep *** after losing his job." },
-              {"id": 310, "word": "Countenance", "emoji": "🙂", "def": "A person's facial expression.", "ex": "His calm *** hid his true feelings." },
-              {"id": 311, "word": "Solitude", "emoji": "🧘", "def": "The state or situation of being alone.", "ex": "She enjoyed the *** of the mountains." },
-              {"id": 312, "word": "Apparition", "emoji": "👻", "def": "A ghost or ghostlike image of a person.", "ex": "He saw an *** in the old hallway." },
-              {"id": 313, "word": "Timidity", "emoji": "🐭", "def": "Lack of courage or confidence.", "ex": "Her *** prevented her from speaking up." },
-              {"id": 314, "word": "Quivering", "emoji": "〰️", "def": "Trembling or shaking.", "ex": "The puppy was *** with excitement." },
-              {"id": 315, "word": "Trepidation", "emoji": "😨", "def": "A feeling of fear about something that may happen.", "ex": "She approached the exam with ***." },
-              {"id": 316, "word": "Disconsolate", "emoji": "😭", "def": "Without consolation or comfort.", "ex": "He was *** after his loss." },
-              {"id": 317, "word": "Eloquence", "emoji": "🗣️", "def": "Fluent or persuasive speaking.", "ex": "The senator spoke with great ***." },
-              {"id": 318, "word": "Bashfulness", "emoji": "😳", "def": "Reluctance to draw attention to oneself.", "ex": "His *** made it hard to make friends." },
-              {"id": 319, "word": "Chivalrous", "emoji": "👔", "def": "Courteous and gallant behavior.", "ex": "It was very *** of him to offer his seat." },
-              {"id": 320, "word": "Phantasmagoria", "emoji": "🌀", "def": "Sequence of imaginary images like in a dream.", "ex": "The movie was a confusing ***." },
-              {"id": 321, "word": "Incoherent", "emoji": "😵", "def": "Expressed in a confusing way.", "ex": "His speech became *** when he was angry." },
-              {"id": 322, "word": "Rapturous", "emoji": "😍", "def": "Feeling great pleasure or enthusiasm.", "ex": "The singer received *** applause." },
-              {"id": 323, "word": "Inexplicable", "emoji": "❓", "def": "Unable to be explained.", "ex": "The disappearance was completely ***." },
-              {"id": 324, "word": "Reverie", "emoji": "💭", "def": "A state of being pleasantly lost in one's thoughts.", "ex": "He was jolted out of his *** by the phone." },
-              {"id": 325, "word": "Voluptuous", "emoji": "💃", "def": "Curvaceous and attractive.", "ex": "The actress was famous for her *** figure." },
-              {"id": 326, "word": "Effusion", "emoji": "⛲", "def": "An instance of giving off something.", "ex": "The sudden *** of gas caused an alarm." },
-              {"id": 327, "word": "Petrified", "emoji": "🗿", "def": "So frightened that one is unable to move.", "ex": "She was *** of spiders." },
-              {"id": 328, "word": "Imperturbable", "emoji": "🧘", "def": "Unable to be upset; calm.", "ex": "The captain remained *** in storms." },
-              {"id": 329, "word": "Transient", "emoji": "⏳", "def": "Lasting only for a short time.", "ex": "We are just *** visitors on this planet." },
-              {"id": 330, "word": "Ephemeral", "emoji": "🦋", "def": "Lasting for a very short time.", "ex": "Sunsets are beautiful but ***." },
-              {"id": 331, "word": "Capricious", "emoji": "🎢", "def": "Unaccountable changes of mood or behavior.", "ex": "The weather can be very ***." },
-              {"id": 332, "word": "Exuberant", "emoji": "🎉", "def": "Characterized by a lively energy.", "ex": "The children were *** when it snowed." },
-              {"id": 333, "word": "Somnambulist", "emoji": "😴", "def": "A person who sleepwalks.", "ex": "The *** walked down the hallway." },
-              {"id": 334, "word": "Insubstantial", "emoji": "🌫️", "def": "Lacking strength and solidity.", "ex": "The evidence was very ***." },
-              {"id": 335, "word": "Spectral", "emoji": "👻", "def": "Of or like a ghost.", "ex": "A *** light flickered in the house." },
-              {"id": 336, "word": "Dilapidated", "emoji": "🏚️", "def": "In a state of disrepair or ruin.", "ex": "They bought a *** old house." },
-              {"id": 337, "word": "Squalid", "emoji": "🗑️", "def": "Dirty and unpleasant result of poverty.", "ex": "The prisoners were kept in *** conditions." },
-              {"id": 338, "word": "Magnanimous", "emoji": "🤝", "def": "Generous or forgiving toward a rival.", "ex": "It was very *** of him to admit it." },
-              {"id": 339, "word": "Benevolence", "emoji": "😇", "def": "The quality of being well meaning; kindness.", "ex": "The king was known for his ***." },
-              {"id": 340, "word": "Candid", "emoji": "📸", "def": "Truthful and straightforward.", "ex": "She gave a *** interview." },
-              {"id": 341, "word": "Naïveté", "emoji": "👶", "def": "Lack of experience or judgment; innocence.", "ex": "His *** led him to believe everything." },
-              {"id": 342, "word": "Artless", "emoji": "🎨", "def": "Natural and simple.", "ex": "Her *** beauty charmed everyone." },
-              {"id": 343, "word": "Coquetry", "emoji": "😉", "def": "Flirtatious behavior or manner.", "ex": "She used her *** to get her way." },
-              {"id": 344, "word": "Caprice", "emoji": "🌬️", "def": "A sudden unaccountable change of behavior.", "ex": "He acted on a *** and bought a ticket." },
-              {"id": 345, "word": "Impetuous", "emoji": "🏃", "def": "Acting quickly without thought.", "ex": "It was an *** decision to quit." },
-              {"id": 346, "word": "Perturbation", "emoji": "😟", "def": "Anxiety; mental uneasiness.", "ex": "The news caused a deal of ***." },
-              {"id": 347, "word": "Vicissitude", "emoji": "🌊", "def": "A change of fortunes; typically unpleasant.", "ex": "Life is full of ***s." },
-              {"id": 348, "word": "Incessant", "emoji": "🔊", "def": "Continuing without pause or interruption.", "ex": "The *** noise was driving him crazy." },
-              {"id": 349, "word": "Lugubrious", "emoji": "😔", "def": "Looking or sounding sad and dismal.", "ex": "The room was filled with sad, *** sounds." },
-              {"id": 350, "word": "Pensive", "emoji": "🤔", "def": "Involving deep or serious thought.", "ex": "She sat by the window in a *** mood." },
-              {"id": 351, "word": "Enraptured", "emoji": "😍", "def": "Give intense pleasure or joy to.", "ex": "I was *** by the beautiful music." },
-              {"id": 352, "word": "Fervent", "emoji": "🔥", "def": "Having a passionate intensity.", "ex": "He is a *** supporter of human rights." },
-              {"id": 353, "word": "Prodigal", "emoji": "💸", "def": "Spending resources freely and recklessly.", "ex": "The *** son returned home." },
-              {"id": 354, "word": "Indigence", "emoji": "🏚️", "def": "A state of extreme poverty.", "ex": "Many are living in a state of ***." },
-              {"id": 355, "word": "Scrupulous", "emoji": "✅", "def": "Diligent and attentive to details.", "ex": "The auditor was very ***." },
-              {"id": 356, "word": "Fastidious", "emoji": "🧐", "def": "Very attentive to detail and accuracy.", "ex": "He is very *** about his appearance." },
-              {"id": 357, "word": "Ambiguous", "emoji": "🌫️", "def": "Open to more than one interpretation.", "ex": "The contract's wording was ***." },
-              {"id": 358, "word": "Equivocal", "emoji": "⚖️", "def": "Open to more than one interpretation.", "ex": "The results of the study were ***." },
-              {"id": 359, "word": "Pretext", "emoji": "🎭", "def": "A reason given that is not the real reason.", "ex": "He used the meeting as a *** to talk." },
-              {"id": 360, "word": "Obstinate", "emoji": "🐂", "def": "Stubbornly refusing to change one's opinion.", "ex": "He is as *** as a mule." },
-              {"id": 361, "word": "Perplexity", "emoji": "😵", "def": "Inability to deal with something complicated.", "ex": "She looked at the puzzle in ***." },
-              {"id": 362, "word": "Indifference", "emoji": "😐", "def": "Lack of interest or concern.", "ex": "He showed complete *** toward others." },
-              {"id": 363, "word": "Apathy", "emoji": "😴", "def": "Lack of interest or enthusiasm.", "ex": "There is a growing sense of ***." },
-              {"id": 364, "word": "Resignation", "emoji": "🏳️", "def": "Acceptance of something undesirable.", "ex": "He accepted his fate with ***." },
-              {"id": 365, "word": "Implicit", "emoji": "🤫", "def": "Suggested though not directly expressed.", "ex": "There was an *** agreement." },
-              {"id": 366, "word": "Sublime", "emoji": "🏔️", "def": "Inspire great admiration; grandeur.", "ex": "The view from the top was ***." },
-              {"id": 367, "word": "Exaltation", "emoji": "🙌", "def": "A state of extreme happiness.", "ex": "The crowd was in a state of ***." },
-              {"id": 368, "word": "Radiance", "emoji": "✨", "def": "Light or heat emitted or reflected.", "ex": "The sun's *** was blinding." },
-              {"id": 369, "word": "Enigmatic", "emoji": "🕵️", "def": "Difficult to understand; mysterious.", "ex": "She gave me an *** smile." },
-              {"id": 370, "word": "Futility", "emoji": "🗑️", "def": "Pointlessness or uselessness.", "ex": "He realized the *** of arguing." },
-              {"id": 371, "word": "Torment", "emoji": "😫", "def": "Severe physical or mental suffering.", "ex": "The memory continued to *** him." },
-              {"id": 372, "word": "Anguish", "emoji": "😭", "def": "Severe physical pain or suffering.", "ex": "She cried out in ***." },
-              {"id": 373, "word": "Despair", "emoji": "🌑", "def": "The complete loss of hope.", "ex": "He was driven to *** by failures." },
-              {"id": 374, "word": "Bitterness", "emoji": "🍋", "def": "Sharpness of taste; lack of sweetness.", "ex": "Her words were filled with ***." },
-              {"id": 375, "word": "Compassion", "emoji": "❤️", "def": "Concern for the misfortunes of others.", "ex": "We must show *** to those in need." },
-              {"id": 376, "word": "Generosity", "emoji": "🎁", "def": "The quality of being kind and generous.", "ex": "We were overwhelmed by their ***." },
-              {"id": 377, "word": "Fidelity", "emoji": "💍", "def": "Faithfulness to a person or cause.", "ex": "He was awarded a medal for his ***." },
-              {"id": 378, "word": "Treachery", "emoji": "🗡️", "def": "Betrayal of trust; deceptive action.", "ex": "His *** led to the downfall." }
-          ],
+  {
+    "word": "Broken-hearted",
+    "emoji": "💔",
+    "def": "Very sad because someone you love has left you. [cite: 737]",
+    "ex": "She was *** when her cat died. [cite: 737]"
+  },
+  {
+    "word": "Faith-deported",
+    "emoji": "🙏",
+    "def": "(Faith) Trusting in something or someone. [cite: 737]",
+    "ex": "I have great *** in your abilities. [cite: 737]"
+  },
+  {
+    "word": "Back down",
+    "emoji": "🔙",
+    "def": "To stop asking for something or stop saying you will do something. [cite: 737]",
+    "ex": "He had to *** from his argument. [cite: 737]"
+  },
+  {
+    "word": "Don't bend",
+    "emoji": "📏",
+    "def": "Do not curve or fold something that is straight. [cite: 737]",
+    "ex": "The metal is strong, it ***. [cite: 737]"
+  },
+  {
+    "word": "Don't break",
+    "emoji": "🛡️",
+    "def": "Do not cause something to separate into pieces. [cite: 737]",
+    "ex": "Be careful with the glass, *** it. [cite: 737]"
+  },
+  {
+    "word": "Swim underwater",
+    "emoji": "🤿",
+    "def": "To move your body in the water below the surface. [cite: 737]",
+    "ex": "I like to *** and look at the fish. [cite: 737]"
+  },
+  {
+    "word": "Ride a bike",
+    "emoji": "🚲",
+    "def": "To sit on and control a bicycle. [cite: 737]",
+    "ex": "It is fun to *** in the park. [cite: 737]"
+  },
+  {
+    "word": "Play rugby",
+    "emoji": "🏉",
+    "def": "To participate in the sport of rugby. [cite: 737]",
+    "ex": "They will *** on Saturday. [cite: 737]"
+  },
+  {
+    "word": "Go snowboarding",
+    "emoji": "🏂",
+    "def": "To move on snow using a board. [cite: 737]",
+    "ex": "I want to *** this winter. [cite: 737]"
+  },
+  {
+    "word": "Go sailing",
+    "emoji": "⛵",
+    "def": "To travel across water in a boat with a sail. [cite: 737]",
+    "ex": "We will *** when the weather is good. [cite: 737]"
+  },
+  {
+    "word": "Go surfing",
+    "emoji": "🏄",
+    "def": "To ride waves on a board in the sea. [cite: 737]",
+    "ex": "Let's *** at the beach tomorrow. [cite: 737]"
+  },
+  {
+    "word": "Go cycling",
+    "emoji": "🚴",
+    "def": "To ride a bicycle. [cite: 737]",
+    "ex": "We usually *** in the countryside. [cite: 737]"
+  },
+  {
+    "word": "Sleigh",
+    "emoji": "🛷",
+    "def": "A vehicle that slides over snow, often pulled by animals. [cite: 737]",
+    "ex": "Santa uses a *** to deliver presents. [cite: 737]"
+  },
+  {
+    "word": "Tree",
+    "emoji": "🌳",
+    "def": "A tall plant with a trunk and branches. [cite: 737]",
+    "ex": "There is a big *** outside my window. [cite: 737]"
+  },
+  {
+    "word": "Star",
+    "emoji": "⭐",
+    "def": "A large, bright object in the night sky. [cite: 738]",
+    "ex": "You can see many *** tonight. [cite: 738]"
+  },
+  {
+    "word": "Lights",
+    "emoji": "💡",
+    "def": "Things that produce brightness so you can see. [cite: 738]",
+    "ex": "Please turn off the *** when you leave. [cite: 738]"
+  },
+  {
+    "word": "Ornament",
+    "emoji": "🎀",
+    "def": "A small object used to decorate something. [cite: 738]",
+    "ex": "She put a new *** on the shelf. [cite: 738]"
+  },
+  {
+    "word": "Candles",
+    "emoji": "🕯️",
+    "def": "Wax that produces light when burned. [cite: 738]",
+    "ex": "We light *** when there is no electricity. [cite: 738]"
+  },
+  {
+    "word": "Postcard",
+    "emoji": "🏞️",
+    "def": "A card with a picture on one side, for writing and sending without an envelope. [cite: 738]",
+    "ex": "I sent a *** from my holiday. [cite: 738]"
+  },
+  {
+    "word": "Presents",
+    "emoji": "🎁",
+    "def": "Something you give to someone as a gift. [cite: 738]",
+    "ex": "I bought three *** for my mother. [cite: 738]"
+  },
+  {
+    "word": "Bells",
+    "emoji": "🔔",
+    "def": "Metal objects that make a ringing sound. [cite: 738]",
+    "ex": "The church *** ring every hour. [cite: 738]"
+  },
+  {
+    "word": "Wreath",
+    "emoji": "🌿",
+    "def": "Flowers and leaves shaped into a circle. [cite: 738]",
+    "ex": "They hung a *** on the front door. [cite: 738]"
+  },
+  {
+    "word": "Bipedalism",
+    "emoji": "🚶",
+    "def": "The ability to walk on two feet. [cite: 738]",
+    "ex": "*** is how people move. [cite: 738]"
+  },
+  {
+    "word": "Australopithecus",
+    "emoji": "💀",
+    "def": "An early type of human-like creature. [cite: 738]",
+    "ex": "Scientists study the *** bones. [cite: 738]"
+  },
+  {
+    "word": "Muscles",
+    "emoji": "💪",
+    "def": "Parts of the body that help you move. [cite: 738]",
+    "ex": "I use my *** to lift heavy things. [cite: 738]"
+  },
+  {
+    "word": "Sporulation",
+    "emoji": "🍄",
+    "def": "The process of creating small seeds (spores). [cite: 738]",
+    "ex": "Fungi use *** to make more of themselves. [cite: 738]"
+  },
+  {
+    "word": "Bipartition",
+    "emoji": "➗",
+    "def": "To divide something into two equal parts. [cite: 738]",
+    "ex": "The cell divides by ***. [cite: 738]"
+  },
+  {
+    "word": "Zygote",
+    "emoji": "🔬",
+    "def": "A new cell made when two cells join together. [cite: 738]",
+    "ex": "The doctor explained what a *** is. [cite: 738]"
+  },
+  {
+    "word": "Tissue",
+    "emoji": "🦠",
+    "def": "A group of similar cells that work together in a body. [cite: 738]",
+    "ex": "He hurt the soft *** in his arm. [cite: 738]"
+  },
+  {
+    "word": "Phototaxis",
+    "emoji": "☀️",
+    "def": "The way an organism moves towards or away from light. [cite: 739]",
+    "ex": "Many plants show ***. [cite: 739]"
+  },
+  {
+    "word": "Chemotaxis",
+    "emoji": "🧪",
+    "def": "The way an organism moves towards or away from chemicals. [cite: 739]",
+    "ex": "The cells use *** to find food. [cite: 739]"
+  },
+  {
+    "word": "Badminton",
+    "emoji": "🏸",
+    "def": "A game where players hit a shuttlecock over a net. [cite: 739]",
+    "ex": "We played *** on the grass. [cite: 739]"
+  },
+  {
+    "word": "Basketball",
+    "emoji": "🏀",
+    "def": "A sport where you throw a ball through a high net (hoop). [cite: 739]",
+    "ex": "She is very good at ***. [cite: 739]"
+  },
+  {
+    "word": "Hockey",
+    "emoji": "🏑",
+    "def": "A sport played with sticks and a ball or puck. [cite: 739]",
+    "ex": "They play field *** at school. [cite: 739]"
+  },
+  {
+    "word": "Gilli-danda",
+    "emoji": "🏏",
+    "def": "A traditional stick and smaller stick game from India. [cite: 739]",
+    "ex": "My grandfather taught me how to play ***. [cite: 739]"
+  },
+  {
+    "word": "Shopping",
+    "emoji": "🛍️",
+    "def": "The activity of buying things in stores. [cite: 739]",
+    "ex": "I need to go *** for new clothes. [cite: 739]"
+  },
+  {
+    "word": "Wearing",
+    "emoji": "👕",
+    "def": "Having clothes or jewellery on your body. [cite: 739]",
+    "ex": "She is *** a blue coat today. [cite: 739]"
+  },
+  {
+    "word": "Cabbage",
+    "emoji": "🥬",
+    "def": "A large, round green or purple vegetable. [cite: 739]",
+    "ex": "We had soup with *** for dinner. [cite: 739]"
+  },
+  {
+    "word": "Ecosystem",
+    "emoji": "🌍",
+    "def": "All the living things and the environment in a place. [cite: 739]",
+    "ex": "The forest is a complex ***. [cite: 739]"
+  },
+  {
+    "word": "Microspheres",
+    "emoji": "🫧",
+    "def": "Very small, round structures. [cite: 739]",
+    "ex": "The material is made of tiny ***. [cite: 739]"
+  },
+  {
+    "word": "Chromosomes",
+    "emoji": "🧬",
+    "def": "Small parts in cells that carry genetic information. [cite: 739]",
+    "ex": "Humans have 46 ***. [cite: 739]"
+  },
+  {
+    "word": "Cytoplasm",
+    "emoji": "🧫",
+    "def": "The jelly-like substance inside a cell, but outside the nucleus. [cite: 739]",
+    "ex": "The *** fills the whole cell. [cite: 739]"
+  },
+  {
+    "word": "Mitochondria",
+    "emoji": "🔋",
+    "def": "The part of the cell that creates energy. [cite: 739]",
+    "ex": "The *** are like the cell's power plant. [cite: 739]"
+  },
+  {
+    "word": "Endoplasmic",
+    "emoji": "🕸️",
+    "def": "A network of membranes inside a cell (e.g., Endoplasmic Reticulum). [cite: 739, 740]",
+    "ex": "The *** system helps make proteins. [cite: 739, 740]"
+  },
+  {
+    "word": "Cryopreservation",
+    "emoji": "❄️",
+    "def": "To keep things very cold to save them for a long time. [cite: 740]",
+    "ex": "They use *** to store seeds. [cite: 740]"
+  },
+  {
+    "word": "Neurons",
+    "emoji": "🧠",
+    "def": "Special cells that send messages in your brain and body. [cite: 740]",
+    "ex": "Your brain is full of ***. [cite: 740]"
+  },
+  {
+    "word": "Justify",
+    "emoji": "⚖️",
+    "def": "To give a good reason for something you did. [cite: 740]",
+    "ex": "Can you *** your late arrival? [cite: 740]"
+  },
+  {
+    "word": "Ensure",
+    "emoji": "✅",
+    "def": "To make certain that something will happen. [cite: 740]",
+    "ex": "I must *** the door is locked. [cite: 740]"
+  },
+  {
+    "word": "Smooth",
+    "emoji": "🪨",
+    "def": "Flat and even, without bumps or rough parts. [cite: 740]",
+    "ex": "The stone is very ***. [cite: 740]"
+  },
+  {
+    "word": "Universal",
+    "emoji": "🌐",
+    "def": "Existing everywhere or involving everyone. [cite: 740]",
+    "ex": "This rule is *** in our company. [cite: 740]"
+  },
+  {
+    "word": "Chloroplast",
+    "emoji": "🌱",
+    "def": "A part of a plant cell that makes food using sunlight. [cite: 740]",
+    "ex": "***s make leaves green. [cite: 740]"
+  },
+  {
+    "word": "Cytoskeleton",
+    "emoji": "🦴",
+    "def": "The frame inside a cell that helps it keep its shape. [cite: 740]",
+    "ex": "The *** supports the cell. [cite: 740]"
+  },
+  {
+    "word": "Flagellum",
+    "emoji": "🦠",
+    "def": "A long, thin part of a cell that helps it move. [cite: 740]",
+    "ex": "Some bacteria use a *** to swim. [cite: 740]"
+  },
+  {
+    "word": "Mammals",
+    "emoji": "🐈",
+    "def": "Animals that feed milk to their babies and usually have hair. [cite: 740]",
+    "ex": "Cats and dogs are both ***. [cite: 740]"
+  },
+  {
+    "word": "Amphibians",
+    "emoji": "🐸",
+    "def": "Animals that live both in water and on land (like frogs). [cite: 740]",
+    "ex": "Frogs are a type of ***. [cite: 740]"
+  },
+  {
+    "word": "Endothermic",
+    "emoji": "🌡️",
+    "def": "Having a body temperature that stays the same, like people. [cite: 740]",
+    "ex": "Birds are *** animals. [cite: 740]"
+  },
+  {
+    "word": "Locomotion",
+    "emoji": "🏃",
+    "def": "The act or power of moving from one place to another. [cite: 740]",
+    "ex": "Walking is a type of ***. [cite: 740]"
+  },
+  {
+    "word": "Autotroph",
+    "emoji": "🌲",
+    "def": "An organism (like a plant) that makes its own food. [cite: 740]",
+    "ex": "A tree is an ***. [cite: 740]"
+  },
+  {
+    "word": "Photosynthesis",
+    "emoji": "☀️",
+    "def": "The process plants use to make food from sunlight and water. [cite: 741]",
+    "ex": "*** is important for all life on Earth. [cite: 741]"
+  },
+  {
+    "word": "Harvest",
+    "emoji": "🌾",
+    "def": "The time of year when crops are cut and collected. [cite: 741]",
+    "ex": "Farmers gather the *** in autumn. [cite: 741]"
+  },
+  {
+    "word": "Sowing",
+    "emoji": "🌱",
+    "def": "Putting seeds in the ground so they can grow. [cite: 741]",
+    "ex": "He is busy *** new seeds in the field. [cite: 741]"
+  },
+  {
+    "word": "Livestock",
+    "emoji": "🐄",
+    "def": "Animals kept on a farm, like cows or sheep. [cite: 741]",
+    "ex": "The farmer keeps a lot of ***. [cite: 741]"
+  },
+  {
+    "word": "Shepherd",
+    "emoji": "🐑",
+    "def": "A person who takes care of sheep. [cite: 741]",
+    "ex": "The *** watched his flock of sheep. [cite: 741]"
+  },
+  {
+    "word": "Domestication",
+    "emoji": "🐕",
+    "def": "The process of training wild animals to live with humans. [cite: 741]",
+    "ex": "The *** of dogs happened a long time ago. [cite: 741]"
+  },
+  {
+    "word": "Cuneiform",
+    "emoji": "🪨",
+    "def": "A very old system of writing that uses shapes cut into clay. [cite: 741]",
+    "ex": "*** was used in ancient Mesopotamia. [cite: 741]"
+  },
+  {
+    "word": "Pictographs",
+    "emoji": "🖼️",
+    "def": "Pictures that represent words or ideas. [cite: 741]",
+    "ex": "Early writing used ***. [cite: 741]"
+  },
+  {
+    "word": "Ideogram",
+    "emoji": "🔣",
+    "def": "A symbol that represents an idea or a thing, not just a sound. [cite: 741]",
+    "ex": "Chinese characters are often ***s. [cite: 741]"
+  },
+  {
+    "word": "Papyrus",
+    "emoji": "📜",
+    "def": "A type of paper used long ago, made from a plant. [cite: 741]",
+    "ex": "Ancient Egyptians wrote on ***. [cite: 741]"
+  },
+  {
+    "word": "Scribes",
+    "emoji": "✍️",
+    "def": "People in the past whose job was to copy documents. [cite: 741]",
+    "ex": "The *** wrote down the king's laws. [cite: 741]"
+  },
+  {
+    "word": "Civilization",
+    "emoji": "🏛️",
+    "def": "A developed human society with its own culture and laws. [cite: 741]",
+    "ex": "Ancient Rome was a great ***. [cite: 741]"
+  },
+  {
+    "word": "Wondering",
+    "emoji": "🤔",
+    "def": "Thinking about something and wanting to know more about it. [cite: 742]",
+    "ex": "I am *** what time the film starts. [cite: 742]"
+  },
+  {
+    "word": "Reminds",
+    "emoji": "💭",
+    "def": "Makes you remember someone or something. [cite: 743]",
+    "ex": "This picture *** me of our holiday. [cite: 743]"
+  },
+  {
+    "word": "Night",
+    "emoji": "🌙",
+    "def": "The time of darkness between sunset and sunrise. [cite: 743]",
+    "ex": "The stars are visible at ***. [cite: 743]"
+  },
+  {
+    "word": "Pain",
+    "emoji": "🤕",
+    "def": "The physical feeling you have when you are hurt. [cite: 743]",
+    "ex": "I have a lot of *** in my knee. [cite: 743]"
+  },
+  {
+    "word": "Imply",
+    "emoji": "😏",
+    "def": "To suggest something without saying it directly. [cite: 743]",
+    "ex": "Her frown seemed to *** that she was unhappy. [cite: 743]"
+  },
+  {
+    "word": "Giving",
+    "emoji": "🤲",
+    "def": "The act of presenting something to someone. [cite: 743]",
+    "ex": "The team is focused on *** its best effort. [cite: 743]"
+  },
+  {
+    "word": "Having",
+    "emoji": "🍽️",
+    "def": "Possessing, owning, or experiencing something. [cite: 743]",
+    "ex": "We are *** dinner with friends tonight. [cite: 743]"
+  },
+  {
+    "word": "Soaking",
+    "emoji": "🧽",
+    "def": "Getting something completely wet with liquid. [cite: 743]",
+    "ex": "I left the dirty clothes *** in water. [cite: 743]"
+  },
+  {
+    "word": "Towel",
+    "emoji": "🧖",
+    "def": "A piece of cloth used for drying things, especially your body. [cite: 743]",
+    "ex": "Don't forget to take a *** to the beach. [cite: 743]"
+  },
+  {
+    "word": "Thank you",
+    "emoji": "🙏",
+    "def": "A polite expression used to show gratitude. [cite: 743]",
+    "ex": "*** for opening the door for me. [cite: 743]"
+  },
+  {
+    "word": "Clouds",
+    "emoji": "☁️",
+    "def": "White or gray masses in the sky made of small drops of water. [cite: 743]",
+    "ex": "The *** look dark; it might rain soon. [cite: 743]"
+  },
+  {
+    "word": "Drinking",
+    "emoji": "🥤",
+    "def": "Taking liquid into your body through your mouth. [cite: 743]",
+    "ex": "She is *** coffee every morning. [cite: 743]"
+  },
+  {
+    "word": "Above",
+    "emoji": "⬆️",
+    "def": "In a higher position than something else. [cite: 743]",
+    "ex": "The moon is shining *** the city. [cite: 743]"
+  },
+  {
+    "word": "Never mind",
+    "emoji": "🤷",
+    "def": "Used to tell someone not to worry about something. [cite: 743]",
+    "ex": "*** the small mistake, keep going. [cite: 743]"
+  },
+  {
+    "word": "Wouldn't",
+    "emoji": "❌",
+    "def": "Short form of 'would not'. [cite: 743]",
+    "ex": "I *** want to miss this meeting. [cite: 743]"
+  },
+  {
+    "word": "By the way",
+    "emoji": "🗣️",
+    "def": "Used to introduce a new topic in a conversation. [cite: 743]",
+    "ex": "***, did you hear the news? [cite: 743]"
+  },
+  {
+    "word": "Fall down",
+    "emoji": "🤕",
+    "def": "To drop to the ground, usually by accident. [cite: 744]",
+    "ex": "Be careful on the ice or you will ***. [cite: 744]"
+  },
+  {
+    "word": "Whenever",
+    "emoji": "⏱️",
+    "def": "At any time, or every time. [cite: 744]",
+    "ex": "I think of you *** I see that movie. [cite: 744]"
+  },
+  {
+    "word": "Wherever",
+    "emoji": "🗺️",
+    "def": "In or to any place. [cite: 744]",
+    "ex": "You can sit *** you like. [cite: 744]"
+  },
+  {
+    "word": "Whoever",
+    "emoji": "👤",
+    "def": "Any person. [cite: 744]",
+    "ex": "*** left the light on needs to turn it off. [cite: 744]"
+  },
+  {
+    "word": "Saxophone",
+    "emoji": "🎷",
+    "def": "A musical instrument made of metal, played by blowing air into it. [cite: 745]",
+    "ex": "He plays the *** in a band. [cite: 745]"
+  },
+  {
+    "word": "Keyboard",
+    "emoji": "⌨️",
+    "def": "A set of keys on a computer or musical instrument. [cite: 745]",
+    "ex": "I need a new *** for my computer. [cite: 745]"
+  },
+  {
+    "word": "Lessons",
+    "emoji": "🏫",
+    "def": "A period of teaching or instruction. [cite: 745]",
+    "ex": "I have piano *** every Tuesday. [cite: 745]"
+  },
+  {
+    "word": "Conversation",
+    "emoji": "🗣️",
+    "def": "A talk between two or more people. [cite: 745]",
+    "ex": "We had a long *** about our plans. [cite: 745]"
+  },
+  {
+    "word": "Terrible",
+    "emoji": "😫",
+    "def": "Very bad or unpleasant. [cite: 745]",
+    "ex": "The weather was *** yesterday. [cite: 745]"
+  },
+  {
+    "word": "Mobile phone",
+    "emoji": "📱",
+    "def": "A small telephone you can carry with you. [cite: 745]",
+    "ex": "Please turn off your *** in the cinema. [cite: 745]"
+  },
+  {
+    "word": "Lovely",
+    "emoji": "🥰",
+    "def": "Attractive or pleasant, often in a simple way. [cite: 745]",
+    "ex": "What a *** day for a walk! [cite: 745]"
+  },
+  {
+    "word": "Wedding",
+    "emoji": "💒",
+    "def": "A ceremony where two people get married. [cite: 745]",
+    "ex": "They are planning their *** for next summer. [cite: 745]"
+  },
+  {
+    "word": "Barbecue",
+    "emoji": "🥩",
+    "def": "A meal or party where food is cooked outside on a grill. [cite: 745]",
+    "ex": "We are having a *** on Saturday. [cite: 745]"
+  },
+  {
+    "word": "Nervous",
+    "emoji": "😬",
+    "def": "Worried and anxious about something. [cite: 745]",
+    "ex": "He felt *** before his presentation. [cite: 745]"
+  },
+  {
+    "word": "Agree",
+    "emoji": "🤝",
+    "def": "To have the same opinion as someone else. [cite: 746]",
+    "ex": "I *** with your suggestion. [cite: 746]"
+  },
+  {
+    "word": "Disagree",
+    "emoji": "🙅",
+    "def": "To have a different opinion than someone else. [cite: 746]",
+    "ex": "It's okay to *** with me sometimes. [cite: 746]"
+  },
+  {
+    "word": "Regards",
+    "emoji": "💌",
+    "def": "Greetings or good wishes. [cite: 746]",
+    "ex": "Please give my *** to your family. [cite: 746]"
+  },
+  {
+    "word": "Pounds",
+    "emoji": "💷",
+    "def": "The unit of money in the UK, or a unit of weight. [cite: 746]",
+    "ex": "The book costs ten ***. [cite: 746]"
+  },
+  {
+    "word": "Advice",
+    "emoji": "🗣️",
+    "def": "Suggestions about what you should do. [cite: 746]",
+    "ex": "Can you give me some *** about moving house? [cite: 746]"
+  },
+  {
+    "word": "Touched",
+    "emoji": "🥺",
+    "def": "To affect someone's feelings, usually in a positive way. [cite: 746]",
+    "ex": "I was very *** by his kindness. [cite: 746]"
+  },
+  {
+    "word": "Games",
+    "emoji": "🎲",
+    "def": "Activities or sports with rules played for fun. [cite: 746]",
+    "ex": "We played many different *** at the party. [cite: 746]"
+  },
+  {
+    "word": "Always",
+    "emoji": "♾️",
+    "def": "At all times, or every time. [cite: 746]",
+    "ex": "She *** arrives on time. [cite: 746]"
+  },
+  {
+    "word": "Burnt",
+    "emoji": "🔥",
+    "def": "Damaged by fire or heat. [cite: 746]",
+    "ex": "Be careful, the food is ***. [cite: 746]"
+  },
+  {
+    "word": "Myself",
+    "emoji": "🙋",
+    "def": "The person who is speaking or writing (used as the object of a verb or preposition). [cite: 746]",
+    "ex": "I made the cake ***. [cite: 746]"
+  },
+  {
+    "word": "Looking",
+    "emoji": "👀",
+    "def": "Directing your eyes towards something. [cite: 747]",
+    "ex": "I am *** for my keys. [cite: 747]"
+  },
+  {
+    "word": "Waiting",
+    "emoji": "⏳",
+    "def": "Staying in one place until something happens. [cite: 747]",
+    "ex": "She is *** for the bus to arrive. [cite: 747]"
+  },
+  {
+    "word": "Watching",
+    "emoji": "📺",
+    "def": "Looking at something for a period of time. [cite: 747]",
+    "ex": "We spent the evening *** a movie. [cite: 747]"
+  },
+  {
+    "word": "Burning",
+    "emoji": "🔥",
+    "def": "Being on fire or using fire to heat something. [cite: 747]",
+    "ex": "The wood is *** in the fireplace. [cite: 747]"
+  },
+  {
+    "word": "Recorded",
+    "emoji": "⏺️",
+    "def": "Saved sounds or pictures to listen to or watch later. [cite: 747]",
+    "ex": "The song was *** last year. [cite: 747]"
+  },
+  {
+    "word": "Portraits",
+    "emoji": "🖼️",
+    "def": "Paintings, drawings, or photos of a person's face. [cite: 748]",
+    "ex": "She painted beautiful *** of her family. [cite: 748]"
+  },
+  {
+    "word": "Suffering",
+    "emoji": "🤒",
+    "def": "Experiencing pain, difficulty, or unhappiness. [cite: 748]",
+    "ex": "He is *** from a bad cold. [cite: 748]"
+  },
+  {
+    "word": "Inclusions",
+    "emoji": "📦",
+    "def": "Things that are included or put into something else. [cite: 748]",
+    "ex": "The price covers all fees and ***. [cite: 748]"
+  },
+  {
+    "word": "Translation",
+    "emoji": "🌐",
+    "def": "Changing words from one language to another. [cite: 748]",
+    "ex": "The *** of the book took a long time. [cite: 748]"
+  },
+  {
+    "word": "Digestion",
+    "emoji": "🍏",
+    "def": "The process in your body of breaking down food. [cite: 748]",
+    "ex": "Good *** is important for health. [cite: 748]"
+  },
+  {
+    "word": "Breaking down",
+    "emoji": "🔧",
+    "def": "Separating something into smaller parts; or stopping something from working. [cite: 748]",
+    "ex": "The car is always ***. [cite: 748]"
+  },
+  {
+    "word": "Sacks",
+    "emoji": "🥔",
+    "def": "Large bags made of strong material for storing things. [cite: 748]",
+    "ex": "The potatoes are stored in big ***. [cite: 748]"
+  },
+  {
+    "word": "Signals",
+    "emoji": "🚦",
+    "def": "Actions or signs that give a message. [cite: 748]",
+    "ex": "The traffic *** turned red. [cite: 748]"
+  },
+  {
+    "word": "Mushrooms",
+    "emoji": "🍄",
+    "def": "Fungi with a stem and a round top, some of which are eaten. [cite: 748]",
+    "ex": "We picked wild *** in the forest. [cite: 748]"
+  },
+  {
+    "word": "Reparation",
+    "emoji": "🛠️",
+    "def": "The act of fixing or repairing something. [cite: 748]",
+    "ex": "The company made *** for the damage. [cite: 748]"
+  },
+  {
+    "word": "Optical",
+    "emoji": "👓",
+    "def": "Relating to the eyes or to light. [cite: 748]",
+    "ex": "She bought new *** glasses. [cite: 748]"
+  },
+  {
+    "word": "Distinguish",
+    "emoji": "🔍",
+    "def": "To recognize the difference between two things. [cite: 748]",
+    "ex": "It's hard to *** the twins. [cite: 748]"
+  },
+  {
+    "word": "Inequalities",
+    "emoji": "⚖️",
+    "def": "Situations where some people have more advantages than others. [cite: 748]",
+    "ex": "The government is trying to reduce ***. [cite: 748]"
+  },
+  {
+    "word": "Lead",
+    "emoji": "👑",
+    "def": "To show the way, or to be in charge of. [cite: 748]",
+    "ex": "He will *** the team in the next project. [cite: 748]"
+  },
+  {
+    "word": "Stages",
+    "emoji": "🪜",
+    "def": "Periods or steps in a process or development. [cite: 748, 749]",
+    "ex": "The project has three main ***. [cite: 748, 749]"
+  },
+  {
+    "word": "Morula",
+    "emoji": "🔬",
+    "def": "A group of early cells that looks like a tiny ball. [cite: 749]",
+    "ex": "The doctor studied the *** under the microscope. [cite: 749]"
+  },
+  {
+    "word": "Blastula",
+    "emoji": "🧫",
+    "def": "A small ball of cells with a space inside, forming very early in development. [cite: 749]",
+    "ex": "The *** is the next stage after the morula. [cite: 749]"
+  },
+  {
+    "word": "Gastrulation",
+    "emoji": "🧬",
+    "def": "The step where early cells begin to move and form layers. [cite: 749]",
+    "ex": "*** creates the basic body plan. [cite: 749]"
+  },
+  {
+    "word": "Implantation",
+    "emoji": "🌱",
+    "def": "When a young embryo attaches itself to the wall of the womb. [cite: 749]",
+    "ex": "*** is a key step in starting a pregnancy. [cite: 749]"
+  },
+  {
+    "word": "Chorion",
+    "emoji": "🛡️",
+    "def": "An outer layer that surrounds a developing embryo. [cite: 749]",
+    "ex": "The *** protects the young organism. [cite: 749]"
+  },
+  {
+    "word": "Conception",
+    "emoji": "✨",
+    "def": "The moment when a new life begins. [cite: 749]",
+    "ex": "They celebrated the moment of ***. [cite: 749]"
+  },
+  {
+    "word": "Pregnancy",
+    "emoji": "🤰",
+    "def": "The time a woman has a baby growing inside her body. [cite: 749]",
+    "ex": "Her *** lasted for nine months. [cite: 749]"
+  },
+  {
+    "word": "Spermatogenesis",
+    "emoji": "🔬",
+    "def": "The process of making male reproductive cells (sperm). [cite: 749]",
+    "ex": "*** happens inside the testes. [cite: 749]"
+  },
+  {
+    "word": "Fallopian tubes",
+    "emoji": "🧬",
+    "def": "Two thin tubes that carry the egg from the ovaries to the womb. [cite: 749]",
+    "ex": "The egg travels through the ***. [cite: 749]"
+  },
+  {
+    "word": "Intercourse",
+    "emoji": "🧑‍🤝‍🧑",
+    "def": "Physical sex between two people. [cite: 749]",
+    "ex": "The doctor discussed safe *** practices. [cite: 749]"
+  },
+  {
+    "word": "Inherits",
+    "emoji": "🧬",
+    "def": "To receive a characteristic or quality from your parents. [cite: 749]",
+    "ex": "He *** his blue eyes from his mother. [cite: 749]"
+  },
+  {
+    "word": "Embryogenesis",
+    "emoji": "🌱",
+    "def": "The process of an embryo growing and developing. [cite: 749]",
+    "ex": "*** is the first few weeks of growth. [cite: 749]"
+  },
+  {
+    "word": "Fetus",
+    "emoji": "👶",
+    "def": "A developing baby inside the mother's body after the first eight weeks. [cite: 749]",
+    "ex": "The doctor checked the health of the ***. [cite: 749]"
+  },
+  {
+    "word": "Resembles",
+    "emoji": "👯",
+    "def": "Looks like or is similar to another person or thing. [cite: 750]",
+    "ex": "The baby *** its father. [cite: 750]"
+  },
+  {
+    "word": "Blastomeres",
+    "emoji": "🔬",
+    "def": "The first small cells created when an egg divides. [cite: 750]",
+    "ex": "The *** split rapidly. [cite: 750]"
+  },
+  {
+    "word": "Cavity",
+    "emoji": "🦷",
+    "def": "An empty space inside a solid object. [cite: 750]",
+    "ex": "The dentist found a small *** in my tooth. [cite: 750]"
+  },
+  {
+    "word": "Ectoderm",
+    "emoji": "🧬",
+    "def": "The outer layer of cells in a very young embryo. [cite: 750]",
+    "ex": "The skin and nervous system come from the ***. [cite: 750]"
+  },
+  {
+    "word": "Mesoderm",
+    "emoji": "🧬",
+    "def": "The middle layer of cells in a very young embryo. [cite: 750]",
+    "ex": "The *** forms the muscles and bones. [cite: 750]"
+  },
+  {
+    "word": "Progesterone",
+    "emoji": "💊",
+    "def": "A hormone that helps prepare the body for pregnancy. [cite: 750]",
+    "ex": "The doctor prescribed *** supplements. [cite: 750]"
+  },
+  {
+    "word": "Stores",
+    "emoji": "📦",
+    "def": "Places where things are kept until they are needed. [cite: 750]",
+    "ex": "She *** her winter clothes in the attic. [cite: 750]"
+  },
+  {
+    "word": "Psychology",
+    "emoji": "🧠",
+    "def": "The scientific study of the mind and how it influences behavior. [cite: 751]",
+    "ex": "She is studying *** at university. [cite: 751]"
+  },
+  {
+    "word": "Honest",
+    "emoji": "😇",
+    "def": "Telling the truth and not cheating or stealing. [cite: 751]",
+    "ex": "You should always be *** with me. [cite: 751]"
+  },
+  {
+    "word": "Enough",
+    "emoji": "👍",
+    "def": "As much as is needed; sufficient. [cite: 751]",
+    "ex": "I think we have *** food for everyone. [cite: 751]"
+  },
+  {
+    "word": "Daughter",
+    "emoji": "👧",
+    "def": "A girl or woman in relation to her parents. [cite: 751]",
+    "ex": "His *** is starting school next year. [cite: 751]"
+  },
+  {
+    "word": "Cough",
+    "emoji": "😷",
+    "def": "To force air suddenly out of your throat, often because you are ill. [cite: 751]",
+    "ex": "He had a bad *** all night. [cite: 751]"
+  },
+  {
+    "word": "Government",
+    "emoji": "🏛️",
+    "def": "The group of people who officially control a country or state. [cite: 751]",
+    "ex": "The *** will meet next week. [cite: 751]"
+  },
+  {
+    "word": "Millennium",
+    "emoji": "🎆",
+    "def": "A period of one thousand years. [cite: 751, 752]",
+    "ex": "We celebrated the start of the new ***. [cite: 751, 752]"
+  },
+  {
+    "word": "Questionnaire",
+    "emoji": "📝",
+    "def": "A list of questions that several people are asked to answer. [cite: 752]",
+    "ex": "Please fill out this short ***. [cite: 752]"
+  },
+  {
+    "word": "Maintenance",
+    "emoji": "🛠️",
+    "def": "The work that is done to keep something in good condition. [cite: 752]",
+    "ex": "The car requires a lot of ***. [cite: 752]"
+  },
+  {
+    "word": "Disagreeing",
+    "emoji": "🗣️",
+    "def": "Having a different opinion from someone else. [cite: 752]",
+    "ex": "They spent hours *** about the plan. [cite: 752]"
+  },
+  {
+    "word": "Subway",
+    "emoji": "🚇",
+    "def": "An underground railway system in a city. [cite: 752]",
+    "ex": "We took the *** to get across town quickly. [cite: 752]"
+  },
+  {
+    "word": "Nickname",
+    "emoji": "🏷️",
+    "def": "An informal, often short, name for a person. [cite: 752]",
+    "ex": "My *** is 'Mac' because of my last name. [cite: 752]"
+  },
+  {
+    "word": "Pronunciation",
+    "emoji": "👄",
+    "def": "The way in which a word or language is spoken. [cite: 752]",
+    "ex": "The teacher corrected my ***. [cite: 752]"
+  },
+  {
+    "word": "Relationships",
+    "emoji": "💞",
+    "def": "The way two or more people are connected, or how they behave toward each other. [cite: 752]",
+    "ex": "Good communication is important in all ***. [cite: 752]"
+  },
+  {
+    "word": "Necessary",
+    "emoji": "❗",
+    "def": "Needed for a particular purpose or reason. [cite: 752]",
+    "ex": "It is *** to have a passport for this trip. [cite: 752]"
+  },
+  {
+    "word": "Embarrassed",
+    "emoji": "😳",
+    "def": "Feeling shy, awkward, or ashamed. [cite: 752]",
+    "ex": "I felt *** when I dropped my plate. [cite: 752]"
+  },
+  {
+    "word": "Schedule",
+    "emoji": "📅",
+    "def": "A plan of times when things are planned to happen. [cite: 752]",
+    "ex": "We need to check the train ***. [cite: 752]"
+  },
+  {
+    "word": "Foreign",
+    "emoji": "🌍",
+    "def": "From a country that is not your own. [cite: 752]",
+    "ex": "She speaks three *** languages. [cite: 752]"
+  },
+  {
+    "word": "Privilege",
+    "emoji": "🎖️",
+    "def": "A special right or advantage given to a person or group. [cite: 752]",
+    "ex": "It is a *** to work on this project. [cite: 752]"
+  },
+  {
+    "word": "Leisure",
+    "emoji": "🏖️",
+    "def": "Time when you are not working or doing other duties. [cite: 752]",
+    "ex": "I like to read books in my *** time. [cite: 752]"
+  },
+  {
+    "word": "Rhythm",
+    "emoji": "🎵",
+    "def": "A pattern of sounds or movements that has a regular beat. [cite: 752]",
+    "ex": "The music had a very fast ***. [cite: 752]"
+  },
+  {
+    "word": "Separate",
+    "emoji": "✂️",
+    "def": "To divide or move apart. [cite: 753]",
+    "ex": "We need to *** the white clothes from the colors. [cite: 753]"
+  },
+  {
+    "word": "Twice",
+    "emoji": "✌️",
+    "def": "Two times. [cite: 753]",
+    "ex": "I have seen that movie ***. [cite: 753]"
+  },
+  {
+    "word": "Humble",
+    "emoji": "🙇",
+    "def": "Not proud or not believing that you are better than other people. [cite: 753]",
+    "ex": "He is a great champion but remains very ***. [cite: 753]"
+  },
+  {
+    "word": "Weird",
+    "emoji": "👽",
+    "def": "Very strange and unusual. [cite: 753]",
+    "ex": "That noise sounds really ***. [cite: 753]"
+  },
+  {
+    "word": "Achieve",
+    "emoji": "🏆",
+    "def": "To succeed in reaching a goal. [cite: 753]",
+    "ex": "You can *** anything you set your mind to. [cite: 753]"
+  },
+  {
+    "word": "Believe",
+    "emoji": "🙏",
+    "def": "To accept that something is true or real. [cite: 753]",
+    "ex": "I *** in second chances. [cite: 753]"
+  },
+  {
+    "word": "Conscience",
+    "emoji": "😇",
+    "def": "The part of your mind that tells you if what you are doing is morally right or wrong. [cite: 753]",
+    "ex": "His *** told him to tell the truth. [cite: 753]"
+  },
+  {
+    "word": "Definite",
+    "emoji": "✔️",
+    "def": "Clearly stated or decided; not vague or doubtful. [cite: 753]",
+    "ex": "We need a *** answer by tomorrow. [cite: 753]"
+  },
+  {
+    "word": "Environment",
+    "emoji": "🌱",
+    "def": "The surroundings or conditions in which a person, animal, or plant lives. [cite: 753]",
+    "ex": "We must protect the natural ***. [cite: 753]"
+  },
+  {
+    "word": "Guarantee",
+    "emoji": "🛡️",
+    "def": "A promise that something will be done or that something will happen. [cite: 753]",
+    "ex": "The company offers a two-year *** on its products. [cite: 753]"
+  },
+  {
+    "word": "Immediately",
+    "emoji": "⚡",
+    "def": "Right away; without delay. [cite: 753]",
+    "ex": "Please call me *** when you arrive. [cite: 753]"
+  },
+  {
+    "word": "Jewellery",
+    "emoji": "💍",
+    "def": "Ornaments such as rings, necklaces, or bracelets. [cite: 753]",
+    "ex": "She keeps all her *** in a special box. [cite: 753]"
+  },
+  {
+    "word": "Knowledge",
+    "emoji": "📚",
+    "def": "Information and understanding about a subject. [cite: 753]",
+    "ex": "He has a lot of *** about history. [cite: 753]"
+  },
+  {
+    "word": "Library",
+    "emoji": "🏛️",
+    "def": "A building where books, magazines, and other materials are kept. [cite: 753]",
+    "ex": "I borrowed a book from the ***. [cite: 753]"
+  },
+  {
+    "word": "Occurred",
+    "emoji": "💥",
+    "def": "Happened; took place. [cite: 754]",
+    "ex": "The accident *** yesterday afternoon. [cite: 754]"
+  },
+  {
+    "word": "Parallel",
+    "emoji": "🛤️",
+    "def": "Lines or paths that are side by side and never cross. [cite: 754]",
+    "ex": "The two roads run *** to each other. [cite: 754]"
+  },
+  {
+    "word": "Restaurant",
+    "emoji": "🍽️",
+    "def": "A place where you can buy and eat a meal. [cite: 754]",
+    "ex": "We went to a new Italian ***. [cite: 754]"
+  },
+  {
+    "word": "Successful",
+    "emoji": "🌟",
+    "def": "Achieving what you wanted to achieve. [cite: 754]",
+    "ex": "The event was very ***. [cite: 754]"
+  },
+  {
+    "word": "Association",
+    "emoji": "🤝",
+    "def": "A group of people organized for a joint purpose. [cite: 754]",
+    "ex": "He is a member of the local business ***. [cite: 754]"
+  },
+  {
+    "word": "Thumb",
+    "emoji": "👍",
+    "def": "The short, thick finger on your hand. [cite: 754]",
+    "ex": "I hurt my *** playing basketball. [cite: 754]"
+  },
+  {
+    "word": "Village",
+    "emoji": "🏘️",
+    "def": "A very small town in the countryside. [cite: 754]",
+    "ex": "She grew up in a quiet ***. [cite: 754]"
+  },
+  {
+    "word": "Written",
+    "emoji": "📝",
+    "def": "Something recorded on paper or another surface. [cite: 754]",
+    "ex": "The final report must be *** by Friday. [cite: 754]"
+  },
+  {
+    "word": "Acceptable",
+    "emoji": "👌",
+    "def": "Good enough or satisfactory. [cite: 754]",
+    "ex": "The quality of the work is ***. [cite: 754]"
+  },
+  {
+    "word": "Acquire",
+    "emoji": "🧲",
+    "def": "To get something, usually a skill or possession. [cite: 754]",
+    "ex": "He wants to *** new skills for his job. [cite: 754]"
+  },
+  {
+    "word": "Beginning",
+    "emoji": "🏁",
+    "def": "The start of something. [cite: 754]",
+    "ex": "It was a difficult ***, but things improved. [cite: 754]"
+  },
+  {
+    "word": "Appropriate",
+    "emoji": "👔",
+    "def": "Suitable or right for a particular situation. [cite: 754]",
+    "ex": "Please wear *** clothing for the ceremony. [cite: 754]"
+  },
+  {
+    "word": "Argument",
+    "emoji": "🗣️",
+    "def": "A disagreement, or a reason given to support an idea. [cite: 754]",
+    "ex": "We had a small *** about the plan. [cite: 754]"
+  },
+  {
+    "word": "Calendar",
+    "emoji": "🗓️",
+    "def": "A chart showing the days, weeks, and months of a year. [cite: 754]",
+    "ex": "I wrote the date on the ***. [cite: 754]"
+  },
+  {
+    "word": "Ceiling",
+    "emoji": "🏠",
+    "def": "The inner upper surface of a room. [cite: 754]",
+    "ex": "He painted the kitchen *** white. [cite: 754]"
+  },
+  {
+    "word": "Cemetery",
+    "emoji": "🪦",
+    "def": "A place where dead people are buried. [cite: 754]",
+    "ex": "The old church has a small *** next to it. [cite: 754]"
+  },
+  {
+    "word": "Committee",
+    "emoji": "👥",
+    "def": "A group of people chosen to do a particular job. [cite: 755]",
+    "ex": "The safety *** meets monthly. [cite: 755]"
+  },
+  {
+    "word": "Completely",
+    "emoji": "💯",
+    "def": "In every way; totally. [cite: 755]",
+    "ex": "I *** agree with you. [cite: 755]"
+  },
+  {
+    "word": "Conscious",
+    "emoji": "👁️",
+    "def": "Awake and able to understand what is happening. [cite: 755]",
+    "ex": "She was knocked down but remained ***. [cite: 755]"
+  },
+  {
+    "word": "Convenient",
+    "emoji": "🏪",
+    "def": "Suitable for your purposes and easy to use. [cite: 755]",
+    "ex": "The store is very *** to my house. [cite: 755]"
+  },
+  {
+    "word": "Criticism",
+    "emoji": "📉",
+    "def": "The act of saying that something or someone is bad or wrong. [cite: 755]",
+    "ex": "He received harsh *** for his mistakes. [cite: 755]"
+  },
+  {
+    "word": "Curiosity",
+    "emoji": "🧐",
+    "def": "A strong desire to know or learn something. [cite: 755]",
+    "ex": "Her *** led her to explore the old house. [cite: 755]"
+  },
+  {
+    "word": "Desperate",
+    "emoji": "😟",
+    "def": "Needing or wanting something very much. [cite: 755]",
+    "ex": "They were *** to find water. [cite: 755]"
+  },
+  {
+    "word": "Develop",
+    "emoji": "📈",
+    "def": "To grow or change into something more advanced. [cite: 755]",
+    "ex": "The city plans to *** a new park. [cite: 755]"
+  },
+  {
+    "word": "Different",
+    "emoji": "🔀",
+    "def": "Not the same as another or each other. [cite: 755]",
+    "ex": "We all have *** ideas. [cite: 755]"
+  },
+  {
+    "word": "Disaster",
+    "emoji": "🌋",
+    "def": "A sudden event that causes great damage or loss of life. [cite: 755]",
+    "ex": "The flood was a natural ***. [cite: 755]"
+  },
+  {
+    "word": "Drums",
+    "emoji": "🥁",
+    "def": "Musical instruments that you hit with your hands or sticks. [cite: 755]",
+    "ex": "The band started playing the ***. [cite: 755]"
+  },
+  {
+    "word": "Magazines",
+    "emoji": "📰",
+    "def": "Thin books with paper covers, often published weekly or monthly. [cite: 755]",
+    "ex": "I like to read fashion ***. [cite: 755]"
+  },
+  {
+    "word": "Extinguisher",
+    "emoji": "🧯",
+    "def": "A device containing water or chemicals for putting out a fire. [cite: 755]",
+    "ex": "Every office must have a fire ***. [cite: 755]"
+  },
+  {
+    "word": "Blanket",
+    "emoji": "🛌",
+    "def": "A warm covering used especially for beds. [cite: 755]",
+    "ex": "I put an extra *** on the bed. [cite: 755]"
+  },
+  {
+    "word": "Costume",
+    "emoji": "🦸",
+    "def": "Clothes worn by an actor or to a fancy dress party. [cite: 755, 756]",
+    "ex": "She wore a superhero *** for the party. [cite: 755, 756]"
+  },
+  {
+    "word": "Sunglasses",
+    "emoji": "🕶️",
+    "def": "Dark glasses that protect your eyes from the sun. [cite: 756]",
+    "ex": "I need my *** because it is bright outside. [cite: 756]"
+  },
+  {
+    "word": "Jumper",
+    "emoji": "🧥",
+    "def": "A knitted piece of clothing for the upper body; a sweater. [cite: 756]",
+    "ex": "It's cold, so wear a warm ***. [cite: 756]"
+  },
+  {
+    "word": "Scarf",
+    "emoji": "🧣",
+    "def": "A piece of cloth worn around the neck or head for warmth or decoration. [cite: 756]",
+    "ex": "He wrapped a thick *** around his neck. [cite: 756]"
+  },
+  {
+    "word": "Trainers",
+    "emoji": "👟",
+    "def": "Shoes worn for sport or informal activities; sneakers. [cite: 756]",
+    "ex": "I wear my *** to the gym. [cite: 756]"
+  },
+  {
+    "word": "Gloves",
+    "emoji": "🧤",
+    "def": "Pieces of clothing worn on the hands for warmth or protection. [cite: 756]",
+    "ex": "She put on her *** before going outside. [cite: 756]"
+  },
+  {
+    "word": "Socks",
+    "emoji": "🧦",
+    "def": "Pieces of clothing worn on the feet inside shoes. [cite: 756]",
+    "ex": "I need a new pair of warm ***. [cite: 756]"
+  },
+  {
+    "word": "Suit",
+    "emoji": "👔",
+    "def": "A set of clothes made from the same fabric, usually a jacket and trousers/skirt. [cite: 756]",
+    "ex": "He wore a business *** to the interview. [cite: 756]"
+  },
+  {
+    "word": "Jacket",
+    "emoji": "🧥",
+    "def": "A short coat. [cite: 756]",
+    "ex": "I left my *** in the car. [cite: 756]"
+  },
+  {
+    "word": "Coat",
+    "emoji": "🧥",
+    "def": "An outer garment, usually worn outdoors. [cite: 756]",
+    "ex": "It's a very cold day, so put on your ***. [cite: 756]"
+  },
+  {
+    "word": "Trousers",
+    "emoji": "👖",
+    "def": "An outer garment for the lower part of the body; pants. [cite: 756]",
+    "ex": "I need to buy new black ***. [cite: 756]"
+  },
+  {
+    "word": "Shirt",
+    "emoji": "👔",
+    "def": "A garment for the upper part of the body, usually made of cotton. [cite: 756]",
+    "ex": "He put on a clean white ***. [cite: 756]"
+  },
+  {
+    "word": "Skirt",
+    "emoji": "👗",
+    "def": "A piece of clothing worn by women and girls that hangs from the waist. [cite: 756]",
+    "ex": "She wore a long blue ***. [cite: 756]"
+  },
+  {
+    "word": "Dress",
+    "emoji": "👗",
+    "def": "A one-piece garment for a woman or girl that covers the body and extends down over the legs. [cite: 756]",
+    "ex": "The bride wore a beautiful white ***. [cite: 756]"
+  },
+  {
+    "word": "Hat",
+    "emoji": "🎩",
+    "def": "A covering for the head. [cite: 757]",
+    "ex": "He put on his baseball ***. [cite: 757]"
+  },
+  {
+    "word": "Cap",
+    "emoji": "🧢",
+    "def": "A soft flat hat with a peak. [cite: 757]",
+    "ex": "I wore a sun *** to the game. [cite: 757]"
+  },
+  {
+    "word": "Belt",
+    "emoji": "🥋",
+    "def": "A strip of leather or cloth worn around the waist. [cite: 757]",
+    "ex": "I tightened my *** after losing weight. [cite: 757]"
+  },
+  {
+    "word": "Tie",
+    "emoji": "👔",
+    "def": "A long, narrow piece of cloth worn around the neck, especially by men. [cite: 757]",
+    "ex": "He needs to wear a *** for his job. [cite: 757]"
+  },
+  {
+    "word": "Boots",
+    "emoji": "👢",
+    "def": "A type of shoe that covers the whole foot and lower leg. [cite: 757]",
+    "ex": "I bought a new pair of hiking ***. [cite: 757]"
+  },
+  {
+    "word": "Sandals",
+    "emoji": "👡",
+    "def": "Light shoes that consist of a sole held onto the foot by straps. [cite: 757]",
+    "ex": "I wear my *** in the summer. [cite: 757]"
+  },
+  {
+    "word": "Pyjamas",
+    "emoji": "🛏️",
+    "def": "Clothes worn for sleeping. [cite: 757]",
+    "ex": "I put on my comfy ***. [cite: 757]"
+  },
+  {
+    "word": "Uniform",
+    "emoji": "👮",
+    "def": "A special set of clothes worn by members of an organization or school. [cite: 757]",
+    "ex": "All the students wear a school ***. [cite: 757]"
+  },
+  {
+    "word": "Leather",
+    "emoji": "👜",
+    "def": "A material made from the skin of an animal, used to make shoes and bags. [cite: 757]",
+    "ex": "I bought a new *** wallet. [cite: 757]"
+  },
+  {
+    "word": "Rubber",
+    "emoji": "🎈",
+    "def": "A strong, elastic material, used for tires and shoes. [cite: 757]",
+    "ex": "The ball is made of ***. [cite: 757]"
+  },
+  {
+    "word": "Silver",
+    "emoji": "💍",
+    "def": "A valuable, shiny, white metal. [cite: 757]",
+    "ex": "She wears a *** ring. [cite: 757]"
+  },
+  {
+    "word": "Concrete",
+    "emoji": "🧱",
+    "def": "A heavy, hard building material made from cement, sand, and water. [cite: 757]",
+    "ex": "The road is made of ***. [cite: 757]"
+  },
+  {
+    "word": "Porcelain",
+    "emoji": "☕",
+    "def": "A delicate, white, translucent ceramic material. [cite: 757]",
+    "ex": "The cup is made of fine ***. [cite: 757]"
+  },
+  {
+    "word": "Styrofoam",
+    "emoji": "📦",
+    "def": "A very light plastic material used for packaging. [cite: 757]",
+    "ex": "The fragile item was packed in ***. [cite: 757]"
+  },
+  {
+    "word": "Cardboard",
+    "emoji": "📦",
+    "def": "A stiff, thick type of paper, often used for boxes. [cite: 757, 758]",
+    "ex": "I recycled the *** box. [cite: 757, 758]"
+  },
+  {
+    "word": "Cotton",
+    "emoji": "🧶",
+    "def": "A soft, white material that grows on a plant, used for making cloth. [cite: 758]",
+    "ex": "This t-shirt is 100% ***. [cite: 758]"
+  },
+  {
+    "word": "Aluminium",
+    "emoji": "🥫",
+    "def": "A light, silver-colored metal. [cite: 758]",
+    "ex": "The foil is made of ***. [cite: 758]"
+  },
+  {
+    "word": "Steel",
+    "emoji": "🏗️",
+    "def": "A strong metal made from iron and carbon. [cite: 758]",
+    "ex": "The bridge is built with ***. [cite: 758]"
+  },
+  {
+    "word": "Graphite",
+    "emoji": "✏️",
+    "def": "A soft, black material used in pencil leads. [cite: 758]",
+    "ex": "The artist drew with a piece of ***. [cite: 758]"
+  },
+  {
+    "word": "Titanium",
+    "emoji": "⚙️",
+    "def": "A light, very strong, silver-colored metal. [cite: 758]",
+    "ex": "The golf club is made of ***. [cite: 758]"
+  },
+  {
+    "word": "Plastic",
+    "emoji": "🥤",
+    "def": "A light, strong material that can be made into many shapes. [cite: 758]",
+    "ex": "We need to reduce our use of ***. [cite: 758]"
+  },
+  {
+    "word": "Glass",
+    "emoji": "🪟",
+    "def": "A hard, transparent material used for windows and bottles. [cite: 758]",
+    "ex": "Be careful not to break the ***. [cite: 758]"
+  },
+  {
+    "word": "Wood",
+    "emoji": "🪵",
+    "def": "The hard material that trees are made of. [cite: 758]",
+    "ex": "The table is made of dark ***. [cite: 758]"
+  },
+  {
+    "word": "Fabric",
+    "emoji": "🧵",
+    "def": "Cloth used for making clothes, curtains, etc. [cite: 758]",
+    "ex": "I need to buy new *** for the curtains. [cite: 758]"
+  },
+  {
+    "word": "Silk",
+    "emoji": "🐛",
+    "def": "A soft, smooth, expensive type of cloth. [cite: 758]",
+    "ex": "She wore a beautiful *** dress. [cite: 758]"
+  },
+  {
+    "word": "Wool",
+    "emoji": "🐑",
+    "def": "A material made from the hair of sheep, used for warm clothes. [cite: 758]",
+    "ex": "I bought a warm *** sweater. [cite: 758]"
+  },
+  {
+    "word": "Nylon",
+    "emoji": "🪢",
+    "def": "A strong, artificial material used for clothes and ropes. [cite: 758]",
+    "ex": "The rope is made of strong ***. [cite: 758]"
+  },
+  {
+    "word": "Cash",
+    "emoji": "💵",
+    "def": "Money in the form of coins or banknotes. [cite: 758]",
+    "ex": "I paid for the groceries with ***. [cite: 758]"
+  },
+  {
+    "word": "Bill",
+    "emoji": "🧾",
+    "def": "A request for payment of money owed, or a banknote. [cite: 758]",
+    "ex": "The waiter brought the *** to the table. [cite: 758]"
+  },
+  {
+    "word": "Discount",
+    "emoji": "🏷️",
+    "def": "A reduction in the usual price of something. [cite: 759]",
+    "ex": "I got a *** for buying two. [cite: 759]"
+  },
+  {
+    "word": "Price",
+    "emoji": "💲",
+    "def": "The amount of money for which something is bought or sold. [cite: 759]",
+    "ex": "What is the *** of that television? [cite: 759]"
+  },
+  {
+    "word": "Accommodate",
+    "emoji": "🏨",
+    "def": "To provide space or a place to stay for someone. [cite: 759]",
+    "ex": "This room can *** ten people. [cite: 759]"
+  },
+  {
+    "word": "Amateur",
+    "emoji": "📸",
+    "def": "A person who does an activity for pleasure, not as a job. [cite: 759]",
+    "ex": "He is an *** photographer. [cite: 759]"
+  },
+  {
+    "word": "Anonymous",
+    "emoji": "👤",
+    "def": "With a name that is not known or not made public. [cite: 759]",
+    "ex": "The donation was given by an *** person. [cite: 759]"
+  },
+  {
+    "word": "Average",
+    "emoji": "📊",
+    "def": "The normal or usual amount, level, or quality. [cite: 759]",
+    "ex": "The *** temperature in summer is 25 degrees. [cite: 759]"
+  },
+  {
+    "word": "Bureaucracy",
+    "emoji": "🏢",
+    "def": "A system of government or management that involves many levels of officials and strict rules. [cite: 759]",
+    "ex": "The process was slow because of the ***. [cite: 759]"
+  },
+  {
+    "word": "Caribbean",
+    "emoji": "🏝️",
+    "def": "The sea and islands in the area between North and South America. [cite: 759]",
+    "ex": "We went on holiday to the ***. [cite: 759]"
+  },
+  {
+    "word": "Vaccination",
+    "emoji": "💉",
+    "def": "An injection that protects against a disease. [cite: 759]",
+    "ex": "It is important to get your annual ***. [cite: 759]"
+  },
+  {
+    "word": "Chauffeur",
+    "emoji": "🚘",
+    "def": "A person employed to drive a car. [cite: 759]",
+    "ex": "The celebrity arrived with a ***. [cite: 759]"
+  },
+  {
+    "word": "Browser",
+    "emoji": "🌐",
+    "def": "A program that lets you look at information on the internet. [cite: 759]",
+    "ex": "I opened my web *** to search online. [cite: 759]"
+  },
+  {
+    "word": "Ketchup",
+    "emoji": "🍅",
+    "def": "A thick, cold sauce made from tomatoes, usually eaten with chips. [cite: 759]",
+    "ex": "I put *** on my burger. [cite: 759]"
+  },
+  {
+    "word": "Peanut Butter",
+    "emoji": "🥜",
+    "def": "A soft food paste made from ground peanuts. [cite: 759]",
+    "ex": "I like a sandwich with jam and ***. [cite: 759]"
+  },
+  {
+    "word": "Water bottle",
+    "emoji": "💧",
+    "def": "A container used to hold water for drinking. [cite: 760]",
+    "ex": "Don't forget your *** for the hike. [cite: 760]"
+  },
+  {
+    "word": "Dilemma",
+    "emoji": "🤷",
+    "def": "A situation in which a difficult choice has to be made between two or more options. [cite: 760]",
+    "ex": "I face a difficult *** about my job. [cite: 760]"
+  },
+  {
+    "word": "Donut",
+    "emoji": "🍩",
+    "def": "A small, ring-shaped sweet cake cooked in hot fat. [cite: 760]",
+    "ex": "She bought a chocolate ***. [cite: 760]"
+  },
+  {
+    "word": "Architecture",
+    "emoji": "🏛️",
+    "def": "The art and practice of designing and constructing buildings. [cite: 760]",
+    "ex": "I am studying the history of Roman ***. [cite: 760]"
+  },
+  {
+    "word": "Entrepreneur",
+    "emoji": "💼",
+    "def": "A person who organizes and operates a business or businesses. [cite: 760]",
+    "ex": "She is a successful young ***. [cite: 760]"
+  },
+  {
+    "word": "Existence",
+    "emoji": "🌌",
+    "def": "The fact or state of living or being real. [cite: 760]",
+    "ex": "Do you believe in the *** of aliens? [cite: 760]"
+  },
+  {
+    "word": "Facetious",
+    "emoji": "🤡",
+    "def": "Treating serious issues with inappropriately joking comments. [cite: 760]",
+    "ex": "Please stop making *** remarks. [cite: 760]"
+  },
+  {
+    "word": "Fascination",
+    "emoji": "🤩",
+    "def": "The state of being very interested in something. [cite: 760]",
+    "ex": "He has a lifelong *** with trains. [cite: 760]"
+  },
+  {
+    "word": "Fluorescent",
+    "emoji": "💡",
+    "def": "Very bright, or related to light produced by a gas in a tube. [cite: 760]",
+    "ex": "The office uses *** lights. [cite: 760]"
+  },
+  {
+    "word": "Fuchsia",
+    "emoji": "🌺",
+    "def": "A bright pinkish-purple color. [cite: 760]",
+    "ex": "Her favorite color is ***. [cite: 760]"
+  },
+  {
+    "word": "Porcelain Clay",
+    "emoji": "🏺",
+    "def": "The raw material used to make porcelain. [cite: 760]",
+    "ex": "Artists use *** for fine sculptures. [cite: 760]"
+  },
+  {
+    "word": "Harass",
+    "emoji": "🚫",
+    "def": "To bother or annoy someone persistently. [cite: 760]",
+    "ex": "It is illegal to *** your employees. [cite: 760]"
+  },
+  {
+    "word": "Hierarchy",
+    "emoji": "🪜",
+    "def": "A system in which people or things are ranked one above the other. [cite: 760]",
+    "ex": "The company has a strict ***. [cite: 760]"
+  },
+  {
+    "word": "Hypocrisy",
+    "emoji": "🎭",
+    "def": "Claiming to have moral standards or beliefs but acting against them. [cite: 760]",
+    "ex": "He was accused of *** for his actions. [cite: 760]"
+  },
+  {
+    "word": "Idiosyncrasy",
+    "emoji": "🧦",
+    "def": "A strange or unusual habit or feature of one person. [cite: 761]",
+    "ex": "His *** is that he always wears two different socks. [cite: 761]"
+  },
+  {
+    "word": "Independent",
+    "emoji": "🦅",
+    "def": "Not controlled by another person or group. [cite: 761]",
+    "ex": "She is completely *** and lives alone. [cite: 761]"
+  },
+  {
+    "word": "Indispensable",
+    "emoji": "🔧",
+    "def": "Absolutely necessary. [cite: 761]",
+    "ex": "This tool is *** for my work. [cite: 761]"
+  },
+  {
+    "word": "Intelligence",
+    "emoji": "🧠",
+    "def": "The ability to learn, understand, and make judgments or have opinions. [cite: 761]",
+    "ex": "She has great *** and works hard. [cite: 761]"
+  },
+  {
+    "word": "Time Machine",
+    "emoji": "⏳",
+    "def": "A device imagined to be able to transport a person through time. [cite: 761]",
+    "ex": "If I had a ***, I would visit the past. [cite: 761]"
+  },
+  {
+    "word": "Unobtrusive",
+    "emoji": "📷",
+    "def": "Not attracting attention; not noticeable. [cite: 761]",
+    "ex": "The camera was small and ***. [cite: 761]"
+  },
+  {
+    "word": "Disquietude",
+    "emoji": "😟",
+    "def": "A state of uneasiness or anxiety. [cite: 761]",
+    "ex": "He felt a sense of *** about the future. [cite: 761]"
+  },
+  {
+    "word": "Irresistible",
+    "emoji": "🤤",
+    "def": "Too attractive or tempting to be resisted. [cite: 761]",
+    "ex": "The cake looked absolutely ***. [cite: 761]"
+  },
+  {
+    "word": "Commiseration",
+    "emoji": "🫂",
+    "def": "An expression of sympathy or pity. [cite: 761]",
+    "ex": "We offered our *** to the losing team. [cite: 761]"
+  },
+  {
+    "word": "Hypochondriac",
+    "emoji": "🌡️",
+    "def": "A person who is constantly worried about their health. [cite: 761]",
+    "ex": "He is a *** and thinks he has every illness. [cite: 761]"
+  },
+  {
+    "word": "Physiognomy",
+    "emoji": "👤",
+    "def": "A person's facial features or expression, especially when considered to show character. [cite: 761]",
+    "ex": "The detective studied the criminal's ***. [cite: 761]"
+  },
+  {
+    "word": "Melancholy",
+    "emoji": "🌧️",
+    "def": "A feeling of sadness, typically with no obvious cause. [cite: 761]",
+    "ex": "The music filled the room with a deep ***. [cite: 761]"
+  },
+  {
+    "word": "Irreproachable",
+    "emoji": "🏆",
+    "def": "Beyond criticism; faultless. [cite: 761]",
+    "ex": "Her work ethic is ***. [cite: 761]"
+  },
+  {
+    "word": "Despondency",
+    "emoji": "😔",
+    "def": "A state of being low in spirits from loss of hope or courage. [cite: 762]",
+    "ex": "He fell into a deep *** after the failure. [cite: 762]"
+  },
+  {
+    "word": "Countenance",
+    "emoji": "😐",
+    "def": "A person's face or facial expression. [cite: 762]",
+    "ex": "His calm *** reassured everyone. [cite: 762]"
+  },
+  {
+    "word": "Solitude",
+    "emoji": "⛰️",
+    "def": "The state of being alone. [cite: 762]",
+    "ex": "She enjoys the peaceful *** of the mountains. [cite: 762]"
+  },
+  {
+    "word": "Apparition",
+    "emoji": "👻",
+    "def": "A ghost or ghostlike image of a person. [cite: 762]",
+    "ex": "We saw a strange *** in the old castle. [cite: 762]"
+  },
+  {
+    "word": "Timidity",
+    "emoji": "🙈",
+    "def": "Lack of courage or confidence. [cite: 762]",
+    "ex": "Her natural *** made her quiet in meetings. [cite: 762]"
+  },
+  {
+    "word": "Quivering",
+    "emoji": "🥶",
+    "def": "Trembling or shaking slightly. [cite: 762]",
+    "ex": "Her voice was *** with emotion. [cite: 762]"
+  },
+  {
+    "word": "Trepidation",
+    "emoji": "😰",
+    "def": "A feeling of fear or anxiety about something that may happen. [cite: 762]",
+    "ex": "They waited with *** for the results. [cite: 762]"
+  },
+  {
+    "word": "Disconsolate",
+    "emoji": "😭",
+    "def": "Unhappy and unable to be comforted. [cite: 762]",
+    "ex": "The *** child missed his parents. [cite: 762]"
+  },
+  {
+    "word": "Eloquence",
+    "emoji": "🗣️",
+    "def": "Fluent or persuasive speaking or writing. [cite: 762]",
+    "ex": "He spoke with great *** about his ideas. [cite: 762]"
+  },
+  {
+    "word": "Bashfulness",
+    "emoji": "😳",
+    "def": "The quality of being shy. [cite: 762]",
+    "ex": "She overcame her *** to give the speech. [cite: 762]"
+  },
+  {
+    "word": "Chivalrous",
+    "emoji": "🛡️",
+    "def": "Courteous and helpful, especially toward women; like a knight. [cite: 762]",
+    "ex": "He was very *** and opened the door for her. [cite: 762]"
+  },
+  {
+    "word": "Phantasmagoria",
+    "emoji": "🎆",
+    "def": "A confusing mixture of real and imagined features. [cite: 762]",
+    "ex": "The show was a stunning *** of light and sound. [cite: 762]"
+  },
+  {
+    "word": "Incoherent",
+    "emoji": "😵",
+    "def": "Expressed in an unclear and confusing way. [cite: 762]",
+    "ex": "After the accident, he was completely ***. [cite: 762]"
+  },
+  {
+    "word": "Rapturous",
+    "emoji": "👏",
+    "def": "Expressing extreme pleasure or enthusiasm. [cite: 762]",
+    "ex": "The audience gave a *** applause. [cite: 762]"
+  },
+  {
+    "word": "Inexplicable",
+    "emoji": "❓",
+    "def": "Unable to be explained or accounted for. [cite: 763]",
+    "ex": "There was an *** change in the weather. [cite: 763]"
+  },
+  {
+    "word": "Reverie",
+    "emoji": "💭",
+    "def": "A state of being pleasantly lost in one's thoughts; a daydream. [cite: 763]",
+    "ex": "He was lost in a deep *** while looking out the window. [cite: 763]"
+  },
+  {
+    "word": "Voluptuous",
+    "emoji": "🛏️",
+    "def": "Relating to luxury or sensual pleasure. [cite: 763]",
+    "ex": "The furniture was covered in a *** red velvet. [cite: 763]"
+  },
+  {
+    "word": "Effusion",
+    "emoji": "💖",
+    "def": "An unrestrained expression of feeling. [cite: 763]",
+    "ex": "She spoke with a heartfelt *** of gratitude. [cite: 763]"
+  },
+  {
+    "word": "Petrified",
+    "emoji": "😱",
+    "def": "So frightened that one is unable to move; turned to stone. [cite: 763]",
+    "ex": "I was *** when I heard the strange noise. [cite: 763]"
+  },
+  {
+    "word": "Imperturbable",
+    "emoji": "🧘",
+    "def": "Unable to be upset or excited; calm. [cite: 763]",
+    "ex": "Despite the chaos, the pilot remained ***. [cite: 763]"
+  },
+  {
+    "word": "Transient",
+    "emoji": "⏳",
+    "def": "Lasting for only a short time; temporary. [cite: 763]",
+    "ex": "The feeling of happiness was ***. [cite: 763]"
+  },
+  {
+    "word": "Ephemeral",
+    "emoji": "👗",
+    "def": "Lasting for a very short time. [cite: 763]",
+    "ex": "Fashion is often ***. [cite: 763]"
+  },
+  {
+    "word": "Capricious",
+    "emoji": "🌦️",
+    "def": "Given to sudden and unaccountable changes of mood or behavior. [cite: 763]",
+    "ex": "The weather here is very ***. [cite: 763]"
+  },
+  {
+    "word": "Exuberant",
+    "emoji": "🥳",
+    "def": "Full of energy, excitement, and cheerfulness. [cite: 763]",
+    "ex": "The children were *** after winning the game. [cite: 763]"
+  },
+  {
+    "word": "Somnambulist",
+    "emoji": "🚶‍♂️",
+    "def": "A person who walks while asleep; a sleepwalker. [cite: 763]",
+    "ex": "The doctor studied the patient who was a ***. [cite: 763]"
+  },
+  {
+    "word": "Insubstantial",
+    "emoji": "🍲",
+    "def": "Lacking physical strength or material; weak. [cite: 763]",
+    "ex": "The meal was quite ***. [cite: 763]"
+  },
+  {
+    "word": "Spectral",
+    "emoji": "👻",
+    "def": "Of or like a ghost. [cite: 763]",
+    "ex": "They searched the old house for *** activity. [cite: 763]"
+  },
+  {
+    "word": "Dilapidated",
+    "emoji": "🏚️",
+    "def": "In a state of disrepair or ruin as a result of age or neglect. [cite: 763]",
+    "ex": "They bought an old, *** farmhouse. [cite: 763]"
+  },
+  {
+    "word": "Squalid",
+    "emoji": "🐀",
+    "def": "Extremely dirty and unpleasant, especially as a result of poverty or neglect. [cite: 764]",
+    "ex": "The prisoners lived in *** conditions. [cite: 764]"
+  },
+  {
+    "word": "Magnanimous",
+    "emoji": "🤝",
+    "def": "Generous or forgiving, especially toward a rival or less powerful person. [cite: 764]",
+    "ex": "The winner was *** in victory. [cite: 764]"
+  },
+  {
+    "word": "Benevolence",
+    "emoji": "❤️",
+    "def": "The quality of being well-meaning and kindly. [cite: 764]",
+    "ex": "The charity is known for its acts of ***. [cite: 764]"
+  },
+  {
+    "word": "Candid",
+    "emoji": "🗣️",
+    "def": "Truthful and straightforward; frank. [cite: 764]",
+    "ex": "She gave a *** opinion about the proposal. [cite: 764]"
+  },
+  {
+    "word": "Naïveté",
+    "emoji": "👶",
+    "def": "Lack of experience, wisdom, or judgment. [cite: 764]",
+    "ex": "His *** made him easy to trick. [cite: 764]"
+  },
+  {
+    "word": "Artless",
+    "emoji": "🧒",
+    "def": "Without deceit or pretense; natural and sincere. [cite: 764]",
+    "ex": "The child's question was completely ***. [cite: 764]"
+  },
+  {
+    "word": "Coquetry",
+    "emoji": "😉",
+    "def": "Flirtatious behavior. [cite: 764]",
+    "ex": "She used a charming *** to get what she wanted. [cite: 764]"
+  },
+  {
+    "word": "Caprice",
+    "emoji": "🤷",
+    "def": "A sudden and unaccountable change of mood or behavior. [cite: 764]",
+    "ex": "It was a sudden *** to quit his job. [cite: 764]"
+  },
+  {
+    "word": "Impetuous",
+    "emoji": "🏎️",
+    "def": "Acting or done quickly and without thought or care. [cite: 764]",
+    "ex": "His *** decision led to an accident. [cite: 764]"
+  },
+  {
+    "word": "Perturbation",
+    "emoji": "😰",
+    "def": "Anxiety; mental uneasiness. [cite: 764]",
+    "ex": "He experienced a great *** after the call. [cite: 764]"
+  },
+  {
+    "word": "Vicissitude",
+    "emoji": "🎢",
+    "def": "A change of circumstances or fortune, typically unwelcome or unpleasant. [cite: 764]",
+    "ex": "We must face the ***s of life. [cite: 764]"
+  },
+  {
+    "word": "Incessant",
+    "emoji": "🔊",
+    "def": "Continuing without pause or interruption. [cite: 764]",
+    "ex": "The noise from the street was ***. [cite: 764]"
+  },
+  {
+    "word": "Lugubrious",
+    "emoji": "⚰️",
+    "def": "Looking or sounding sad and dismal. [cite: 764]",
+    "ex": "The funeral service was a *** affair. [cite: 764]"
+  },
+  {
+    "word": "Pensive",
+    "emoji": "🤔",
+    "def": "Engaged in deep or serious thought. [cite: 764]",
+    "ex": "He looked *** as he stared out the window. [cite: 764]"
+  },
+  {
+    "word": "Enraptured",
+    "emoji": "😍",
+    "def": "Filled with delight; deeply moved. [cite: 765]",
+    "ex": "The audience was *** by the music. [cite: 765]"
+  },
+  {
+    "word": "Fervent",
+    "emoji": "🔥",
+    "def": "Having or displaying a passionate intensity. [cite: 765]",
+    "ex": "She is a *** supporter of the team. [cite: 765]"
+  },
+  {
+    "word": "Prodigal",
+    "emoji": "💸",
+    "def": "Spending money or resources freely and carelessly; wastefully extravagant. [cite: 765]",
+    "ex": "The *** son wasted all his inheritance. [cite: 765]"
+  },
+  {
+    "word": "Indigence",
+    "emoji": "🏚️",
+    "def": "A state of extreme poverty. [cite: 765]",
+    "ex": "He worked hard to lift his family out of ***. [cite: 765]"
+  },
+  {
+    "word": "Scrupulous",
+    "emoji": "🧐",
+    "def": "Diligent, thorough, and extremely attentive to details. [cite: 765]",
+    "ex": "The accountant was known for his *** honesty. [cite: 765]"
+  },
+  {
+    "word": "Fastidious",
+    "emoji": "👔",
+    "def": "Very attentive to and concerned about accuracy and detail. [cite: 765]",
+    "ex": "He is *** about his clothing. [cite: 765]"
+  },
+  {
+    "word": "Ambiguous",
+    "emoji": "❓",
+    "def": "Open to more than one interpretation; unclear. [cite: 765]",
+    "ex": "The final line of the poem is ***. [cite: 765]"
+  },
+  {
+    "word": "Equivocal",
+    "emoji": "🤷",
+    "def": "Open to more than one interpretation; not clear or definite. [cite: 765]",
+    "ex": "His promise was *** and hard to trust. [cite: 765]"
+  },
+  {
+    "word": "Pretext",
+    "emoji": "🤥",
+    "def": "A reason given in justification of a course of action that is not the real reason. [cite: 765]",
+    "ex": "He used a headache as a *** for leaving early. [cite: 765]"
+  },
+  {
+    "word": "Obstinate",
+    "emoji": "🫸",
+    "def": "Refusing to change one's opinion or chosen course of action, despite attempts to persuade one to do so. [cite: 765]",
+    "ex": "She is very *** and won't change her mind. [cite: 765]"
+  },
+  {
+    "word": "Perplexity",
+    "emoji": "😵‍💫",
+    "def": "A state of being confused or puzzled. [cite: 765]",
+    "ex": "The complex equation caused him great ***. [cite: 765]"
+  },
+  {
+    "word": "Indifference",
+    "emoji": "😐",
+    "def": "Lack of interest, concern, or sympathy. [cite: 765]",
+    "ex": "Their *** to the problem was surprising. [cite: 765]"
+  },
+  {
+    "word": "Apathy",
+    "emoji": "🥱",
+    "def": "Lack of interest, enthusiasm, or concern. [cite: 765]",
+    "ex": "The town showed widespread *** about the election. [cite: 765]"
+  },
+  {
+    "word": "Resignation",
+    "emoji": "😔",
+    "def": "The acceptance of something undesirable but unavoidable. [cite: 766]",
+    "ex": "He accepted the bad news with quiet ***. [cite: 766]"
+  },
+  {
+    "word": "Implicit",
+    "emoji": "🤫",
+    "def": "Suggested though not directly expressed. [cite: 766]",
+    "ex": "She gave her *** approval to the plan. [cite: 766]"
+  },
+  {
+    "word": "Sublime",
+    "emoji": "⛰️",
+    "def": "Of such excellence, grandeur, or beauty as to inspire great admiration or awe. [cite: 766]",
+    "ex": "The view from the mountain top was ***. [cite: 766]"
+  },
+  {
+    "word": "Exaltation",
+    "emoji": "🙌",
+    "def": "A feeling or state of extreme happiness. [cite: 766]",
+    "ex": "She was filled with *** after her victory. [cite: 766]"
+  },
+  {
+    "word": "Radiance",
+    "emoji": "✨",
+    "def": "Light or heat as emitted or reflected by something. [cite: 766]",
+    "ex": "The bride's face shone with happiness and ***. [cite: 766]"
+  },
+  {
+    "word": "Enigmatic",
+    "emoji": "🎭",
+    "def": "Difficult to interpret or understand; mysterious. [cite: 766]",
+    "ex": "He gave an *** smile and walked away. [cite: 766]"
+  },
+  {
+    "word": "Futility",
+    "emoji": "📉",
+    "def": "Pointlessness or uselessness. [cite: 766]",
+    "ex": "The soldiers understood the *** of the attack. [cite: 766]"
+  },
+  {
+    "word": "Torment",
+    "emoji": "😫",
+    "def": "Severe physical or mental suffering. [cite: 766]",
+    "ex": "He was in great *** after losing his home. [cite: 766]"
+  },
+  {
+    "word": "Anguish",
+    "emoji": "😭",
+    "def": "Severe mental or physical pain or suffering. [cite: 766]",
+    "ex": "She cried out in sudden ***. [cite: 766]"
+  },
+  {
+    "word": "Despair",
+    "emoji": "😞",
+    "def": "The complete loss or absence of hope. [cite: 766]",
+    "ex": "He was filled with *** after the bad news. [cite: 766]"
+  },
+  {
+    "word": "Bitterness",
+    "emoji": "😠",
+    "def": "Anger and disappointment at being treated unfairly; resentment. [cite: 766]",
+    "ex": "He spoke with great *** about his past. [cite: 766]"
+  },
+  {
+    "word": "Compassion",
+    "emoji": "❤️",
+    "def": "Sympathetic pity and concern for the suffering or misfortunes of others. [cite: 766]",
+    "ex": "She showed great *** for the poor. [cite: 766]"
+  },
+  {
+    "word": "Generosity",
+    "emoji": "🎁",
+    "def": "The quality of being kind and giving. [cite: 766]",
+    "ex": "His *** is well-known in the community. [cite: 766]"
+  },
+  {
+    "word": "Fidelity",
+    "emoji": "🤝",
+    "def": "Faithfulness to a person, cause, or belief. [cite: 766]",
+    "ex": "He questioned her *** after she lied. [cite: 766]"
+  },
+  {
+    "word": "Treachery",
+    "emoji": "🐍",
+    "def": "Betrayal of trust; deceptive action. [cite: 766, 767]",
+    "ex": "He was punished for his act of ***. [cite: 766, 767]"
+  }
+]
     "9":  [
               {"id": 1, "word": "Summer", "emoji": "☀️", "def": "The warmest season of the year.", "ex": "We plan to go to the beach this ***." },
               {"id": 2, "word": "Make out", "emoji": "💋", "def": "To kiss and hug affectionately.", "ex": "The couple wanted to *** in the car." },
