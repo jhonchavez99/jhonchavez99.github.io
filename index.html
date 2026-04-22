@@ -208,18 +208,18 @@
       .lb-streak {
         font-size: 1.5rem !important;
       }
-      
+
       .lb-badge {
         font-size: 0.9rem !important;
         padding: 8px 15px !important;
       }
-      
+
       .lb-actions {
         width: 100%;
         flex-direction: row !important;
         justify-content: space-between;
       }
-      
+
       .lb-actions button {
         flex: 1;
         font-size: 0.85rem !important;
@@ -242,7 +242,7 @@
         flex-direction: column;
         gap: 4px !important;
       }
-      
+
       #wordDisplay {
         font-size: 2.2rem !important;
       }
@@ -1192,6 +1192,11 @@
                 Spell words correctly in a row to build your tie-breaker streak! One mistake resets it. 🍯
               </span>
             </div>
+            <!-- Discreet Podium Hint -->
+            <div id="podiumHint"
+              style="margin-top: 10px; font-size: 0.85rem; color: #d97706; font-family: 'Outfit', sans-serif; font-weight: 700; display: none; align-items: center; justify-content: center; gap: 6px; animation: hintGlow 2s infinite alternate;">
+              🏆 <span id="podiumHintText">---</span>
+            </div>
           </div>
 
           <div class="word-progress" id="wordProgress">Word 1 of 5</div>
@@ -1231,8 +1236,8 @@
               </div>
             </div>
 
-            <input type="text" id="spellingInput" class="spelling-input" placeholder="Type here..." 
-              autocomplete="off" autocorrect="off" spellcheck="false" autocapitalize="off" disabled>
+            <input type="text" id="spellingInput" name="spelling" class="spelling-input" placeholder="Type here..."
+              autocomplete="new-password" autocorrect="off" autocapitalize="off" spellcheck="false" disabled>
 
             <button class="submit-btn" id="btnSubmitSpelling" disabled>Submit Spelling</button>
 
@@ -1354,18 +1359,24 @@
           height: 48px; min-width: 120px; gap: 10px; border-radius: 12px;
           cursor: pointer; border: none; background-color: #22c55e; color: white;
           transition: all 0.2s; box-shadow: 0 4px 12px rgba(34, 197, 94, 0.2);
-        " onmouseover="this.style.opacity='0.9'; this.style.transform='scale(1.02)'" onmouseout="this.style.opacity='1'; this.style.transform='scale(1)'">
+        " onmouseover="this.style.opacity='0.9'; this.style.transform='scale(1.02)'"
+          onmouseout="this.style.opacity='1'; this.style.transform='scale(1)'">
           <div style="display: flex; align-items: center; justify-content: center; gap: 8px;">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" style="width: 20px; height: 20px; display: block; flex-shrink: 0;">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M3 16.5v2.25A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75V16.5M16.5 12 12 16.5m0 0L7.5 12m4.5 4.5V3"></path>
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
+              stroke="currentColor" style="width: 20px; height: 20px; display: block; flex-shrink: 0;">
+              <path stroke-linecap="round" stroke-linejoin="round"
+                d="M3 16.5v2.25A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75V16.5M16.5 12 12 16.5m0 0L7.5 12m4.5 4.5V3">
+              </path>
             </svg>
             <span style="font-size: 1rem;">Download Report</span>
           </div>
         </button>
 
-        <button class="btn-pdf btn-stroke" style="flex: 1; background-color: #fbbf24; color: #0f172a; border: none; font-weight: 800;"
+        <button class="btn-pdf btn-stroke"
+          style="flex: 1; background-color: #fbbf24; color: #0f172a; border: none; font-weight: 800;"
           id="btnSubmitSheets">🚀 Enviar al Registro</button>
-        <button class="btn-pdf btn-stroke" style="flex: 1; background-color: #64748b; color: white; border: none;" id="btnRestartPractice">🔄 Try Again</button>
+        <button class="btn-pdf btn-stroke" style="flex: 1; background-color: #64748b; color: white; border: none;"
+          id="btnRestartPractice">🔄 Try Again</button>
       </div>
     </section>
 
@@ -1444,10 +1455,28 @@
       </div>
     </section>
 
+    <!-- New: Session Recovery Modal -->
+    <div id="recoveryModal" class="modal-overlay">
+      <div class="modal-content" style="max-width: 450px; padding: 40px; border: 4px solid var(--primary);">
+        <div style="font-size: 4rem; margin-bottom: 20px;">🛡️</div>
+        <h2 style="font-size: 2rem; color: var(--text-dark); margin-bottom: 10px;">Session Found</h2>
+        <p style="font-size: 1.1rem; color: var(--text-muted); margin-bottom: 30px; font-family: 'Inter', sans-serif;">
+          We found an unfinished practice session for <strong><span id="recoveryStudentName">student</span></strong>.
+          Would you like to resume?
+        </p>
+        <div style="display: flex; gap: 15px;">
+          <button id="btnResumeSession" class="action-button primary" style="flex: 1; padding: 12px;">Resume
+            Practice</button>
+          <button id="btnDiscardSession" class="action-button"
+            style="flex: 1; padding: 12px; background: #94a3b8; color: white;">Discard</button>
+        </div>
+      </div>
+    </div>
+
     <!-- Tab 4: Leaderboard -->
     <section id="leaderboard-view" class="view-section active">
       <div style="text-align: center; padding: 20px; margin-bottom: 40px;">
-        
+
 
 
         <!-- Panal Glassmorphism Container -->
@@ -1466,14 +1495,19 @@
           overflow: hidden;
         ">
           <!-- Decorative Glow (Soft Light) -->
-          <div style="position: absolute; top: -50px; left: 50%; transform: translateX(-50%); width: 400px; height: 300px; background: radial-gradient(circle, rgba(255, 255, 255, 0.8) 0%, transparent 70%); filter: blur(30px); pointer-events: none;"></div>
-          
-          <div class="lb-header" style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px; position: relative; z-index: 10; flex-wrap: wrap; gap: 15px;">
+          <div
+            style="position: absolute; top: -50px; left: 50%; transform: translateX(-50%); width: 400px; height: 300px; background: radial-gradient(circle, rgba(255, 255, 255, 0.8) 0%, transparent 70%); filter: blur(30px); pointer-events: none;">
+          </div>
+
+          <div class="lb-header"
+            style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px; position: relative; z-index: 10; flex-wrap: wrap; gap: 15px;">
             <div>
-              <h2 class="lb-title" style="font-size: 2.8rem; margin: 0; color: var(--text-dark); font-family: 'Outfit', sans-serif; font-weight: 800; letter-spacing: -0.02em;">
+              <h2 class="lb-title"
+                style="font-size: 2.8rem; margin: 0; color: var(--text-dark); font-family: 'Outfit', sans-serif; font-weight: 800; letter-spacing: -0.02em;">
                 Hall of Fame 🏆
               </h2>
-              <p style="font-size: 1.1rem; color: var(--text-muted); margin: 5px 0 0 0; font-family: 'Inter', sans-serif;">
+              <p
+                style="font-size: 1.1rem; color: var(--text-muted); margin: 5px 0 0 0; font-family: 'Inter', sans-serif;">
                 Spelling Bee Elite Scoreboard
               </p>
             </div>
@@ -1493,9 +1527,12 @@
                   transition: all 0.3s;
                   position: relative;
                   overflow: hidden;
-                " onmouseover="this.style.transform='scale(1.05)'; this.style.boxShadow='0 0 25px rgba(99, 102, 241, 0.8)'" onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='0 0 15px rgba(99, 102, 241, 0.5)'">
+                " onmouseover="this.style.transform='scale(1.05)'; this.style.boxShadow='0 0 25px rgba(99, 102, 241, 0.8)'"
+                  onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='0 0 15px rgba(99, 102, 241, 0.5)'">
                   <span style="position: relative; z-index: 2;">🌀 Farmear Aura</span>
-                  <div class="aura-glow" style="position: absolute; top: 0; left: -100%; width: 100%; height: 100%; background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent); transition: 0.5s;"></div>
+                  <div class="aura-glow"
+                    style="position: absolute; top: 0; left: -100%; width: 100%; height: 100%; background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent); transition: 0.5s;">
+                  </div>
                 </button>
 
                 <button id="btnRefreshLeaderboard" style="
@@ -1510,7 +1547,8 @@
                   font-size: 1rem;
                   box-shadow: 0 4px 14px rgba(245, 158, 11, 0.3);
                   transition: transform 0.2s, box-shadow 0.2s;
-                " onmouseover="this.style.transform='translateY(-2px)'" onmouseout="this.style.transform='translateY(0)'">
+                " onmouseover="this.style.transform='translateY(-2px)'"
+                  onmouseout="this.style.transform='translateY(0)'">
                   <span style="margin-right: 8px;">🐝</span> Actualizar
                 </button>
               </div>
@@ -1518,32 +1556,69 @@
           </div>
 
           <!-- Static Badge -->
-          <div style="display: flex; gap: 10px; margin-bottom: 30px; position: relative; z-index: 10; justify-content: center;">
-            <div class="lb-badge" style="background: #FFBF00; color: #0f172a; border: 2px solid #FFBF00; padding: 10px 30px; border-radius: 25px; font-weight: 800; font-family: 'Outfit', sans-serif; font-size: 1.1rem; box-shadow: 0 4px 10px rgba(0,0,0,0.1); display: inline-block;">🔥 Racha Máxima Global</div>
+          <div
+            style="display: flex; gap: 10px; margin-bottom: 30px; position: relative; z-index: 10; justify-content: center;">
+            <div class="lb-badge"
+              style="background: #FFBF00; color: #0f172a; border: 2px solid #FFBF00; padding: 10px 30px; border-radius: 25px; font-weight: 800; font-family: 'Outfit', sans-serif; font-size: 1.1rem; box-shadow: 0 4px 10px rgba(0,0,0,0.1); display: inline-block;">
+              🔥 Racha Máxima Global</div>
           </div>
 
-          <div id="leaderboardList" style="display: flex; flex-direction: column; gap: 12px; position: relative; z-index: 10;">
-            <div style="color: var(--text-muted); text-align: center; font-style: italic; padding: 40px 0;">Cargando panal global... 🍯</div>
+          <div id="leaderboardList"
+            style="display: flex; flex-direction: column; gap: 12px; position: relative; z-index: 10;">
+            <div style="color: var(--text-muted); text-align: center; font-style: italic; padding: 40px 0;">Cargando
+              panal global... 🍯</div>
           </div>
         </div>
       </div>
     </section>
 
     <style>
-      @keyframes aura-slide {
-        0% { left: -100%; }
-        100% { left: 100%; }
+      @keyframes hintGlow {
+        from {
+          opacity: 0.6;
+          transform: scale(0.98);
+        }
+
+        to {
+          opacity: 1;
+          transform: scale(1);
+        }
       }
+
+      @keyframes aura-slide {
+        0% {
+          left: -100%;
+        }
+
+        100% {
+          left: 100%;
+        }
+      }
+
       .aura-glow {
         animation: aura-slide 2s infinite linear;
       }
-      
+
       @keyframes fly-bee {
-        0% { transform: translate(0, 0) rotate(0deg); opacity: 0; }
-        10% { opacity: 1; }
-        90% { opacity: 1; }
-        100% { transform: translate(var(--tx), var(--ty)) rotate(20deg); opacity: 0; }
+        0% {
+          transform: translate(0, 0) rotate(0deg);
+          opacity: 0;
+        }
+
+        10% {
+          opacity: 1;
+        }
+
+        90% {
+          opacity: 1;
+        }
+
+        100% {
+          transform: translate(var(--tx), var(--ty)) rotate(20deg);
+          opacity: 0;
+        }
       }
+
       .floating-bee {
         position: fixed;
         font-size: 2rem;
@@ -2500,7 +2575,16 @@
       reportScoreFraction: document.getElementById('reportScoreFraction'),
       reportTotalBestStreak: document.getElementById('reportTotalBestStreak'),
       reportAvgTime: document.getElementById('reportAvgTime'),
-      reportTotalLifelines: document.getElementById('reportTotalLifelines')
+      reportTotalLifelines: document.getElementById('reportTotalLifelines'),
+      // Recovery Modal
+      recoveryModal: document.getElementById('recoveryModal'),
+      recoveryStudentName: document.getElementById('recoveryStudentName'),
+      btnResumeSession: document.getElementById('btnResumeSession'),
+      btnDiscardSession: document.getElementById('btnDiscardSession'),
+
+      // Podium Hint
+      podiumHint: document.getElementById('podiumHint'),
+      podiumHintText: document.getElementById('podiumHintText')
     };
 
     // --- Initialization ---
@@ -2513,6 +2597,9 @@
         populateVocab(state.grade);
         setupEventListeners();
         if (typeof fetchGlobalLeaderboard === 'function') fetchGlobalLeaderboard();
+
+        // Recover session if exists
+        if (typeof checkForCheckpoint === 'function') checkForCheckpoint();
       } catch (error) {
         console.error("Initialization error:", error);
         const grid = document.getElementById('vocabGrid');
@@ -2614,6 +2701,78 @@
       }
     }
 
+    // --- Podium Hint Logic ---
+    function updatePodiumHint() {
+      if (!window.globalLeaderboardData || window.globalLeaderboardData.length === 0) return;
+
+      const sorted = processAndSortData(window.globalLeaderboardData);
+      if (sorted.length === 0) return;
+
+      const topStreak = parseInt(sorted[0].streak) || 0;
+      const currentStreak = state.streak;
+
+      if (currentStreak < topStreak && (topStreak - currentStreak) <= 5) {
+        const diff = topStreak - currentStreak;
+        els.podiumHintText.textContent = `Only ${diff} more words to reach #1! 🏆`;
+        els.podiumHint.style.display = 'flex';
+      } else {
+        els.podiumHint.style.display = 'none';
+      }
+    }
+
+    // --- Persistence (Checkpoint) ---
+    function saveCheckpoint() {
+      const dataToSave = {
+        grade: state.grade,
+        practiceList: state.practiceList,
+        practiceIndex: state.practiceIndex,
+        streak: state.streak,
+        correctCount: state.correctCount,
+        results: state.results,
+        studentName: state.studentName,
+        studentSurname: state.studentSurname,
+        attemptDate: state.attemptDate,
+        bestStreak: state.bestStreak || 0,
+        mistakeCount: state.mistakeCount || 0
+      };
+      localStorage.setItem('bee_practice_checkpoint', JSON.stringify(dataToSave));
+    }
+
+    function clearCheckpoint() {
+      localStorage.removeItem('bee_practice_checkpoint');
+    }
+
+    function checkForCheckpoint() {
+      const saved = localStorage.getItem('bee_practice_checkpoint');
+      if (saved) {
+        try {
+          const data = JSON.parse(saved);
+          els.recoveryStudentName.textContent = `${data.studentName} ${data.studentSurname}`;
+          els.recoveryModal.classList.add('active');
+        } catch (e) {
+          clearCheckpoint();
+        }
+      }
+    }
+
+    function restoreSession() {
+      const saved = localStorage.getItem('bee_practice_checkpoint');
+      if (!saved) return;
+
+      const data = JSON.parse(saved);
+      // Merge saved data into state
+      Object.keys(data).forEach(key => {
+        state[key] = data[key];
+      });
+
+      els.recoveryModal.classList.remove('active');
+      els.startWrapper.style.display = 'none';
+      els.practiceControls.style.display = 'block';
+      switchTab('practice-view');
+
+      loadPracticeWord();
+    }
+
     // --- Practice Mode Logic ---
     function resetPracticeState() {
       let list = [...VOCAB_DATA[state.grade]];
@@ -2666,6 +2825,8 @@
         [list[i], list[j]] = [list[j], list[i]];
       }
       state.practiceList = list;
+
+      saveCheckpoint();
 
       els.startWrapper.style.display = 'none';
       els.practiceControls.style.display = 'block';
@@ -2807,6 +2968,7 @@
         state.streak++;
         if (state.streak > state.bestStreak) state.bestStreak = state.streak;
         state.correctCount++;
+        updatePodiumHint();
       } else {
         els.practiceBox.classList.add('wrong-flash');
         els.overlayResult.innerHTML = `
@@ -2820,6 +2982,7 @@
         els.overlayResult.style.color = 'var(--text-dark)';
         state.streak = 0;
         state.mistakeCount = (state.mistakeCount || 0) + 1;
+        updatePodiumHint();
         timeoutDuration = 3000;
       }
 
@@ -2839,6 +3002,8 @@
         lifelines: state.lifelinesThisWord.length > 0 ? state.lifelinesThisWord.join(', ') : '-'
       });
 
+      saveCheckpoint();
+
       // Move to next word after delay
       setTimeout(() => {
         els.practiceBox.classList.remove('correct-flash', 'wrong-flash');
@@ -2846,7 +3011,8 @@
         els.overlayResult.innerHTML = '✅';
 
         if (state.mistakeCount >= 5) {
-          alert("¡Has cometido 5 errores! 🐝 Práctica finalizada. Aquí tienes tu reporte.");
+          alert("You've made 5 mistakes! 🐝 Practice finished. Here is your report.");
+          clearCheckpoint();
           showReport();
           return;
         }
@@ -2858,6 +3024,7 @@
 
     // --- Report View ---
     function showReport() {
+      clearCheckpoint();
       els.sections.forEach(sec => sec.classList.remove('active'));
       document.getElementById('report-view').classList.add('active');
 
@@ -3059,13 +3226,26 @@
       });
       els.closeModal.addEventListener('click', closeModal);
 
-      // Practice Flow
+      // Practice Start
       els.btnStartPractice.addEventListener('click', startPractice);
       els.btnRestartPractice.addEventListener('click', () => {
+        clearCheckpoint();
         resetPracticeState();
         switchTab('practice-view');
       });
       els.btnPlayAudio.addEventListener('click', playPracticeAudio);
+
+      // Recovery Buttons
+      els.btnResumeSession.addEventListener('click', restoreSession);
+      els.btnDiscardSession.addEventListener('click', () => {
+        const confirmation = prompt("To confirm discarding your progress, please type 'discard':");
+        if (confirmation && confirmation.toLowerCase() === 'discard') {
+          clearCheckpoint();
+          els.recoveryModal.classList.remove('active');
+        } else if (confirmation !== null) {
+          alert("Incorrect word. Session was not discarded.");
+        }
+      });
 
       if (els.btnSubmitSheets) {
         els.btnSubmitSheets.addEventListener('click', sendResultsToGoogleSheets);
@@ -3115,8 +3295,8 @@
     let auraAudio = null;
 
     function pTime(time) {
-      if(!time) return 999;
-      return parseFloat(time.replace('s','')) || 999;
+      if (!time) return 999;
+      return parseFloat(time.replace('s', '')) || 999;
     }
 
     function processAndSortData(data) {
@@ -3141,7 +3321,7 @@
       });
 
       const finalArray = Object.values(uniqueMap);
-      finalArray.sort((a,b) => {
+      finalArray.sort((a, b) => {
         const streakA = parseInt(a.streak) || 0;
         const streakB = parseInt(b.streak) || 0;
         if (streakB !== streakA) return streakB - streakA;
@@ -3163,18 +3343,18 @@
         const bee = document.createElement('div');
         bee.className = 'floating-bee';
         bee.textContent = '🐝';
-        
+
         const startX = Math.random() * window.innerWidth;
         const startY = Math.random() * window.innerHeight;
         const tx = (Math.random() - 0.5) * 400;
         const ty = (Math.random() - 0.5) * 400;
-        
+
         bee.style.left = startX + 'px';
         bee.style.top = startY + 'px';
         bee.style.setProperty('--tx', tx + 'px');
         bee.style.setProperty('--ty', ty + 'px');
         bee.style.animationDelay = (Math.random() * 2) + 's';
-        
+
         container.appendChild(bee);
         activeBees.push(bee);
       }
@@ -3189,7 +3369,7 @@
         clearTimeout(auraModeTimer);
         auraModeTimer = null;
       }
-      
+
       const btn = document.getElementById('btnFarmAura');
       if (btn) btn.style.boxShadow = '0 0 15px rgba(99, 102, 241, 0.5)';
 
@@ -3206,10 +3386,10 @@
           bee.style.left = (targetX + (Math.random() - 0.5) * 60) + 'px';
           bee.style.top = (targetY + (Math.random() - 0.5) * 30) + 'px';
           bee.style.transform = 'scale(0.8)';
-          
+
           setTimeout(() => {
-             bee.style.opacity = '0';
-             setTimeout(() => bee.remove(), 1000);
+            bee.style.opacity = '0';
+            setTimeout(() => bee.remove(), 1000);
           }, 2000 + (idx * 50));
         });
       } else {
@@ -3229,16 +3409,16 @@
         auraAudio.pause();
         auraAudio = null;
       }
-      
+
       auraAudio = new Audio('https://cdn.pixabay.com/audio/2026/02/13/audio_66ff20def1.mp3');
       auraAudio.volume = 0.6;
       auraAudio.play();
-      
+
       triggerBeeAura();
-      
+
       const btn = document.getElementById('btnFarmAura');
       if (btn) btn.style.boxShadow = '0 0 50px #6366f1';
-      
+
       auraModeTimer = setTimeout(() => {
         stopAuraMode();
       }, 10000);
@@ -3255,7 +3435,7 @@
           let rankStyle = '';
           let rankIcon = '';
           let numberColor = '';
-          
+
           if (idx === 0) {
             rankStyle = 'background: linear-gradient(to right, rgba(255, 191, 0, 0.2), rgba(255, 191, 0, 0.05)); border: 1px solid rgba(255, 191, 0, 0.6); box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);';
             rankIcon = '👑';
