@@ -47,6 +47,38 @@
       flex-direction: column;
     }
 
+    body.practice-focus {
+      overflow: hidden;
+    }
+
+    body.practice-focus header,
+    body.practice-focus .tabs,
+    body.practice-focus .view-section:not(#practice-view) {
+      display: none !important;
+    }
+
+    body.practice-focus main {
+      max-width: none;
+      width: 100%;
+      min-height: 100vh;
+      padding: 0;
+      margin: 0;
+    }
+
+    body.practice-focus #practice-view {
+      display: block !important;
+      min-height: 100vh;
+      padding: 24px;
+      background: var(--background);
+    }
+
+    body.practice-focus .practice-container {
+      min-height: calc(100vh - 48px);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
     h1,
     h2,
     h3,
@@ -1273,6 +1305,16 @@
   <main>
     <!-- Tab 1: Vocabulary -->
     <section id="vocab-view" class="view-section">
+      <div class="no-print"
+        style="display: flex; justify-content: center; gap: 12px; flex-wrap: wrap; margin-bottom: 28px;">
+        <button id="btnVocabWordsMode" class="action-button primary"
+          style="padding: 12px 24px; border-radius: 999px;">Vocabulary Words</button>
+        <button id="btnVocabNumbersMode" class="action-button"
+          style="padding: 12px 24px; border-radius: 999px; background: white; color: var(--text-dark); border: 2px solid var(--border);">Practice
+          Numbers</button>
+      </div>
+
+      <div id="vocabWordsPanel">
       <div class="course-selection"
         style="text-align: center; padding: 40px 20px; background: linear-gradient(135deg, #fdfbfb 0%, #ebedee 100%); border-radius: var(--radius-lg); margin-bottom: 40px; box-shadow: 0 10px 30px rgba(0,0,0,0.05); border: 2px solid white; position: relative; overflow: hidden;">
         <!-- Decorative subtle element -->
@@ -1321,6 +1363,46 @@
 
       <div class="vocab-grid" id="vocabGrid">
         <!-- Cards injected via JS -->
+      </div>
+      </div>
+
+      <div id="numberPracticePanel"
+        style="display: none; max-width: 900px; margin: 0 auto; background: rgba(255,255,255,0.78); border: 2px solid rgba(212,159,78,0.55); border-radius: var(--radius-lg); padding: 32px; box-shadow: 0 12px 28px rgba(0,0,0,0.06);">
+        <h2 style="font-size: 2rem; color: var(--text-dark); margin-bottom: 8px;">Practice Numbers</h2>
+        <p style="color: var(--text-muted); margin-bottom: 24px; line-height: 1.5;">Choose a maximum length up to 60
+          digits, generate a number, or type your own number to see it written in English.</p>
+
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 16px; margin-bottom: 20px;">
+          <div>
+            <label for="numberDigitLimit"
+              style="display: block; font-size: 0.85rem; color: var(--text-muted); font-weight: 800; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 6px;">Maximum
+              digits</label>
+            <input id="numberDigitLimit" type="number" min="1" max="60" value="4"
+              style="width: 100%; padding: 14px 16px; border-radius: var(--radius-md); border: 2px solid var(--border); font-family: 'Outfit', sans-serif; font-size: 1.1rem;">
+          </div>
+          <div>
+            <label for="numberPracticeInput"
+              style="display: block; font-size: 0.85rem; color: var(--text-muted); font-weight: 800; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 6px;">Number</label>
+            <input id="numberPracticeInput" type="text" inputmode="numeric" maxlength="60" placeholder="2209"
+              style="width: 100%; padding: 14px 16px; border-radius: var(--radius-md); border: 2px solid var(--border); font-family: 'Outfit', sans-serif; font-size: 1.1rem;">
+          </div>
+        </div>
+
+        <div style="display: flex; gap: 12px; flex-wrap: wrap; margin-bottom: 24px;">
+          <button id="btnGenerateNumber" class="action-button primary" style="padding: 12px 24px;">Generate
+            Number</button>
+          <button id="btnSpeakNumber" class="action-button"
+            style="padding: 12px 24px; background: white; color: var(--text-dark); border: 2px solid var(--border);">Listen</button>
+        </div>
+
+        <div
+          style="background: var(--surface); border: 2px solid var(--border); border-radius: var(--radius-md); padding: 20px;">
+          <div id="numberPracticeNumber"
+            style="font-family: 'Outfit', sans-serif; font-size: 1.2rem; font-weight: 800; color: var(--text-dark); word-break: break-all; margin-bottom: 12px;">
+            Type or generate a number.</div>
+          <div id="numberPracticeWords"
+            style="font-size: 1.25rem; color: var(--text-dark); line-height: 1.7; font-weight: 700;"></div>
+        </div>
       </div>
     </section>
 
@@ -1531,14 +1613,29 @@
         </table>
       </div>
 
+      <div id="studentMessagePanel" class="no-print"
+        style="display: none; margin-bottom: 30px; background: #ffffff; border: 2px solid var(--border); border-radius: var(--radius-lg); padding: 24px; box-shadow: 0 8px 20px rgba(0,0,0,0.06);">
+        <h3 id="studentMessageTitle"
+          style="font-size: 1.5rem; margin-bottom: 8px; color: var(--text-dark); font-family: 'Outfit', sans-serif;">
+          Leave a message for other players</h3>
+        <p id="studentMessageHint" style="color: var(--text-muted); margin-bottom: 15px; line-height: 1.5;"></p>
+        <textarea id="studentMessageInput" maxlength="180" rows="3"
+          placeholder="Write a short message for the next players..."
+          style="display: none; width: 100%; padding: 14px 16px; border-radius: var(--radius-md); border: 2px solid var(--border); font-family: 'Inter', sans-serif; font-size: 1rem; resize: vertical; outline: none;"></textarea>
+        <div id="studentEmojiPicker" style="display: none; gap: 10px; flex-wrap: wrap;"></div>
+        <div id="studentMessageLocked"
+          style="display: none; padding: 16px; background: #f8fafc; border-radius: var(--radius-md); color: var(--text-muted); font-weight: 700;">
+          Keep practicing to unlock the player message wall.</div>
+      </div>
+
       <div id="submitReminder" class="overlay-result"
         style="position: fixed; z-index: 9999; text-align: center; font-family: 'Outfit', sans-serif;">
         <div
           style="background-color: var(--surface); border-radius: var(--radius-lg); padding: 40px; border: 4px solid var(--border); box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25); max-width: 600px; width: 90%; transform: scale(1); animation: modalOpen 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);">
           <div style="font-size: 5rem; margin-bottom: 15px;" id="submitReminderIcon">⏳</div>
           <h2 id="submitReminderTitle"
-            style="font-size: 2.2rem; color: var(--text-dark); margin-bottom: 25px; font-weight: 800;">Enviando
-            resultados...</h2>
+            style="font-size: 2.2rem; color: var(--text-dark); margin-bottom: 25px; font-weight: 800;">Sending
+            results...</h2>
 
           <div
             style="background: #ffffff; padding: 25px; border-radius: var(--radius-md); border-left: 10px solid var(--danger); text-align: left; box-shadow: inset 0 2px 4px rgba(0,0,0,0.05);">
@@ -1546,7 +1643,7 @@
               <span style="font-size: 2rem;">🔔</span>
               <p
                 style="font-size: 1.2rem; color: var(--text-dark); font-weight: 700; line-height: 1.4; font-family: 'Inter', sans-serif; margin: 0;">
-                Recuerde guardar el reporte o imprimirlo para cualquier reclamo.
+                Remember to save or print the report for any score review.
               </p>
             </div>
           </div>
@@ -1577,7 +1674,7 @@
 
         <button class="btn-pdf btn-stroke"
           style="flex: 1; background-color: #fbbf24; color: #0f172a; border: none; font-weight: 800;"
-          id="btnSubmitSheets">🚀 Enviar al Registro</button>
+          id="btnSubmitSheets">🚀 Send to Record</button>
         <button class="btn-pdf btn-stroke" style="flex: 1; background-color: #64748b; color: white; border: none;"
           id="btnRestartPractice">🔄 Try Again</button>
       </div>
@@ -1747,7 +1844,7 @@
 
 
 
-        <!-- Panal Glassmorphism Container -->
+        <!-- Hive Glassmorphism Container -->
         <div id="leaderboardContainer" class="lb-container" style="
           background-color: rgba(255, 255, 255, 0.4);
           backdrop-filter: blur(8px);
@@ -1797,7 +1894,7 @@
                   overflow: hidden;
                 " onmouseover="this.style.transform='scale(1.05)'; this.style.boxShadow='0 0 25px rgba(99, 102, 241, 0.8)'"
                   onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='0 0 15px rgba(99, 102, 241, 0.5)'">
-                  <span style="position: relative; z-index: 2;">🌀 Farmear Aura</span>
+                  <span style="position: relative; z-index: 2;">🌀 Aura Mode</span>
                   <div class="aura-glow"
                     style="position: absolute; top: 0; left: -100%; width: 100%; height: 100%; background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent); transition: 0.5s;">
                   </div>
@@ -1817,7 +1914,24 @@
                   transition: transform 0.2s, box-shadow 0.2s;
                 " onmouseover="this.style.transform='translateY(-2px)'"
                   onmouseout="this.style.transform='translateY(0)'">
-                  <span style="margin-right: 8px;">🐝</span> Actualizar
+                  <span style="margin-right: 8px;">🐝</span> Refresh
+                </button>
+
+                <button id="btnToggleTop20" style="
+                  padding: 10px 24px;
+                  background: #ffffff;
+                  color: #0f172a;
+                  border: 2px solid rgba(212, 159, 78, 0.75);
+                  border-radius: 12px;
+                  cursor: pointer;
+                  font-weight: 800;
+                  font-family: 'Outfit', sans-serif;
+                  font-size: 1rem;
+                  box-shadow: 0 4px 14px rgba(15, 23, 42, 0.08);
+                  transition: transform 0.2s, box-shadow 0.2s, background-color 0.2s;
+                " onmouseover="this.style.transform='translateY(-2px)'; this.style.boxShadow='0 8px 18px rgba(15,23,42,0.12)'"
+                  onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 14px rgba(15,23,42,0.08)'">
+                  Curiosity: Top 20
                 </button>
               </div>
             </div>
@@ -1826,7 +1940,7 @@
           <!-- Countdown Timer -->
           <div
             style="text-align: center; margin-bottom: 5px; position: relative; z-index: 10; font-family: 'Outfit', sans-serif; font-weight: 700; color: var(--text-dark);">
-            Faltan para el Spelling Contest (8 de Junio, 2026):
+            Time left until the Spelling Contest (June 8, 2026):
           </div>
           <div id="countdownTimer"
             style="display: flex; gap: 10px; margin-bottom: 25px; position: relative; z-index: 10; justify-content: center; font-family: 'Outfit', sans-serif;">
@@ -1834,7 +1948,7 @@
               style="background: white; border: 2px solid var(--border); border-radius: 12px; padding: 10px; text-align: center; box-shadow: 0 4px 6px rgba(0,0,0,0.05); min-width: 60px;">
               <div id="cdDays" style="font-size: 1.8rem; font-weight: 800; color: #d97706; line-height: 1;">0</div>
               <div style="font-size: 0.7rem; font-weight: bold; color: var(--text-muted); text-transform: uppercase;">
-                DÃ­as</div>
+                Days</div>
             </div>
             <div
               style="background: white; border: 2px solid var(--border); border-radius: 12px; padding: 10px; text-align: center; box-shadow: 0 4px 6px rgba(0,0,0,0.05); min-width: 60px;">
@@ -1852,7 +1966,7 @@
               style="background: white; border: 2px solid var(--border); border-radius: 12px; padding: 10px; text-align: center; box-shadow: 0 4px 6px rgba(0,0,0,0.05); min-width: 60px;">
               <div id="cdSecs" style="font-size: 1.8rem; font-weight: 800; color: #d97706; line-height: 1;">00</div>
               <div style="font-size: 0.7rem; font-weight: bold; color: var(--text-muted); text-transform: uppercase;">
-                Seg</div>
+                Sec</div>
             </div>
           </div>
           <!-- Static Badge -->
@@ -1860,13 +1974,22 @@
             style="display: flex; gap: 10px; margin-bottom: 30px; position: relative; z-index: 10; justify-content: center;">
             <div class="lb-badge"
               style="background: #FFBF00; color: #0f172a; border: 2px solid #FFBF00; padding: 10px 30px; border-radius: 25px; font-weight: 800; font-family: 'Outfit', sans-serif; font-size: 1.1rem; box-shadow: 0 4px 10px rgba(0,0,0,0.1); display: inline-block;">
-              🔥 Racha Máxima Global</div>
+              🔥 Global Best Streak</div>
           </div>
 
           <div id="leaderboardList"
             style="display: flex; flex-direction: column; gap: 12px; position: relative; z-index: 10;">
-            <div style="color: var(--text-muted); text-align: center; font-style: italic; padding: 40px 0;">Cargando
-              panal global... 🍯</div>
+            <div style="color: var(--text-muted); text-align: center; font-style: italic; padding: 40px 0;">Loading
+              the global hive... 🍯</div>
+          </div>
+
+          <div id="messageWall"
+            style="margin-top: 28px; padding-top: 24px; border-top: 2px dashed rgba(212, 159, 78, 0.55); position: relative; z-index: 10;">
+            <h3 style="font-size: 1.5rem; margin-bottom: 12px; color: var(--text-dark); font-family: 'Outfit', sans-serif;">
+              Player Messages</h3>
+            <div id="messageWallList" style="display: flex; flex-direction: column; gap: 10px;">
+              <div style="color: var(--text-muted); font-style: italic;">Loading player messages...</div>
+            </div>
           </div>
         </div>
       </div>
@@ -3172,7 +3295,17 @@
     };
 
     // --- Configuration ---
-    const SHEETS_URL = "https://script.google.com/macros/s/AKfycbyxXycQBKcuKBsp0IlC_JM80PrpJUar_dFe85_ipKXS5BFgVgueXjvfAI-E7DZXKqvf/exec";
+    const SHEETS_URL = "https://script.google.com/macros/s/AKfycbyRpllych9czY4boXkMxnQpuFKCtLx6bsTp3auMnTXITg27JPLy-b7-LJRmup9stoUS/exec";
+    const REFRESH_LIMIT_KEY = "bee_practice_refresh_count";
+    const WALL_EMOJIS = ["🎉", "🔥", "👏", "⭐", "💪", "🏆", "😊", "🐝"];
+    const AURA_SYMBOL = "\uD83D\uDC1D";
+    const LEADERBOARD_ICONS = {
+      first: "\uD83D\uDC51",
+      second: "\uD83E\uDD48",
+      third: "\uD83E\uDD49",
+      target: "\uD83C\uDFAF",
+      timer: "\u23F1\uFE0F"
+    };
 
     // --- State ---
     let state = {
@@ -3189,7 +3322,9 @@
       usedLifelines: { replay: false, example: false, def: false },
       studentName: "",
       studentSurname: "",
-      attemptDate: ""
+      attemptDate: "",
+      playerMessage: "",
+      playerEmoji: ""
     };
 
     let lifelineTimer = null;
@@ -3257,6 +3392,13 @@
       reportTotalBestStreak: document.getElementById('reportTotalBestStreak'),
       reportAvgTime: document.getElementById('reportAvgTime'),
       reportTotalLifelines: document.getElementById('reportTotalLifelines'),
+      studentMessagePanel: document.getElementById('studentMessagePanel'),
+      studentMessageTitle: document.getElementById('studentMessageTitle'),
+      studentMessageHint: document.getElementById('studentMessageHint'),
+      studentMessageInput: document.getElementById('studentMessageInput'),
+      studentEmojiPicker: document.getElementById('studentEmojiPicker'),
+      studentMessageLocked: document.getElementById('studentMessageLocked'),
+      messageWallList: document.getElementById('messageWallList'),
       // Recovery Modal
       recoveryModal: document.getElementById('recoveryModal'),
       recoveryStudentName: document.getElementById('recoveryStudentName'),
@@ -3268,16 +3410,31 @@
       podiumHintText: document.getElementById('podiumHintText')
     };
 
+    const numberPracticeEls = {
+      wordsMode: document.getElementById('btnVocabWordsMode'),
+      numbersMode: document.getElementById('btnVocabNumbersMode'),
+      wordsPanel: document.getElementById('vocabWordsPanel'),
+      numbersPanel: document.getElementById('numberPracticePanel'),
+      digitLimit: document.getElementById('numberDigitLimit'),
+      numberInput: document.getElementById('numberPracticeInput'),
+      generateBtn: document.getElementById('btnGenerateNumber'),
+      speakBtn: document.getElementById('btnSpeakNumber'),
+      numberDisplay: document.getElementById('numberPracticeNumber'),
+      wordsDisplay: document.getElementById('numberPracticeWords')
+    };
+
     // --- Initialization ---
     async function init() {
       try {
         if (typeof VOCAB_DATA === 'undefined') {
-          throw new Error('VOCAB_DATA no está definido. Asegúrate de que los datos estén en el código.');
+          throw new Error('VOCAB_DATA is not defined. Make sure the data is included in the code.');
         }
 
         populateVocab(state.grade);
         setupEventListeners();
+        initNumberPractice();
         if (typeof fetchGlobalLeaderboard === 'function') fetchGlobalLeaderboard();
+        if (typeof fetchPlayerMessages === 'function') fetchPlayerMessages();
 
         // Recover session if exists
         if (typeof checkForCheckpoint === 'function') checkForCheckpoint();
@@ -3287,7 +3444,7 @@
         if (grid) {
           grid.innerHTML = `
                         <div style="grid-column: 1/-1; text-align: center; padding: 40px; color: #ff6b6b;">
-                            <h3>⚠️ Error de Inicialización</h3>
+                            <h3>⚠️ Initialization Error</h3>
                             <p>${error.message}</p>
                         </div>
                     `;
@@ -3406,7 +3563,132 @@
       window.speechSynthesis.cancel();
     }
 
+    function setVocabularyMode(mode) {
+      const isNumbers = mode === 'numbers';
+      if (!numberPracticeEls.wordsPanel || !numberPracticeEls.numbersPanel) return;
+      numberPracticeEls.wordsPanel.style.display = isNumbers ? 'none' : 'block';
+      numberPracticeEls.numbersPanel.style.display = isNumbers ? 'block' : 'none';
+
+      if (numberPracticeEls.wordsMode && numberPracticeEls.numbersMode) {
+        numberPracticeEls.wordsMode.style.background = isNumbers ? 'white' : 'var(--primary)';
+        numberPracticeEls.wordsMode.style.color = 'var(--text-dark)';
+        numberPracticeEls.wordsMode.style.border = isNumbers ? '2px solid var(--border)' : 'none';
+
+        numberPracticeEls.numbersMode.style.background = isNumbers ? 'var(--primary)' : 'white';
+        numberPracticeEls.numbersMode.style.color = 'var(--text-dark)';
+        numberPracticeEls.numbersMode.style.border = isNumbers ? 'none' : '2px solid var(--border)';
+      }
+    }
+
+    const NUMBER_ONES = ["", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine"];
+    const NUMBER_TEENS = ["ten", "eleven", "twelve", "thirteen", "fourteen", "fifteen", "sixteen", "seventeen", "eighteen", "nineteen"];
+    const NUMBER_TENS = ["", "", "twenty", "thirty", "forty", "fifty", "sixty", "seventy", "eighty", "ninety"];
+    const NUMBER_SCALES = [
+      "", "thousand", "million", "billion", "trillion", "quadrillion", "quintillion",
+      "sextillion", "septillion", "octillion", "nonillion", "decillion", "undecillion",
+      "duodecillion", "tredecillion", "quattuordecillion", "quindecillion", "sexdecillion",
+      "septendecillion", "octodecillion", "novemdecillion"
+    ];
+
+    function clampDigitLimit() {
+      if (!numberPracticeEls.digitLimit) return 60;
+      let value = parseInt(numberPracticeEls.digitLimit.value, 10);
+      if (!Number.isFinite(value)) value = 1;
+      value = Math.max(1, Math.min(60, value));
+      numberPracticeEls.digitLimit.value = value;
+      return value;
+    }
+
+    function cleanNumberString(value, maxDigits = 60) {
+      const cleaned = String(value || '').replace(/\D/g, '').slice(0, maxDigits);
+      return cleaned;
+    }
+
+    function triadToWords(num) {
+      const parts = [];
+      const hundreds = Math.floor(num / 100);
+      const remainder = num % 100;
+
+      if (hundreds > 0) parts.push(`${NUMBER_ONES[hundreds]} hundred`);
+      if (remainder >= 20) {
+        const ten = Math.floor(remainder / 10);
+        const one = remainder % 10;
+        parts.push(one ? `${NUMBER_TENS[ten]}-${NUMBER_ONES[one]}` : NUMBER_TENS[ten]);
+      } else if (remainder >= 10) {
+        parts.push(NUMBER_TEENS[remainder - 10]);
+      } else if (remainder > 0) {
+        parts.push(NUMBER_ONES[remainder]);
+      }
+
+      return parts.join(' ');
+    }
+
+    function numberToWords(value) {
+      let digits = cleanNumberString(value, 60).replace(/^0+/, '');
+      if (!digits) return "zero";
+
+      const groups = [];
+      while (digits.length > 0) {
+        groups.unshift(digits.slice(-3));
+        digits = digits.slice(0, -3);
+      }
+
+      return groups.map((group, index) => {
+        const n = parseInt(group, 10);
+        if (!n) return "";
+        const scaleIndex = groups.length - index - 1;
+        const scale = NUMBER_SCALES[scaleIndex] || "";
+        return `${triadToWords(n)}${scale ? " " + scale : ""}`;
+      }).filter(Boolean).join(', ');
+    }
+
+    function updateNumberPractice() {
+      const maxDigits = clampDigitLimit();
+      const cleaned = cleanNumberString(numberPracticeEls.numberInput ? numberPracticeEls.numberInput.value : '', maxDigits);
+      if (numberPracticeEls.numberInput && numberPracticeEls.numberInput.value !== cleaned) {
+        numberPracticeEls.numberInput.value = cleaned;
+      }
+
+      if (!cleaned) {
+        numberPracticeEls.numberDisplay.textContent = "Type or generate a number.";
+        numberPracticeEls.wordsDisplay.textContent = "";
+        return;
+      }
+
+      numberPracticeEls.numberDisplay.textContent = cleaned;
+      numberPracticeEls.wordsDisplay.textContent = numberToWords(cleaned);
+    }
+
+    function generatePracticeNumber() {
+      const digits = clampDigitLimit();
+      let number = "";
+      for (let i = 0; i < digits; i++) {
+        const min = i === 0 && digits > 1 ? 1 : 0;
+        number += String(Math.floor(Math.random() * (10 - min)) + min);
+      }
+      numberPracticeEls.numberInput.value = number;
+      updateNumberPractice();
+    }
+
+    function initNumberPractice() {
+      if (!numberPracticeEls.wordsMode || !numberPracticeEls.numbersMode) return;
+      numberPracticeEls.wordsMode.addEventListener('click', () => setVocabularyMode('words'));
+      numberPracticeEls.numbersMode.addEventListener('click', () => setVocabularyMode('numbers'));
+      numberPracticeEls.digitLimit.addEventListener('input', updateNumberPractice);
+      numberPracticeEls.numberInput.addEventListener('input', updateNumberPractice);
+      numberPracticeEls.generateBtn.addEventListener('click', generatePracticeNumber);
+      numberPracticeEls.speakBtn.addEventListener('click', () => {
+        const words = numberPracticeEls.wordsDisplay.textContent.trim();
+        if (words) speakWord(words);
+      });
+      updateNumberPractice();
+    }
+
     function switchTab(targetId) {
+      if (document.body.classList.contains('practice-focus') && targetId !== 'practice-view') {
+        return;
+      }
+
       els.tabBtns.forEach(btn => {
         btn.classList.toggle('active', btn.dataset.target === targetId);
       });
@@ -3442,6 +3724,7 @@
 
     // --- Persistence (Checkpoint) ---
     function saveCheckpoint() {
+      const existing = JSON.parse(localStorage.getItem('bee_practice_checkpoint') || '{}');
       const dataToSave = {
         grade: state.grade,
         practiceList: state.practiceList,
@@ -3453,13 +3736,15 @@
         studentSurname: state.studentSurname,
         attemptDate: state.attemptDate,
         bestStreak: state.bestStreak || 0,
-        mistakeCount: state.mistakeCount || 0
+        mistakeCount: state.mistakeCount || 0,
+        refreshCount: existing.refreshCount || 0
       };
       localStorage.setItem('bee_practice_checkpoint', JSON.stringify(dataToSave));
     }
 
     function clearCheckpoint() {
       localStorage.removeItem('bee_practice_checkpoint');
+      sessionStorage.removeItem(REFRESH_LIMIT_KEY);
     }
 
     function checkForCheckpoint() {
@@ -3467,6 +3752,22 @@
       if (saved) {
         try {
           const data = JSON.parse(saved);
+          const refreshCount = (parseInt(data.refreshCount, 10) || 0) + 1;
+          data.refreshCount = refreshCount;
+          localStorage.setItem('bee_practice_checkpoint', JSON.stringify(data));
+
+          if (refreshCount >= 3) {
+            clearCheckpoint();
+            alert("Practice closed because the page was refreshed too many times.");
+            return;
+          }
+
+          if (refreshCount === 1) {
+            alert("Warning: refreshing the page can interrupt your practice.");
+          } else if (refreshCount === 2) {
+            alert("If you refresh the page one more time, the practice will be closed.");
+          }
+
           els.recoveryStudentName.textContent = `${data.studentName} ${data.studentSurname}`;
           els.recoveryModal.classList.add('active');
         } catch (e) {
@@ -3489,6 +3790,7 @@
       els.startWrapper.style.display = 'none';
       els.practiceControls.style.display = 'block';
       switchTab('practice-view');
+      enterPracticeFocus();
 
       loadPracticeWord();
     }
@@ -3521,6 +3823,22 @@
 
       stopTimer();
       window.speechSynthesis.cancel();
+      exitPracticeFocus();
+    }
+
+    function enterPracticeFocus() {
+      document.body.classList.add('practice-focus');
+      const practiceView = document.getElementById('practice-view');
+      if (practiceView && practiceView.requestFullscreen && !document.fullscreenElement) {
+        practiceView.requestFullscreen().catch(() => { });
+      }
+    }
+
+    function exitPracticeFocus() {
+      document.body.classList.remove('practice-focus');
+      if (document.fullscreenElement && document.exitFullscreen) {
+        document.exitFullscreen().catch(() => { });
+      }
     }
 
     function startPractice() {
@@ -3550,6 +3868,7 @@
 
       els.startWrapper.style.display = 'none';
       els.practiceControls.style.display = 'block';
+      enterPracticeFocus();
       loadPracticeWord();
     }
 
@@ -3576,7 +3895,7 @@
       if (els.btnSubmitSheets) {
         els.btnSubmitSheets.style.display = 'block';
         els.btnSubmitSheets.disabled = false;
-        els.btnSubmitSheets.innerHTML = "🚀 Enviar Nota al Registro";
+        els.btnSubmitSheets.innerHTML = "🚀 Send Score to Record";
         els.btnSubmitSheets.style.backgroundColor = "#22c55e";
       }
       if (els.btnDownloadReport) {
@@ -3745,6 +4064,7 @@
     // --- Report View ---
     function showReport() {
       clearCheckpoint();
+      exitPracticeFocus();
       els.sections.forEach(sec => sec.classList.remove('active'));
       document.getElementById('report-view').classList.add('active');
 
@@ -3773,6 +4093,7 @@
       els.reportTotalBestStreak.textContent = state.bestStreak;
       els.reportAvgTime.textContent = `${avgTime}s`;
       els.reportTotalLifelines.textContent = totalLifelinesUsed;
+      setupStudentMessagePanel(accuracy);
 
       els.reportTableBody.innerHTML = '';
 
@@ -3797,6 +4118,127 @@
       });
     }
 
+    function setupStudentMessagePanel(accuracy) {
+      if (!els.studentMessagePanel) return;
+
+      state.playerMessage = "";
+      state.playerEmoji = "";
+      els.studentMessagePanel.style.display = 'block';
+      els.studentMessageInput.style.display = 'none';
+      els.studentEmojiPicker.style.display = 'none';
+      els.studentMessageLocked.style.display = 'none';
+      els.studentMessageInput.value = "";
+      els.studentEmojiPicker.innerHTML = "";
+
+      if (accuracy > 85) {
+        els.studentMessageTitle.textContent = "Leave a message for other players";
+        els.studentMessageHint.textContent = "Great job. You can write a short message that other players will see later.";
+        els.studentMessageInput.style.display = 'block';
+        els.studentMessageInput.oninput = (e) => {
+          state.playerMessage = e.target.value.trim().slice(0, 180);
+          state.playerEmoji = "";
+        };
+        return;
+      }
+
+      if (accuracy >= 60 && accuracy <= 70) {
+        els.studentMessageTitle.textContent = "Choose one emoji for other players";
+        els.studentMessageHint.textContent = "You unlocked an emoji reaction. Pick only one.";
+        els.studentEmojiPicker.style.display = 'flex';
+        WALL_EMOJIS.forEach(emoji => {
+          const btn = document.createElement('button');
+          btn.type = 'button';
+          btn.textContent = emoji;
+          btn.style.cssText = "font-size: 1.8rem; width: 52px; height: 52px; border-radius: 12px; border: 2px solid var(--border); background: #fff; cursor: pointer;";
+          btn.addEventListener('click', () => {
+            state.playerEmoji = emoji;
+            state.playerMessage = "";
+            [...els.studentEmojiPicker.children].forEach(child => {
+              child.style.background = "#fff";
+              child.style.borderColor = "var(--border)";
+            });
+            btn.style.background = "var(--primary)";
+            btn.style.borderColor = "#d97706";
+          });
+          els.studentEmojiPicker.appendChild(btn);
+        });
+        return;
+      }
+
+      els.studentMessageTitle.textContent = "Player message locked";
+      els.studentMessageHint.textContent = "Messages unlock with more practice accuracy.";
+      els.studentMessageLocked.style.display = 'block';
+    }
+
+    function sanitizeWallText(value) {
+      const div = document.createElement('div');
+      div.textContent = value || "";
+      return div.innerHTML;
+    }
+
+    function decodeMojibakeText(text) {
+      if (!text || typeof text !== 'string') return text;
+      if (!/[ÃÂð]/.test(text)) return text;
+      try {
+        const decoded = decodeURIComponent(escape(text));
+        return decoded || text;
+      } catch (_) {
+        return text;
+      }
+    }
+
+    function fixMojibakeInDom(root = document.body) {
+      if (!root) return;
+      const walker = document.createTreeWalker(root, NodeFilter.SHOW_TEXT, null);
+      const touched = [];
+      while (walker.nextNode()) touched.push(walker.currentNode);
+      touched.forEach(node => {
+        const original = node.nodeValue;
+        const fixed = decodeMojibakeText(original);
+        if (fixed !== original) node.nodeValue = fixed;
+      });
+    }
+
+    function installMojibakeObserver() {
+      fixMojibakeInDom();
+      const observer = new MutationObserver((mutations) => {
+        mutations.forEach(m => {
+          if (m.type === 'characterData' && m.target && m.target.nodeValue) {
+            const fixed = decodeMojibakeText(m.target.nodeValue);
+            if (fixed !== m.target.nodeValue) m.target.nodeValue = fixed;
+          }
+          m.addedNodes.forEach(node => {
+            if (node.nodeType === Node.TEXT_NODE) {
+              const fixed = decodeMojibakeText(node.nodeValue);
+              if (fixed !== node.nodeValue) node.nodeValue = fixed;
+            } else if (node.nodeType === Node.ELEMENT_NODE) {
+              fixMojibakeInDom(node);
+            }
+          });
+        });
+      });
+      observer.observe(document.body, { childList: true, subtree: true, characterData: true });
+    }
+
+    async function appScriptFetch(url, options = {}) {
+      const response = await fetch(url, {
+        redirect: 'follow',
+        cache: 'no-cache',
+        ...options
+      });
+
+      const text = await response.text();
+      let data = null;
+      try {
+        data = JSON.parse(text);
+      } catch (_) {
+        data = null;
+      }
+
+      if (data) return data;
+      return { ok: response.ok, raw: text };
+    }
+
     async function sendResultsToGoogleSheets() {
       if (!els.btnSubmitSheets) return;
 
@@ -3816,6 +4258,11 @@
         }
       });
       const avgTime = attemptedWords > 0 ? (totalTime / attemptedWords).toFixed(1) : "0.0";
+      const messageText = (els.studentMessageInput && els.studentMessageInput.style.display !== 'none')
+        ? els.studentMessageInput.value.trim().slice(0, 180)
+        : "";
+      const emojiText = state.playerEmoji || "";
+      const wallEntryType = messageText ? "message" : (emojiText ? "emoji" : "none");
 
       const payload = {
         studentName: `${state.studentName} ${state.studentSurname}`,
@@ -3826,6 +4273,9 @@
         bestStreak: state.bestStreak,
         avgTime: avgTime,
         lifelinesUsed: totalLifelinesUsed,
+        playerMessage: messageText,
+        playerEmoji: emojiText,
+        wallEntryType: wallEntryType,
         wordDetails: state.results.map((r, i) => `${i + 1}. ${r.word}: ${r.isCorrect ? '✅' : '❌'} (${r.timeSpent}s)`).join(', ')
       };
 
@@ -3835,26 +4285,25 @@
         // Show huge full-screen reminder instantly
         if (els.submitReminder) {
           document.getElementById('submitReminderIcon').innerText = "⏳";
-          document.getElementById('submitReminderTitle').innerText = "Enviando resultados...";
+          document.getElementById('submitReminderTitle').innerText = "Sending results...";
           els.submitReminder.classList.add('show');
         }
 
-        const response = await fetch(SHEETS_URL, {
+        await appScriptFetch(SHEETS_URL, {
           method: 'POST',
-          mode: 'no-cors',
-          cache: 'no-cache',
-          headers: { 'Content-Type': 'application/json' },
+          headers: { 'Content-Type': 'text/plain;charset=utf-8' },
           body: JSON.stringify(payload)
         });
 
         // Update modal to show success, but force wait for 5s
         if (els.submitReminder) {
           document.getElementById('submitReminderIcon').innerText = "✅";
-          document.getElementById('submitReminderTitle').innerText = "¡Nota Registrada!";
+          document.getElementById('submitReminderTitle').innerText = "Score saved!";
         }
 
-        btn.innerHTML = "✅ ¡Nota Registrada!";
+        btn.innerHTML = "✅ Score saved!";
         btn.style.backgroundColor = "#16a34a";
+        fetchPlayerMessages();
 
         setTimeout(() => {
           if (els.submitReminder) {
@@ -3868,7 +4317,7 @@
 
       } catch (error) {
         console.error("Error submitting to Sheets:", error);
-        btn.innerHTML = "❌ Error al enviar";
+        btn.innerHTML = "❌ Sending error";
         btn.style.backgroundColor = "#dc2626";
         btn.disabled = false;
 
@@ -4287,16 +4736,62 @@
 
     // --- Leaderboard Logic (Global) ---
     window.globalLeaderboardData = [];
+    const DEFAULT_LEADERBOARD_LIMIT = 5;
+    const EXTENDED_LEADERBOARD_LIMIT = 20;
+    let leaderboardVisibleLimit = DEFAULT_LEADERBOARD_LIMIT;
     let auraAudio = null;
 
     function pTime(time) {
       if (!time) return 999;
-      return parseFloat(time.replace('s', '')) || 999;
+      return parseFloat(String(time).replace('s', '')) || 999;
+    }
+
+    function pickField(item, keys, fallback = "") {
+      for (const key of keys) {
+        if (item && item[key] !== undefined && item[key] !== null && item[key] !== "") return item[key];
+      }
+      return fallback;
+    }
+
+    function normalizeGradeLabel(value) {
+      const raw = String(value || "").trim();
+      if (!raw) return "";
+      const number = raw.match(/\d+/);
+      return number ? number[0] : raw;
+    }
+
+    function normalizeAccuracy(value) {
+      const raw = String(value ?? "").trim();
+      if (!raw) return "0%";
+      return raw.includes('%') ? raw : `${raw}%`;
+    }
+
+    function normalizeLeaderboardEntry(item) {
+      if (!item) return null;
+
+      if (Array.isArray(item)) {
+        item = {
+          studentName: item[1],
+          grade: item[2],
+          accuracy: item[5],
+          bestStreak: item[6],
+          avgTime: item[7]
+        };
+      }
+
+      const name = String(pickField(item, ['name', 'studentName', 'Student Name', 'student', 'Student', 'nombre', 'Nombre'], "")).trim();
+      const grade = normalizeGradeLabel(pickField(item, ['grade', 'course', 'Grade', 'Course', 'curso', 'Curso'], ""));
+      const streak = parseInt(pickField(item, ['streak', 'bestStreak', 'Best Streak', 'racha', 'Racha'], 0), 10) || 0;
+      const avgTime = String(pickField(item, ['avgTime', 'averageTime', 'Avg Time', 'Avg. Speed', 'time', 'Tiempo'], "0.0s"));
+      const accuracy = normalizeAccuracy(pickField(item, ['accuracy', 'Accuracy', 'precision', 'Precision'], 0));
+
+      if (!name && !streak) return null;
+      return { name: name || "Player", grade, streak, avgTime, accuracy };
     }
 
     function processAndSortData(data) {
       const uniqueMap = {};
-      data.forEach(item => {
+      data.map(normalizeLeaderboardEntry).filter(Boolean).forEach(item => {
         const key = (item.name || "").trim().toLowerCase() + '_' + (item.grade || "");
         if (!uniqueMap[key]) {
           uniqueMap[key] = { ...item };
@@ -4337,7 +4832,7 @@
       for (let i = 0; i < amount; i++) {
         const bee = document.createElement('div');
         bee.className = 'floating-bee';
-        bee.textContent = 'ðŸ';
+        bee.textContent = AURA_SYMBOL;
 
         const startX = Math.random() * window.innerWidth;
         const startY = Math.random() * window.innerHeight;
@@ -4423,25 +4918,26 @@
       const list = document.getElementById('leaderboardList');
       if (!list) return;
 
-      const finalData = processAndSortData(window.globalLeaderboardData).slice(0, 10);
+      const finalData = processAndSortData(window.globalLeaderboardData).slice(0, leaderboardVisibleLimit);
+      updateLeaderboardLimitButton();
 
       if (finalData && finalData.length > 0) {
         list.innerHTML = finalData.map((lbl, idx) => {
           let rankStyle = '';
-          let rankIcon = '👑';
+          let rankIcon = LEADERBOARD_ICONS.first;
           let numberColor = '';
 
           if (idx === 0) {
             rankStyle = 'background: linear-gradient(to right, rgba(255, 191, 0, 0.2), rgba(255, 191, 0, 0.05)); border: 1px solid rgba(255, 191, 0, 0.6); box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);';
-            rankIcon = '👑';
+            rankIcon = LEADERBOARD_ICONS.first;
             numberColor = 'color: #d97706; text-shadow: 0 0 10px rgba(255, 191, 0, 0.3);';
           } else if (idx === 1) {
             rankStyle = 'background: linear-gradient(to right, rgba(148, 163, 184, 0.2), rgba(148, 163, 184, 0.05)); border: 1px solid rgba(148, 163, 184, 0.4);';
-            rankIcon = '🥈';
+            rankIcon = LEADERBOARD_ICONS.second;
             numberColor = 'color: #64748b;';
           } else if (idx === 2) {
             rankStyle = 'background: linear-gradient(to right, rgba(180, 83, 9, 0.2), rgba(180, 83, 9, 0.05)); border: 1px solid rgba(180, 83, 9, 0.4);';
-            rankIcon = '🥉';
+            rankIcon = LEADERBOARD_ICONS.third;
             numberColor = 'color: #92400e;';
           } else {
             rankStyle = 'background: rgba(255, 255, 255, 0.6); border: 1px solid rgba(0, 0, 0, 0.05);';
@@ -4462,39 +4958,106 @@
               <div style="flex: 1; min-width: 0;">
                 <div style="display: flex; align-items: center; gap: 10px; flex-wrap: wrap;">
                   <h4 style="margin: 0; font-size: 1.25rem; color: var(--text-dark); font-family: 'Outfit', sans-serif; font-weight: 700; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 150px;">${lbl.name}</h4>
-                  <span style="font-size: 0.75rem; padding: 4px 8px; background: rgba(255, 191, 0, 0.2); color: #d97706; border-radius: 20px; font-weight: 600;">${lbl.grade}th</span>
+                  <span style="font-size: 0.75rem; padding: 4px 8px; background: rgba(255, 191, 0, 0.2); color: #d97706; border-radius: 20px; font-weight: 600;">${lbl.grade ? lbl.grade + 'th' : 'Grade'}</span>
                   ${gifHtml}
                 </div>
                 <div class="lb-item-stats" style="display: flex; gap: 15px; font-size: 0.85rem; color: var(--text-muted); margin-top: 6px; font-family: 'Inter', sans-serif; align-items: center;">
-                  <span>🎯 <strong style="color: #16a34a;">${lbl.accuracy || '0%'}</strong></span>
-                  <span>⏱️ <strong style="color: var(--text-dark);">${lbl.avgTime || '0.0s'}</strong></span>
+                  <span>${LEADERBOARD_ICONS.target} <strong style="color: #16a34a;">${lbl.accuracy || '0%'}</strong></span>
+                  <span>${LEADERBOARD_ICONS.timer} <strong style="color: var(--text-dark);">${lbl.avgTime || '0.0s'}</strong></span>
                 </div>
               </div>
               <div style="text-align: right; flex-shrink: 0;">
-                <div style="font-size: 0.7rem; color: var(--text-muted); text-transform: uppercase; letter-spacing: 1px; font-weight: 600; margin-bottom: 2px;">RACHA</div>
+                <div style="font-size: 0.7rem; color: var(--text-muted); text-transform: uppercase; letter-spacing: 1px; font-weight: 600; margin-bottom: 2px;">STREAK</div>
                 <div class="lb-streak" style="font-size: 2rem; font-family: 'Outfit', sans-serif; font-weight: 800; line-height: 1; ${numberColor}">${lbl.streak}</div>
               </div>
             </div>
           `;
         }).join('');
       } else {
-        list.innerHTML = `<div style="color: var(--text-muted); text-align: center; font-style: italic; padding: 40px 0;">Aún no hay rachas registradas en la base de datos.</div>`;
+        list.innerHTML = `<div style="color: var(--text-muted); text-align: center; font-style: italic; padding: 40px 0;">No streaks have been recorded in the database yet.</div>`;
+      }
+    }
+
+    function updateLeaderboardLimitButton() {
+      const btn = document.getElementById('btnToggleTop20');
+      if (!btn) return;
+      const isExtended = leaderboardVisibleLimit === EXTENDED_LEADERBOARD_LIMIT;
+      btn.textContent = isExtended ? 'Back to Top 5' : 'Curiosity: Top 20';
+      btn.title = isExtended ? 'Show only the top 5 players' : 'Show up to 20 players';
+      btn.style.background = isExtended ? '#FFBF00' : '#ffffff';
+    }
+
+    function normalizeWallMessages(data) {
+      if (!data) return [];
+      if (Array.isArray(data)) return data;
+      if (Array.isArray(data.messages)) return data.messages;
+      if (Array.isArray(data.data)) return data.data;
+      if (Array.isArray(data.leaderboard)) return data.leaderboard;
+      if (Array.isArray(data.topStreaks)) return data.topStreaks;
+      return [];
+    }
+
+    function renderPlayerMessages(data) {
+      const list = els.messageWallList || document.getElementById('messageWallList');
+      if (!list) return;
+
+      const messages = normalizeWallMessages(data)
+        .filter(item => item && (item.playerMessage || item.message || item.playerEmoji || item.emoji))
+        .slice(0, 8);
+
+      if (messages.length === 0) {
+        list.innerHTML = `<div style="color: var(--text-muted); font-style: italic;">No player messages yet. Finish a practice to unlock the wall.</div>`;
+        return;
+      }
+
+      list.innerHTML = messages.map(item => {
+        const name = sanitizeWallText(item.studentName || item.name || "Player");
+        const grade = sanitizeWallText(item.grade || "");
+        const accuracy = sanitizeWallText(String(item.accuracy || ""));
+        const content = sanitizeWallText(item.playerMessage || item.message || item.playerEmoji || item.emoji || "");
+        return `
+          <div style="background: rgba(255,255,255,0.75); border: 1px solid rgba(212,159,78,0.55); border-radius: 12px; padding: 14px 16px;">
+            <div style="font-size: 0.8rem; color: var(--text-muted); margin-bottom: 6px; font-weight: 700;">${name}${grade ? " · " + grade : ""}${accuracy ? " · " + accuracy + "%" : ""}</div>
+            <div style="font-size: 1.05rem; color: var(--text-dark); font-weight: 700;">${content}</div>
+          </div>
+        `;
+      }).join('');
+    }
+
+    async function fetchPlayerMessages() {
+      const list = els.messageWallList || document.getElementById('messageWallList');
+      if (!list) return;
+
+      try {
+        const data = await appScriptFetch(SHEETS_URL + "?action=getMessages");
+        renderPlayerMessages(data);
+      } catch (error) {
+        console.warn("Could not load player messages", error);
+        list.innerHTML = `<div style="color: var(--text-muted); font-style: italic;">Player messages will appear here after the database returns them.</div>`;
       }
     }
 
     async function fetchGlobalLeaderboard() {
       const list = document.getElementById('leaderboardList');
       if (!list) return;
-      list.innerHTML = `<div style="color: var(--text-muted); text-align: center; font-style: italic; padding: 40px 0;">Cargando panal global... ðŸ</div>`;
+      list.innerHTML = `<div style="color: var(--text-muted); text-align: center; font-style: italic; padding: 40px 0;">Loading the global hive...</div>`;
 
       try {
-        const response = await fetch(SHEETS_URL + "?action=getTopStreaks");
-        const data = await response.json();
-        window.globalLeaderboardData = data || [];
+        const responses = await Promise.allSettled([
+          appScriptFetch(SHEETS_URL + "?action=getTopStreaks"),
+          appScriptFetch(SHEETS_URL + "?action=getLeaderboard")
+        ]);
+
+        const candidates = responses
+          .filter(result => result.status === 'fulfilled')
+          .map(result => normalizeWallMessages(result.value))
+          .filter(rows => rows.length > 0);
+
+        window.globalLeaderboardData = candidates[0] || [];
         renderLeaderboard();
       } catch (error) {
         console.error("Error fetching leaderboard", error);
-        list.innerHTML = `<div style="color: #ef4444; text-align: center; font-style: italic; padding: 40px 0;">Error al cargar rachas globales. Intentando de nuevo en breve.</div>`;
+        list.innerHTML = `<div style="color: #ef4444; text-align: center; font-style: italic; padding: 40px 0;">Error loading global streaks. Trying again shortly.</div>`;
       }
     }
 
@@ -4505,10 +5068,29 @@
       });
     }
 
-    const btnFarmAura = document.getElementById('btnFarmAura');
-    if (btnFarmAura) {
-      btnFarmAura.addEventListener('click', playAuraMusic);
+    const btnToggleTop20 = document.getElementById('btnToggleTop20');
+    if (btnToggleTop20) {
+      btnToggleTop20.addEventListener('click', () => {
+        leaderboardVisibleLimit = leaderboardVisibleLimit === DEFAULT_LEADERBOARD_LIMIT
+          ? EXTENDED_LEADERBOARD_LIMIT
+          : DEFAULT_LEADERBOARD_LIMIT;
+        renderLeaderboard();
+      });
     }
+
+    const btnFarmAura = document.getElementById('btnFarmAura');
+      if (btnFarmAura) {
+        btnFarmAura.addEventListener('click', playAuraMusic);
+      }
+
+    window.addEventListener('beforeunload', (event) => {
+      if (localStorage.getItem('bee_practice_checkpoint')) {
+        event.preventDefault();
+        event.returnValue = "Refreshing may close your practice.";
+      }
+    });
+
+    window.addEventListener('DOMContentLoaded', installMojibakeObserver);
 
     // Boot
     window.addEventListener('DOMContentLoaded', init);
@@ -4622,3 +5204,5 @@
 </body>
 
 </html>
+
+
