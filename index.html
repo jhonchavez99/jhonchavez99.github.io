@@ -1522,7 +1522,7 @@
               </div>
               <div
                 style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; font-weight: 800; font-family: 'Outfit', sans-serif; color: var(--text-dark); pointer-events: none;">
-                <span id="timerText">12</span>s
+                <span id="timerText">24</span>s
               </div>
             </div>
 
@@ -3374,7 +3374,7 @@
       correctCount: 0,
       results: [],
       timerInterval: null,
-      timeLeft: 12,
+      timeLeft: 24,
       isTimerActive: false,
       britishVoice: null,
       usedLifelines: { replay: false, example: false, def: false },
@@ -3952,7 +3952,7 @@
       els.btnPlayAudio.disabled = false;
       state.lifelinesThisWord = [];
 
-      els.timerText.textContent = '12';
+      els.timerText.textContent = '24';
       els.timerBar.style.width = '100%';
       els.timerBar.style.backgroundColor = 'var(--secondary)';
 
@@ -4000,11 +4000,11 @@
         const secondsVisible = Math.ceil(state.timeLeft / 10);
         els.timerText.textContent = secondsVisible;
 
-        const percentage = (state.timeLeft / 120) * 100;
+        const percentage = (state.timeLeft / 240) * 100;
         els.timerBar.style.width = percentage + '%';
 
-        if (state.timeLeft < 40) els.timerBar.style.backgroundColor = 'var(--danger)';
-        else if (state.timeLeft < 80) els.timerBar.style.backgroundColor = '#FFD700'; // Gold/Yellow
+        if (state.timeLeft < 80) els.timerBar.style.backgroundColor = 'var(--danger)';
+        else if (state.timeLeft < 160) els.timerBar.style.backgroundColor = '#FFD700'; // Gold/Yellow
         else els.timerBar.style.backgroundColor = 'var(--secondary)';
 
         if (state.timeLeft <= 0) {
@@ -4015,7 +4015,7 @@
     }
 
     function startTimer() {
-      state.timeLeft = 120; // 12 seconds (120 * 100ms)
+      state.timeLeft = 240; // 24 seconds (240 * 100ms)
       resumeTimer();
     }
 
@@ -4095,8 +4095,8 @@
       els.overlayResult.classList.add('show');
 
       // Save result
-      let timeSpent = ((120 - state.timeLeft) / 10).toFixed(1);
-      if (isTimeout) timeSpent = "12.0";
+      let timeSpent = ((240 - state.timeLeft) / 10).toFixed(1);
+      if (isTimeout) timeSpent = "24.0";
 
       state.results.push({
         word: currentItem.word,
