@@ -2079,27 +2079,6 @@
       </button>
     </div>
   </div>
-
-  <!-- Modal for Accent -->
-  <div class="modal-overlay" id="accentAlertModal">
-    <div class="modal-content" style="max-width: 400px; padding: 30px;">
-      <div style="font-size: 3rem; margin-bottom: 15px;">⚠️</div>
-      <h2 style="font-size: 1.8rem; margin-bottom: 10px; font-family: 'Outfit', sans-serif;">Important Notice</h2>
-      <p style="font-size: 1.1rem; color: var(--text-muted); line-height: 1.5; margin-bottom: 25px;">
-        Please note: The teacher in the real contest will use the <strong style="color:var(--danger);">British
-          accent</strong>!
-      </p>
-
-      <div id="countdownSkipText" style="margin-bottom: 15px; font-weight: bold; color: var(--danger);">Wait 5 seconds
-        to accept...</div>
-
-      <div
-        style="position: relative; width: 100%; height: 50px; background: var(--surface); border: 2px solid var(--border); border-radius: 25px; overflow: hidden; display: none;"
-        id="sliderContainer">
-        <div class="slide-text">Slide arrow to accept &rarr;</div>
-        <input type="range" min="0" max="100" value="0" id="accentAcceptSlider">
-      </div>
-    </div>
   </div>
 
   <script>
@@ -4416,50 +4395,7 @@
 
     // --- Event Listeners setup ---
     function setupEventListeners() {
-      const accentSelect = document.getElementById('accentSelect');
-      const alertModal = document.getElementById('accentAlertModal');
-      const slider = document.getElementById('accentAcceptSlider');
-      const sliderContainer = document.getElementById('sliderContainer');
-      const countdownText = document.getElementById('countdownSkipText');
-      let skipTimer;
-
-      if (accentSelect) {
-        accentSelect.addEventListener('change', (e) => {
-          if (e.target.value === 'US') {
-            alertModal.classList.add('active');
-            sliderContainer.style.display = 'none';
-            countdownText.style.display = 'block';
-            slider.value = 0;
-            let count = 5;
-            countdownText.textContent = `Wait ${count} seconds to accept...`;
-
-            if (skipTimer) clearInterval(skipTimer);
-            skipTimer = setInterval(() => {
-              count--;
-              if (count > 0) {
-                countdownText.textContent = `Wait ${count} seconds to accept...`;
-              } else {
-                clearInterval(skipTimer);
-                countdownText.style.display = 'none';
-                sliderContainer.style.display = 'block';
-              }
-            }, 1000);
-          }
-        });
-
-        slider.addEventListener('input', (e) => {
-          if (e.target.value > 95) {
-            e.target.value = 100;
-            alertModal.classList.remove('active');
-          }
-        });
-
-        slider.addEventListener('change', (e) => {
-          if (e.target.value < 100) {
-            e.target.value = 0; // snap back if they didn't slide all the way
-          }
-        });
-      }
+      
       // Grade Change
       els.gradeSelect.addEventListener('change', (e) => {
         state.grade = e.target.value;
